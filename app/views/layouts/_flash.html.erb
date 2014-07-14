@@ -1,17 +1,17 @@
 <!-- Flash Messages --> 
 <% if flash[:notice] %>
-	<div class="alert alert-success">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<div data-alert class="alert-box success">
 		<%= flash[:notice] %>
+		<%= link_to "&times;".html_safe, "#", class: "close" %>
 	</div>
 <% elsif flash[:error] %>
-	<div class="alert alert-danger">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<div data-alert class="alert-box alert">
 		<%= flash[:error] %>
+		<%= link_to "&times;".html_safe, "#", class: "close" %>
 	</div>
 <% elsif flash[:alert] %>
-	<div class="alert alert-warning">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
+	<div data-alert class="alert-box">
 		<%= flash[:alert] %>
+		<%= link_to "&times;".html_safe, "#", class: "close" %>
 	</div>
 <% end %>
