@@ -1,0 +1,40 @@
+<div id="header">
+	<div class="row">
+		<div class="small-12 small-centered medium-6 medium-uncentered columns">
+			<%= link_to "Lauralee Flores", root_path, class: "logo" %>
+		</div>
+		<div class="show-for-medium-up medium-6 columns text-right">
+			<% if user_signed_in? %>
+				<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+			<% else %>
+				<%= link_to "Sign In", new_user_session_path %>
+			<% end %>
+		</div>
+	</div>
+
+	<!-- Intro Text -->
+	<div class="row">
+		<div class="small-12 medium-8 medium-centered columns text-center">
+			<p>Helping Entrepreneurs Create Ruby on Rails Applications that are <em>Minimal</em>, <em>Beautiful</em>, <em>Usable</em>, and <em>Persuasive</em>.</p>
+		</div>
+	</div>
+
+	<% if user_signed_in? %>
+	<% else %>
+		<div class="row">
+			<div class="small-12 medium-8 medium-centered columns">
+				<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+					<%= devise_error_messages! %>
+
+					<%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+
+					<%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+
+					<%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Your Password" %>
+
+					<%= f.submit "Send Me Training When It's Available", class: "button expand" %>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</div>

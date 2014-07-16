@@ -10,8 +10,10 @@
   </head>
 
   <body>
-    <%= render partial: 'layouts/navigation' %>
     <%= render partial: 'layouts/flash' %>
+    <% if current_page?(root_path) %>
+      <%= render partial: 'layouts/header' %>
+    <% end %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

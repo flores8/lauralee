@@ -6,6 +6,9 @@
 // FOUNDATION SETTINGS
 //
 
+// IMPORT CUSTOM FOUNDATION STYLES
+@import "foundation_customization";
+
 // This is the default html and body font-size for the base rem value.
 // $rem-base: 16px;
 
@@ -1186,7 +1189,7 @@
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: rgba(0, 0, 0, 0);
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1195,7 +1198,7 @@
 
 // Controlling the styles for the title in the top bar
 // $topbar-title-weight: $font-weight-normal;
-// $topbar-title-font-size: rem-calc(17);
+// $topbar-title-font-size: rem-calc(30);
 
 // Style the top bar dropdown elements
 // $topbar-dropdown-bg: #333;
@@ -1212,7 +1215,7 @@
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
 // $topbar-link-weight: $font-weight-normal;
-// $topbar-link-font-size: rem-calc(13);
+// $topbar-link-font-size: rem-calc(30);
 // $topbar-link-hover-lightness: -10%; // Darken by 10%
 // $topbar-link-bg: $topbar-bg;
 // $topbar-link-bg-color-hover: #555555;
@@ -1234,7 +1237,7 @@
 
 // Top menu icon styles
 // $topbar-menu-link-transform: uppercase;
-// $topbar-menu-link-font-size: rem-calc(13);
+// $topbar-menu-link-font-size: rem-calc(30);
 // $topbar-menu-link-weight: $font-weight-bold;
 // $topbar-menu-link-color: #fff;
 // $topbar-menu-icon-color: #fff;
