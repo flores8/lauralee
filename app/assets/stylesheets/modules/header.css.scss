@@ -1,0 +1,21 @@
+@import "globals/all";
+
+#header {
+	background-image: image-url("learn-to-create-websites.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50em;
+	padding-top: 2em;
+	.logo {
+		color: white;
+		text-transform: uppercase;
+		font-size: 2.4em;
+		font-weight: 300;
+	}
+	a.ghost-button {
+		@include ghost-button($pink, .5em 1.5em, 1.75em);
+		font-weight: 400;
+		position: relative;
+		top: .5em;
+	}
+}

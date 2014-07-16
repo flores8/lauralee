@@ -1,0 +1,18 @@
+@mixin transition ($seconds) {
+	-webkit-transition: $seconds;
+	-moz-transition: $seconds;
+	-o-transition: $seconds;
+	transition: $seconds;
+}
+
+@mixin ghost-button ($color, $padding, $font-size) {
+	border: 3px solid $color;
+	padding: $padding;
+	font-size: $font-size;
+	color: $color;
+	@include transition(.4s);
+	&:hover {
+		color: white;
+		background-color: $color;
+	}
+}
