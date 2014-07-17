@@ -5,6 +5,12 @@
 	transition: $seconds;
 }
 
+@mixin border-radius ($px) {
+	-webkit-border-radius: $px;
+	-moz-border-radius: $px;
+	border-radius: $px;
+}
+
 @mixin ghost-button ($color, $padding, $font-size) {
 	border: 3px solid $color;
 	padding: $padding;
@@ -14,5 +20,20 @@
 	&:hover {
 		color: white;
 		background-color: $color;
+	}
+}
+
+@mixin button ($bg_color, $color, $padding) {
+	background-color: ($bg_color);
+	border: none;
+	color: $color;
+	padding: ($padding);
+	@include border-radius(1px);
+	@include transition (.4s);
+	&:hover {
+		text-decoration: none;
+		background-color: darken($bg_color, 5%);
+		color: $color;
+		@include transition (.4s);
 	}
 }

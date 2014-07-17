@@ -5,7 +5,7 @@
 	background-image: image-url("learn-to-create-websites.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 50em;
+	height: 60em;
 	padding-top: 2em;
 	/* Lauralee Flores Link (logo) */
 	.logo {
@@ -32,7 +32,8 @@
 			font-size: 3em;
 			color: $text;
 			font-weight: 400;
-			padding: 1em 0 1.5em;
+			padding: 1em 0 .5em;
+			line-height: 1.5em;
 		}
 	}
 }

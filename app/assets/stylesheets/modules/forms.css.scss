@@ -1,14 +1,14 @@
+@import "globals/all";
+
 #form {
-	background-color: $portOffWhite;
-	padding: 8em 0;
 	p {
-		color: $portText;
+		color: $text;
 		font-size: 2em;
 		line-height: 1.6em;
 		padding-bottom: 1.5em;
 	}
 	h2 {
-		color: $portPink;
+		color: $pink;
 		font-family: 'Source Sans Pro', sans-serif;
 		text-align: center;
 		font-size: 2.5em;
@@ -22,9 +22,9 @@
 	}
 	input[type="text"], input[type="email"], input[type="password"], textarea {
 		background: white;
-		height: 50px;
+		height: 3.125em;
 		box-shadow: none;
-		font-size: 1.3em;
+		font-size: 1.5em;
 		line-height: 1.4em;
 		font-family: 'Source Sans Pro', sans-serif;
 		color: #8BA0B3;
@@ -32,7 +32,8 @@
 		border-radius: 0;
 		width: 100%;
 		padding: 1em;
-		margin: .5em 0;
+		margin: 1em 0;
+		@include transition (.4s);
 		&:focus {
 			border: 2px solid #8BA0B3;
 			box-shadow: none;
@@ -43,7 +44,7 @@
 		padding: 1em;
 	}
 	input[type="submit"] {
-		@include button ($portPink, $white, 1em 5em);
+		@include button ($pink, white, 1em 5em);
 		@include border-radius (1px);
 		display: inline-block;
 		text-align: center;
@@ -51,10 +52,10 @@
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 1.3em;
 		text-transform: uppercase;
-		margin-top: 2em;
+		margin-top: .5em;
 		@include transition (.4s);
 		&:hover {
-			background-color: darken($portPink, 5%);
+			background-color: darken($pink, 5%);
 			@include transition (.4s);
 		}
 	}
