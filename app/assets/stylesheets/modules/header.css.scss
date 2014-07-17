@@ -25,4 +25,14 @@
 		position: relative;
 		top: .5em;
 	}
+	/* Who this site is for and why they should care */
+	.header-call {
+		padding-top: 5em;
+		h1 {
+			font-size: 3em;
+			color: $text;
+			font-weight: 400;
+			padding: 1em 0 1.5em;
+		}
+	}
 }

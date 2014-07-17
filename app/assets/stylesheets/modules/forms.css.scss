@@ -1,0 +1,63 @@
+#form {
+	background-color: $portOffWhite;
+	padding: 8em 0;
+	p {
+		color: $portText;
+		font-size: 2em;
+		line-height: 1.6em;
+		padding-bottom: 1.5em;
+	}
+	h2 {
+		color: $portPink;
+		font-family: 'Source Sans Pro', sans-serif;
+		text-align: center;
+		font-size: 2.5em;
+		padding-bottom: 1em;
+	}
+	label {
+		margin-top: 2em;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1.5em;
+		line-height: 1.4em;
+	}
+	input[type="text"], input[type="email"], input[type="password"], textarea {
+		background: white;
+		height: 50px;
+		box-shadow: none;
+		font-size: 1.3em;
+		line-height: 1.4em;
+		font-family: 'Source Sans Pro', sans-serif;
+		color: #8BA0B3;
+		border: none;
+		border-radius: 0;
+		width: 100%;
+		padding: 1em;
+		margin: .5em 0;
+		&:focus {
+			border: 2px solid #8BA0B3;
+			box-shadow: none;
+		}
+	}
+	textarea {
+		height: 12em;
+		padding: 1em;
+	}
+	input[type="submit"] {
+		@include button ($portPink, $white, 1em 5em);
+		@include border-radius (1px);
+		display: inline-block;
+		text-align: center;
+		border: none;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 1.3em;
+		text-transform: uppercase;
+		margin-top: 2em;
+		@include transition (.4s);
+		&:hover {
+			background-color: darken($portPink, 5%);
+			@include transition (.4s);
+		}
+	}
+}
+
+	
