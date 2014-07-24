@@ -6,8 +6,6 @@
 // FOUNDATION SETTINGS
 //
 
-// IMPORT CUSTOM FOUNDATION STYLES
-
 // This is the default html and body font-size for the base rem value.
 // $rem-base: 16px;
 
@@ -1300,3 +1298,20 @@ $topbar-bg-color: rgba(0, 0, 0, 0);
 // $range-slider-handle-cursor: pointer;
 
 @import 'foundation';
+
+// CUSTOM FOUNDATION STYLES
+.big-spacer {
+	padding: 7em 0;
+}
+.small-spacer {
+	padding: 2em 0;
+}
+h1 {
+	color: #585457;
+}
+p {
+	color: #585457;
+	font-size: 1.5em;
+	line-height: 1.8em;
+	text-align: left;
+}
