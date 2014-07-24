@@ -1,5 +1,15 @@
+@import "globals/all";
+
 .what-you-get {
 	background-color: #66a3c6;
 	padding: 3em 2em;
 	margin: 3em 0;
+}
+
+.gray-strip {
+	background-color: #e2e2e2;
+}
+
+a.button-pink {
+	background-color: $pink;
 }
