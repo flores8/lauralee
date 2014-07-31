@@ -1,0 +1,19 @@
+@import "globals/all";
+
+.devise-wrapper {
+	text-align: center;
+	padding: 5em 0 1em;
+}
+.devise-links {
+	padding: .5em 1.5em;
+	display: inline-block;
+	color: $text;
+	font-size: 1.2em;
+	border-right: 1px solid $gray;
+	&:last-of-type {
+		border-right: 0px;
+	}
+	&:hover {
+		color: $pink;
+	}
+}
