@@ -60,12 +60,12 @@ $body-font-family: 'Source Sans Pro', "Helvetica Neue", "Helvetica", Helvetica, 
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
-// $alert-color: #f04124;
-// $success-color: #43AC6A;
-// $warning-color: #f08a24;
-// $info-color: #a0d3e8;
+$primary-color: #66a3c6;
+$secondary-color: #e7e7e7;
+$alert-color: #f37171;
+$success-color: #4fc099;
+$warning-color: #b4c65f;
+$info-color: #a5cde4;
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 3px;
@@ -1303,8 +1303,17 @@ $topbar-bg-color: rgba(0, 0, 0, 0);
 .big-spacer {
 	padding: 7em 0;
 }
+.big-spacer-top {
+	padding-top: 7em;
+}
 .small-spacer {
 	padding: 2em 0;
+}
+.small-spacer-top {
+	padding-top: 2em;
+}
+.medium-spacer-top {
+	padding-top: 4em;
 }
 h1 {
 	color: #585457;
@@ -1313,4 +1322,14 @@ p {
 	color: #585457;
 	font-size: 1.5em;
 	line-height: 1.8em;
+}
+.alert-box {
+	border: none;
+	padding: 1.5em;
+	font-size: 1.5em;
+	margin-bottom: 0;
+	font-weight: 200;
+	a.close {
+		font-size: 1.5em;
+	}
 }

@@ -15,7 +15,6 @@
 		padding-bottom: 1em;
 	}
 	label {
-		margin-top: 2em;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 1.5em;
 		line-height: 1.4em;
@@ -37,6 +36,17 @@
 		&:focus {
 			border: 2px solid #8BA0B3;
 			box-shadow: none;
+		}
+	}
+	input[type="text"].off-white, input[type="email"].off-white, input[type="password"].off-white, textarea.off-white {
+		background: $lightGray;
+	}
+	input[type="text"].border-bottom, input[type="email"].border-bottom, input[type="password"].border-bottom, textarea.border-bottom {
+		border-bottom: 3px solid $gray;
+		&:focus {
+			border: 3px solid darken($blue, 15%);
+			box-shadow: none;
+			background: $offWhite;
 		}
 	}
 	textarea {
@@ -61,5 +71,4 @@
 		}
 	}
 }
-
 	

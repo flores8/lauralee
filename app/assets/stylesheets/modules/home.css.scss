@@ -1,5 +1,13 @@
 @import "globals/all";
-
+.off-white {
+	background-color: $offWhite;
+}
+.gray {
+	background-color: $gray;
+}
+.light-gray {
+	background-color: $lightGray;
+}
 .what-you-get {
 	background-color: #66a3c6;
 	padding: 3em 2em;
@@ -7,7 +15,7 @@
 }
 
 .gray-strip {
-	background-color: #e2e2e2;
+	background-color: $gray;
 	padding: 3em 0 2em;
 }
 
@@ -20,10 +28,6 @@ a.button-pink {
 	&:hover {
 		background-color: darken($pink, 8%);
 	}
-}
-
-.off-white {
-	background-color: #fafafa;
 }
 
 footer {
