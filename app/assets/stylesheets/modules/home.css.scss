@@ -8,8 +8,16 @@
 
 .gray-strip {
 	background-color: #e2e2e2;
+	padding: 3em 0 2em;
 }
 
 a.button-pink {
 	background-color: $pink;
+	font-size: 1.75em;
+	font-weight: 200;
+	padding-top: .8em;
+	padding-bottom: .8em;
+	&:hover {
+		background-color: darken($pink, 8%);
+	}
 }

@@ -44,13 +44,14 @@
 		padding: 1em;
 	}
 	input[type="submit"] {
-		@include button ($pink, white, 1em 5em);
+		@include button ($pink, white, 1em 1em);
 		@include border-radius (1px);
 		display: inline-block;
 		text-align: center;
 		border: none;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 1.3em;
+		font-size: 1.7em;
+		font-weight: 200;
 		text-transform: uppercase;
 		margin-top: .5em;
 		@include transition (.4s);
