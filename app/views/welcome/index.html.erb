@@ -10,7 +10,7 @@
 					<p>That's why you should sign up. <em><strong>Because making an impact online is so much more than creating a website.</strong></em> I will teach you the technology and the psychology behind making amazing websites.</p>
 					<div class="small-spacer row">
 						<div class="small-6 small-centered columns">
-							<%= link_to "Sign Up For Free", new_user_registration_path, class: "button expand button-pink" %>
+							<%= link_to "Sign Up For Free", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
 						</div>
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 	<div class="small-spacer">
 		<div class="row">
 			<div class="small-6 small-centered columns">
-				<%= link_to "Sign up, for free!", new_user_registration_path, class: "button expand button-pink" %>
+				<%= link_to "Sign up, for free!", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
 			</div>
 		</div>
 	</div>
@@ -57,5 +57,23 @@
 			</div>
 		</div>
 	</footer>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="sign-up-modal", class="reveal-modal" data-reveal >
+	<h2 class="text-center">Sign Up For Free</h2>
+  <p>Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of <code>close-reveal-modal</code>. Clicking anywhere outside the modal will also dismiss it.</p>
+  <p>Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.</p>
+  <p><a href="#" data-reveal-id="sign-in-modal" class="secondary button">Second Modal...</a></p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+<!-- Sign In Modal -->
+<div id="sign-in-modal", class="reveal-modal" data-reveal >
+	<h2 class="text-center">Sign In</h2>
+  <p>Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of <code>close-reveal-modal</code>. Clicking anywhere outside the modal will also dismiss it.</p>
+  <p>Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.</p>
+  <p><a href="#" data-reveal-id="sign-up-modal" class="secondary button">Second Modal...</a></p>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
 	
