@@ -1,8 +1,11 @@
-<div class="row">
-	<h1>Edit My Feedback</h1>
+<div id="thoughtful-feedback">
+	<div class="row">
+		<h1 class="text-center">Edit My Feedback</h1>
+	</div>
+
+	<%= render 'form' %>
+
+	<div class="row text-center">
+		<p><%= link_to 'Cancel', @feedback, class: "white" %> </p>
+	</div>
 </div>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @feedback %> |
-<%= link_to 'Back', feedbacks_path %>

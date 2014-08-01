@@ -13,7 +13,10 @@
     <% end %>
 
     <div class="row">
-      <%= f.text_area :most_interested %>
+      <div class="small-12 columns">
+        <%= f.text_area :most_interested %>
+      </div>
+      
 
       <div class="small-12 medium-7 medium-centered columns">
         <%= f.submit "Submit", class: "button expand" %>

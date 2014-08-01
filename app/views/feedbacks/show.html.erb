@@ -1,10 +1,14 @@
-<div id="show-feedback">
+<div id="thoughtful-feedback">
 	<div class="row">
+		<div class="small-12 columns">
+			<h1 class="text-center">Your Feedback</h1>
+		</div>
 		<div class="small-12 medium-8 medium-centered columns">
 			<div class="big-spacer-top">
-				<p><%= @feedback.most_interested %></p>
+				<p><%= simple_format(@feedback.most_interested) %></p>
 			</div>
-			
+		</div>
+		<div class="small-12 medium-6 medium-centered columns">
 			<%= link_to 'Edit', edit_feedback_path(@feedback), class: "button expand" %>
 		</div>
 	</div>

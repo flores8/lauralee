@@ -1,6 +1,17 @@
-#show-feedback {
+@import "globals/all";
+
+#thoughtful-feedback {
 	padding: 7em 0 9em;
 	background-image: image-url('thoughtful.jpg');
 	background-size: cover;
 	background-position: center top;
+}
+
+a.white {
+	color: $text;
+	padding: 2em .5em;
+	@include transition(.4s);
+	&:hover {
+		color: $white;
+	}
 }

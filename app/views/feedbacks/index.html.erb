@@ -1,27 +1,20 @@
-<h1>Listing feedbacks</h1>
+<div class="row">
+  <div class="medium-spacer">
+    <h1 class="text-center">Listing feedbacks</h1>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Most interested</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div class="row">
+  <% @feedbacks.each do |f| %>
+    <div class="panel">
+      <%= simple_format(f.most_interested) %>
+      <%= link_to 'Show', f %> | <%= link_to 'Edit', edit_feedback_path(f) %> | <%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+</div>
 
-  <tbody>
-    <% @feedbacks.each do |feedback| %>
-      <tr>
-        <td><%= feedback.most_interested %></td>
-        <td><%= link_to 'Show', feedback %></td>
-        <td><%= link_to 'Edit', edit_feedback_path(feedback) %></td>
-        <td><%= link_to 'Destroy', feedback, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Feedback', new_feedback_path %>
+<div class="row">
+  <div class="small-12 medium-6 medium-centered columns">
+    <%= link_to 'New Feedback', new_feedback_path, class: "button expand" %>
+  </div>
+</div>
