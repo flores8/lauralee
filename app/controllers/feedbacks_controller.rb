@@ -1,5 +1,6 @@
 class FeedbacksController < ApplicationController
   before_action :set_feedback, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /feedbacks
   # GET /feedbacks.json
@@ -24,7 +25,7 @@ class FeedbacksController < ApplicationController
   # POST /feedbacks
   # POST /feedbacks.json
   def create
-    @feedback = Feedback.new(feedback_params)
+    @feedback = current_user.feedbacks.new(feedback_params)
 
     respond_to do |format|
       if @feedback.save
@@ -69,6 +70,6 @@ class FeedbacksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def feedback_params
-      params.require(:feedback).permit(:most_interested)
+      params.require(:feedback).permit(:most_interested, :user_id)
     end
 end
