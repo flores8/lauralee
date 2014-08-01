@@ -37,3 +37,22 @@
 		@include transition (.4s);
 	}
 }
+
+@mixin font-smoothing ($value: on) {
+  @if $value == on {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+      -webkit-font-smoothing: subpixel-antialiased;
+      -moz-osx-font-smoothing: auto;
+  }
+}
+/* Usage
+	.dark-background-on-light-text {
+    @include font-smoothing(off);
+	}
+
+	.light-on-dark {
+    @include font-smoothing(on);
+	} */
