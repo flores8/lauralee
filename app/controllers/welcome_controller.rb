@@ -5,4 +5,7 @@ class WelcomeController < ApplicationController
 
   def comingsoon
   end
+
+  def freeimages
+  end
 end
