@@ -28,7 +28,7 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       if @feedback.save
-        format.html { redirect_to @feedback, notice: 'Feedback was successfully created.' }
+        format.html { redirect_to @feedback, notice: 'Thank you so much for your input!' }
         format.json { render action: 'show', status: :created, location: @feedback }
       else
         format.html { render action: 'new' }
@@ -42,7 +42,7 @@ class FeedbacksController < ApplicationController
   def update
     respond_to do |format|
       if @feedback.update(feedback_params)
-        format.html { redirect_to @feedback, notice: 'Feedback was successfully updated.' }
+        format.html { redirect_to @feedback, notice: 'Your feedback was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

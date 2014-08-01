@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div id="show-feedback">
+	<div class="row">
+		<div class="small-12 medium-8 medium-centered columns">
+			<div class="big-spacer-top">
+				<p><%= @feedback.most_interested %></p>
+			</div>
+			
+			<%= link_to 'Edit', edit_feedback_path(@feedback), class: "button expand" %>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Most interested:</strong>
-  <%= @feedback.most_interested %>
-</p>
 
-<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
-<%= link_to 'Back', feedbacks_path %>
+

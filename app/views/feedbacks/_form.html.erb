@@ -1,21 +1,26 @@
-<%= form_for(@feedback) do |f| %>
-  <% if @feedback.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</h2>
+<div id="form">
+  <%= form_for(@feedback) do |f| %>
+    <% if @feedback.errors.any? %>
+      <div id="error_explanation">
+        <p class="error"><%= pluralize(@feedback.errors.count, "error") %> prohibited this feedback from being saved:</p>
 
-      <ul>
-      <% @feedback.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @feedback.errors.full_messages.each do |msg| %>
+          <li><p><%= msg %></p></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <%= f.text_area :most_interested %>
+
+      <div class="small-12 medium-7 medium-centered columns">
+        <%= f.submit "Submit", class: "button expand" %>
+      </div>
     </div>
+    
+
   <% end %>
 
-  <div class="field">
-    <%= f.label :most_interested %><br>
-    <%= f.text_area :most_interested %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'foundation-rails'
 gem 'devise'
 gem 'figaro'
+gem 'pry'
 
 group :production do
 	gem 'rails_12factor'

@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
   end
 
   def comingsoon
+  	@feedback = Feedback.new
   end
 
   def freeimages
