@@ -6,3 +6,13 @@ $gray: 				#e2e2e2;
 $darkGray: 		#aeaeae;
 $lightGray: 	#f0f0f0;
 $blue: 				#66a3c6;
+
+
+::-moz-selection { 
+	color: white;  
+	background: $pink !important; 
+}
+::selection { 
+	color: white;  
+	background: $pink !important; 
+}
