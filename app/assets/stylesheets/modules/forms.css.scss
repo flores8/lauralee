@@ -70,6 +70,9 @@
 			@include transition (.4s);
 		}
 	}
+	input[type="submit"].notice {
+		@include button ($blue, white, 1em 1em);
+	}
 }
 	
 p.error {

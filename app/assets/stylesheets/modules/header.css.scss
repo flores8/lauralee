@@ -25,6 +25,13 @@
 		position: relative;
 		top: .5em;
 	}
+	/* Top Bar Button to Log Out */
+	.button-small {
+		@include button ($blue, $white, .5em 1em);
+		font-size: 1.3em;
+		position: relative;
+		top: .5em;
+	}
 	/* Who this site is for and why they should care */
 	.header-call {
 		padding-top: 5em;
