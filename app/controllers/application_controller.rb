@@ -10,7 +10,4 @@ class ApplicationController < ActionController::Base
   	devise_parameter_sanitizer.for(:sign_up) << :name
   end
 
-  def after_inactive_sign_up_path_for(resource)
-    comingsoon_path
-  end
 end

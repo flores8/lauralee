@@ -2,6 +2,7 @@ Lauralee::Application.routes.draw do
   resources :feedbacks
 
   devise_for :users
+  resources :users, only: [:update]
   root to: "welcome#index"
   get "/comingsoon" => 'welcome#comingsoon'
   get "/freeimages" => 'welcome#freeimages'
