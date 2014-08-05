@@ -18,9 +18,11 @@
       <div class="content active" id="personal-information">
         <%= form_for(current_user) do |f| %>
           <div class="small-12 medium-8 medium-centered columns">
-            <%= f.text_field :name, placeholder: "First Name", class: "border-bottom" %>
+            <div class="small-spacer">
+              <%= f.text_field :name, placeholder: "First Name", class: "border-bottom" %>
+            </div>
 
-            <%= f.submit "Update Personal Information", class: "button expand notice" %>
+            <%= f.submit "Update My Personal Information", class: "button expand notice" %>
           </div>
         <% end %>
       </div>
@@ -31,13 +33,15 @@
         <div class="small-12 medium-8 medium-centered columns">
           <%= devise_error_messages! %>
 
-          <%= f.email_field :email, placeholder: "Email", class: "border-bottom" %>
+          <div class="medium-spacer-top small-spacer">
+            <%= f.email_field :email, placeholder: "Email", class: "border-bottom" %>
 
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-          <% end %>
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
 
-            <%= f.password_field :current_password, autocomplete: "off", placeholder: "Password (required to confirm your changes)", class: "border-bottom" %>
+              <%= f.password_field :current_password, autocomplete: "off", placeholder: "Password (required to confirm your changes)", class: "border-bottom" %>
+          </div>
 
           <%= f.submit "Update My Account", class: "button expand notice" %>
         </div>
@@ -47,7 +51,21 @@
 
       <!-- Password Tab Content -->
       <div class="content" id="password">
-        <p>Fourth panel content goes here...</p>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <div class="small-12 medium-8 medium-centered columns">
+          <%= devise_error_messages! %>
+
+          <div class="medium-spacer-top small-spacer">
+            <%= f.password_field :password, placeholder: "Enter your new password", class: "border-bottom" %>
+
+            <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current Password (required to confirm your changes)", class: "border-bottom" %>
+          </div>
+
+          <%= f.submit "Update My Account", class: "button expand notice" %>
+        </div>
+
+        <% end %>
+          
       </div>
 
       <!-- Cancel Account Tab Content -->
