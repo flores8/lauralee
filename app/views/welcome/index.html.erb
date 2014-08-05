@@ -10,7 +10,11 @@
 					<p>That's why you should sign up. <em><strong>Because making an impact online is so much more than creating a website.</strong></em> I will teach you the technology <em><strong>and</strong></em> the psychology behind making amazing websites.</p>
 					<div class="small-spacer row">
 						<div class="small-6 small-centered columns">
-							<%= link_to "Sign Up For Free", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
+							<% if user_signed_in? %>
+								<%= link_to	"What Do You Want To Learn?", new_feedback_path, class: "button expand button-pink" %>
+							<% else %>
+								<%= link_to "Sign Up For Free", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
+							<% end %>
 						</div>
 					</div>
 				</div>
@@ -43,7 +47,11 @@
 	<div class="small-spacer">
 		<div class="row">
 			<div class="small-6 small-centered columns">
-				<%= link_to "Sign up, for free!", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
+				<% if user_signed_in? %>
+					<%= link_to	"Thank You For Signing Up", comingsoon_path, class: "button expand button-pink" %>
+				<% else %>
+					<%= link_to "Sign up, for free!", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
+				<% end %>
 			</div>
 		</div>
 	</div>
@@ -80,6 +88,8 @@
 				<div class="small-12 medium-8 medium-centered columns">
 					<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 						<%= devise_error_messages! %>
+
+						<%= f.text_field :name, autofocus: true, placeholder: "First Name", class: "border-bottom" %>
 
 						<%= f.email_field :email, autofocus: true, placeholder: "Email", class: "border-bottom" %>
 
