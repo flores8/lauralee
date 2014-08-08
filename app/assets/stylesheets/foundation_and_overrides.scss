@@ -1307,17 +1307,26 @@ $topbar-bg-color: rgba(0, 0, 0, 0);
 .big-spacer-top {
 	padding-top: 7em;
 }
-.small-spacer {
-	padding: 2em 0;
-}
-.small-spacer-top {
-	padding-top: 2em;
+.big-spacer-bottom {
+	padding-bottom: 7em;
 }
 .medium-spacer {
 	padding: 4em;
 }
 .medium-spacer-top {
 	padding-top: 4em;
+}
+.medium-spacer-bottom {
+	padding-bottom: 4em;
+}
+.small-spacer {
+	padding: 2em 0;
+}
+.small-spacer-top {
+	padding-top: 2em;
+}
+.small-spacer-bottom {
+	padding-bottom: 2em;
 }
 h1 {
 	color: #585457;

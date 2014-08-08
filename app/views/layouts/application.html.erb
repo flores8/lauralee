@@ -13,10 +13,19 @@
     <%= render partial: 'layouts/flash' %>
     <% if current_page?(root_path) %>
       <%= render partial: 'layouts/header' %>
+      <%= yield %>
     <% else %>
-      <%= render partial: 'layouts/nav' %>
+      <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+          <%= render partial: 'layouts/nav' %>
+          <%= yield %>
+          <!-- close the off-canvas menu -->
+          <%= link_to "", "", class: "exit-off-canvas" %>
+        </div>
+      </div>
+      
     <% end %>
-    <%= yield %>
+    
     <%= render partial: 'layouts/footer' %>
     <%= javascript_include_tag "application" %>
   </body>
