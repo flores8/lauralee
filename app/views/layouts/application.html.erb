@@ -11,6 +11,7 @@
 
   <body>
     <%= render partial: 'layouts/flash' %>
+
     <% if current_page?(root_path) %>
       <%= render partial: 'layouts/header' %>
       <%= yield %>
@@ -23,10 +24,11 @@
           <%= link_to "", "", class: "exit-off-canvas" %>
         </div>
       </div>
-      
+      <%= render partial: 'layouts/footer' %>
     <% end %>
+
     
-    <%= render partial: 'layouts/footer' %>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
