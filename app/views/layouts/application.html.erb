@@ -22,9 +22,10 @@
           <%= yield %>
           <!-- close the off-canvas menu -->
           <%= link_to "", "", class: "exit-off-canvas" %>
+          <%= render partial: 'layouts/footer' %>
         </div>
       </div>
-      <%= render partial: 'layouts/footer' %>
+      
     <% end %>
 
     <%= javascript_include_tag "application" %>
