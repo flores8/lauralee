@@ -15,3 +15,21 @@ a.white {
 		color: $white;
 	}
 }
+
+p.created-by {
+	font-size: 1em;
+	font-style: italic;
+	color: $darkGray;
+}
+
+a.pink-link-center {
+	color: $pink;
+	@include transition(.4s);
+	@include link-center-out($pink);
+}
+
+a.pink-link-left {
+	color: $pink;
+	@include transition(.4s);
+	@include link-left-right($pink);
+}

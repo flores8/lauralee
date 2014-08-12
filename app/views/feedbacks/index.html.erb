@@ -3,15 +3,36 @@
     <h1 class="text-center">Listing Feedback</h1>
   </div>
 </div>
-
-<div class="row">
-  <% @feedbacks.each do |f| %>
-    <div class="panel">
-      <%= simple_format(f.most_interested) %>
-      <%= link_to 'Show', f %> | <%= link_to 'Edit', edit_feedback_path(f) %> | <%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </div>
-  <% end %>
-</div>
+<%= current_user.email %> has given <%= current_user.feedbacks.count %> feedback.
+<% if current_user.email == "lauralee@majorfinder.com" %>
+  <div class="row">
+    <h2>Hey Commander!</h2>
+    <% @feedbacks.each do |f| %>
+      <!-- View all feedback - only for me -->
+        
+        <div class="panel">
+          <%= simple_format(f.most_interested) %>
+          <p class="created-by">Submitted <%= time_ago_in_words(f.created_at) %> ago by <%= f.user.email %>.</p>
+          <%= link_to 'View', f %> | <%= link_to 'Edit', edit_feedback_path(f) %> | <%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure? You will remove this feedback from the database and can\'t get it back.' } %>
+        </div>
+    <% end %>
+  </div>
+<% else %>
+  <div class="row">
+    <% if current_user.feedbacks.count > 0 %>
+      <h3>You have given feedback <%= current_user.feedbacks.count %></h3>
+      <% current_user.feedbacks.each do |f| %>
+        <div class="panel">
+          <%= simple_format(f.most_interested) %>
+          <p class="created-by">Submitted <%= time_ago_in_words(f.created_at) %> ago by <%= f.user.email %>.</p>
+          <%= link_to 'Edit My Feedback', edit_feedback_path(f), class: "pink-link-left" %> | <%= link_to 'View My Feedback', feedback_path(f), class: "pink-link-left" %>
+        </div>
+      <% end %>
+    <% else %>
+      <p>You don't have any feedback.  I would sincerely love to hear your input and suggestions.</p>
+    <% end %>
+  </div>
+<% end %>
 
 <div class="row">
   <div class="small-12 medium-6 medium-centered columns">
