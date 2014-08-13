@@ -1,12 +1,23 @@
-<%= link_to image_tag("nav-blue.png"), "#", class: "left-off-canvas-toggle", id: "top-nav" %>
+<div id="nav">
+	<div class="fixed">
+		<div class="contain-to-grid">
+			<nav class="top-bar" data-topbar>
+				<ul class="title-area">
+					<li class="name">
+						<h1><%= link_to "Lauralee Flores", root_path %></h1>
+					</li>
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
 
-<!-- Off Canvas Menu -->
-<aside class="left-off-canvas-menu">
-  <!-- Off Canvas Nav Elements -->
-  <ul class="off-canvas-list">
-  	<li><label>Test Label</label></li>
-  	<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
-    <li class="<%= 'active' if controller.controller_name == "feedbacks" %>"><%= link_to "Feedback", feedbacks_path %></li>
-    <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Edit My Account", edit_user_registration_path %></li>
-  </ul>
-</aside>
+				<section class="top-bar-section">
+					<!-- Right Nav Section -->
+					<ul class="right">
+						<li class="<%= 'active' if controller.controller_name == 'feedbacks' %>"><%= link_to "Feedback", new_feedback_path %></li>
+						<li class="<%= 'active' if current_page?(comingsoon_path) %>"><%= link_to "Training", comingsoon_path %></li>
+						<li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "My Account", edit_user_registration_path %></li>
+					</ul>
+				</section>
+			</nav>
+		</div>
+	</div>
+</div>

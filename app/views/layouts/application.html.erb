@@ -16,17 +16,14 @@
       <%= render partial: 'layouts/header' %>
       <%= yield %>
     <% else %>
-      <div class="off-canvas-wrap" data-offcanvas>
-        <div class="inner-wrap">
-          <%= render partial: 'layouts/nav' %>
-          <%= yield %>
-          <!-- close the off-canvas menu -->
-          <%= link_to "", "", class: "exit-off-canvas" %>
-          <%= render partial: 'layouts/footer' %>
-        </div>
+      <%= render partial: 'layouts/nav' %>
+      <div class="nav-padding">
+        <%= yield %>
       </div>
-      
     <% end %>
+
+    
+    <%= render partial: 'layouts/footer' %>
 
     <%= javascript_include_tag "application" %>
   </body>
