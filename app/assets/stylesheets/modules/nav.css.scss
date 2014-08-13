@@ -1,6 +1,17 @@
+@import "globals/all";
+
 #top-nav {
 	position: absolute;
 	position: fixed;
 	top: 2%;
 	left: 2%;
+}
+
+aside.left-off-canvas-menu ul {
+	li.active {
+		background-color: $blue;
+		a {
+			color: $white;
+		}
+	}
 }

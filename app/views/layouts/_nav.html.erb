@@ -5,8 +5,8 @@
   <!-- Off Canvas Nav Elements -->
   <ul class="off-canvas-list">
   	<li><label>Test Label</label></li>
-  	<li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Feedback", feedbacks_path %></li>
-    <li><%= link_to "Edit My Account", edit_user_registration_path %></li>
+  	<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to "Home", root_path %></li>
+    <li class="<%= 'active' if controller.controller_name == "feedbacks" %>"><%= link_to "Feedback", feedbacks_path %></li>
+    <li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "Edit My Account", edit_user_registration_path %></li>
   </ul>
 </aside>
