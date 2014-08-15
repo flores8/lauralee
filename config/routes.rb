@@ -1,4 +1,5 @@
 Lauralee::Application.routes.draw do
+  resources :posts
   resources :feedbacks
 
   devise_for :users
