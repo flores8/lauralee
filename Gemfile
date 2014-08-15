@@ -9,6 +9,7 @@ gem 'devise'
 gem 'figaro'
 gem 'pry'
 gem 'jquery-turbolinks'
+gem 'faker'
 
 group :production do
 	gem 'rails_12factor'
