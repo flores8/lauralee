@@ -1,12 +1,12 @@
 <div class="row">
-	<div class="medium-spacer-top">
-		<h2>Here are your free images!</h2>
+	<div class="big-spacer-top">
+		<h2>Free to Use - No Attribution Required - Images</h2>
 	</div>
 </div>
 
 <div class="row">
-	<div class="small-spacer">
-		<h3>Free to Use - No Attribution Necessary - Images</h3>
+	<div class="small-spacer-top text-center">
+		<p>Every web project needs high-quality images.  In fact, the images you use can make a difference between an average design and a beautiful design. Here are some incredible resources for any web project.</p>
 	</div>
 </div>
 
@@ -79,5 +79,41 @@
 		<h3>Public Domain Pictures</h3>
 		<p>Free public domain pictures</p>
 		<%= link_to "View Public Domain Pictures", "http://www.publicdomainpictures.net/", class: "button expand" %>
+	</div>
+</div>
+
+<div class="row small-spacer">
+	<div class="small-6 columns">
+		<%= link_to image_tag("flickrcommons.jpg"), "https://www.flickr.com/commons/" %>
+		<h3>The Commons on Flickr</h3>
+		<p>The key goal of The Commons is to share hidden treasure from the world's public photography archives.</p>
+		<%= link_to "View Commons Photos on Flickr", "https://www.flickr.com/commons/", class: "button expand" %>
+	</div>
+	<div class="small-6 columns">
+		<%= link_to image_tag("deathtostock.jpg"), "http://deathtothestockphoto.com/" %>
+		<h3>Death to Stock</h3>
+		<p>Free photos sent to you by email every month. For commercial use, your blog posts, social accounts, and mockups.</p>
+		<%= link_to "Sign Up for Death to Stock Photos", "http://deathtothestockphoto.com/", class: "button expand" %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="big-spacer-top">
+		<h2>Free to Use - Attribution Required - Images</h2>
+	</div>
+</div>
+
+<div class="row small-spacer">
+	<div class="small-6 columns">
+		<%= link_to image_tag('markusspikes.jpg'), "#" %>
+		<h3>Markus Spiske</h3>
+		<p>Beautiful high-quality free images to use with the requirement that you attribute the image to Markus like this: Photo: Markus Spiske / <%= link_to "www.temporausch.com", "http://www.temporausch.com/", class: "pink-link-center" %></p>
+		<%= link_to "View Markus Spiske's Photos", "http://www.temporausch.com/", class: 'button expand' %>
+	</div>
+	<div class="small-6 columns">
+		<%= link_to image_tag("flickrcreativecommons.jpg"), "https://www.flickr.com/search?sort=relevance&license=1%2C2%2C3%2C4%2C5%2C6&text=work" %>
+		<h3>Flickr - Creative Commons Photos</h3>
+		<p>Some incredible photos with varying restrictions - some are completely free and others have attribution requirements or other restrictions.</p>
+		<%= link_to "View Flickr Pictures", "https://www.flickr.com/search?sort=relevance&license=1%2C2%2C3%2C4%2C5%2C6&text=work", class: "button expand" %>
 	</div>
 </div>
