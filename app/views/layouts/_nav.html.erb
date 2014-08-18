@@ -14,7 +14,14 @@
 					<ul class="right">
 						<li class="<%= 'active' if controller.controller_name == 'feedbacks' %>"><%= link_to "Feedback", new_feedback_path %></li>
 						<li class="<%= 'active' if current_page?(comingsoon_path) %>"><%= link_to "Training", comingsoon_path %></li>
-						<li class="<%= 'active' if current_page?(edit_user_registration_path) %>"><%= link_to "My Account", edit_user_registration_path %></li>
+						<li class="has-dropdown <%= 'active' if current_page?(edit_user_registration_path) %>">
+							<%= link_to "#{ current_user.name.present? ? current_user.name : current_user.email}", "#" %>
+							<ul class="dropdown">
+								<li><%= link_to "My Account", edit_user_registration_path %></li>
+								<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+							</ul>
+						</li>
+							
 					</ul>
 				</section>
 			</nav>
