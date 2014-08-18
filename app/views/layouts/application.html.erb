@@ -11,20 +11,10 @@
 
   <body>
     <%= render partial: 'layouts/flash' %>
-
     <% if current_page?(root_path) %>
       <%= render partial: 'layouts/header' %>
-      <%= yield %>
-    <% else %>
-      <%= render partial: 'layouts/nav' %>
-      <div class="nav-padding">
-        <%= yield %>
-      </div>
     <% end %>
-
-    
-    <%= render partial: 'layouts/footer' %>
-
+    <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
