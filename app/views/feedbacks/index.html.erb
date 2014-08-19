@@ -1,41 +1,51 @@
-<div class="row">
-  <div class="medium-spacer">
-    <h1 class="text-center">Listing Feedback</h1>
-  </div>
-</div>
-<%= current_user.email %> has given <%= current_user.feedbacks.count %> feedback.
-<% if current_user.email == "lauralee@majorfinder.com" %>
+<% if current_user.feedbacks.count > 0 %>
   <div class="row">
-    <h2>Hey Commander!</h2>
-    <% @feedbacks.each do |f| %>
-      <!-- View all feedback - only for me -->
-        
-        <div class="panel">
-          <%= simple_format(f.most_interested) %>
-          <p class="created-by">Submitted <%= time_ago_in_words(f.created_at) %> ago by <%= f.user.email %>.</p>
-          <%= link_to 'View', f %> | <%= link_to 'Edit', edit_feedback_path(f) %> | <%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure? You will remove this feedback from the database and can\'t get it back.' } %>
-        </div>
-    <% end %>
+    <div class="big-spacer-top small-spacer-bottom">
+      <h1 class="text-center">Thank you for your feedback!</h1>
+    </div>
   </div>
-<% else %>
-  <div class="row">
-    <% if current_user.feedbacks.count > 0 %>
-      <h3>You have given feedback <%= current_user.feedbacks.count %></h3>
+  <% if current_user.email == "lauralee@majorfinder.com" %>
+    <div class="row">
+      <h2>Hey Commander!</h2>
+      <% @feedbacks.each do |f| %>
+        <!-- View all feedback - only for me -->
+          <div class="panel">
+            <%= simple_format(f.most_interested) %>
+            <p class="created-by">Submitted <%= time_ago_in_words(f.created_at) %> ago by <%= f.user.email %>.</p>
+            <%= link_to 'View', f %> | <%= link_to 'Edit', edit_feedback_path(f) %> | <%= link_to 'Destroy', f, method: :delete, data: { confirm: 'Are you sure? You will remove this feedback from the database and can\'t get it back.' } %>
+          </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="row">
       <% current_user.feedbacks.each do |f| %>
-        <div class="panel">
-          <%= simple_format(f.most_interested) %>
-          <p class="created-by">Submitted <%= time_ago_in_words(f.created_at) %> ago by <%= f.user.email %>.</p>
-          <%= link_to 'Edit My Feedback', edit_feedback_path(f), class: "pink-link-left" %> | <%= link_to 'View My Feedback', feedback_path(f), class: "pink-link-left" %>
+        <div class="small-spacer">
+          <div class="panel">
+            <%= simple_format(f.most_interested) %>
+            <p class="created-by">Submitted <%= time_ago_in_words(f.created_at) %> ago by <%= f.user.email %>.</p>
+            <%= link_to 'Edit Feedback', edit_feedback_path(f), class: "pink-link-left space-right" %> | <%= link_to 'View Feedback', feedback_path(f), class: "pink-link-left space-left" %>
+          </div>
         </div>
       <% end %>
-    <% else %>
-      <p>You don't have any feedback.  I would sincerely love to hear your input and suggestions.</p>
-    <% end %>
+    </div>
+  <% end %>
+<% else %>
+  <div class="row medium-spacer-top">
+    <h2>You Don't Have Any Feedback</h2>
+    <p class="text-center">I would sincerely love to hear your input and suggestions. Sincerely.</p>
   </div>
 <% end %>
 
-<div class="row">
-  <div class="small-12 medium-6 medium-centered columns">
-    <%= link_to 'New Feedback', new_feedback_path, class: "button expand" %>
+<div class="small-spacer-bottom">
+  <div class="row">
+    <div class="small-12 medium-6 medium-centered columns">
+      <% if current_user.feedbacks.count > 0 %>
+        <%= link_to 'Share Another Idea', new_feedback_path, class: "button expand" %>
+      <% else %>
+        <div class="small-spacer">
+          <%= link_to "Share An Idea", new_feedback_path, class: "button expand" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

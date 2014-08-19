@@ -7,6 +7,8 @@
 	background-position: center top;
 }
 
+/* Feedback Link Styling */
+
 a.white {
 	color: $text;
 	padding: 2em .5em;
@@ -14,12 +16,6 @@ a.white {
 	&:hover {
 		color: $white;
 	}
-}
-
-p.created-by {
-	font-size: 1em;
-	font-style: italic;
-	color: $darkGray;
 }
 
 a.pink-link-center {
@@ -32,4 +28,23 @@ a.pink-link-left {
 	color: $pink;
 	@include transition(.4s);
 	@include link-left-right($pink);
+}
+
+a.space-right {
+	margin-right: .75em;
+}
+
+a.space-left {
+	margin-left: .75em;
+}
+
+/* Feedback fonts */
+.panel p {
+	color: #585457;
+}
+
+p.created-by {
+	font-size: 1em;
+	font-style: italic;
+	color: $darkGray;
 }
