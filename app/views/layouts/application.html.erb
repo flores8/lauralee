@@ -13,14 +13,17 @@
     <% if current_page?(root_path) %>
       <%= render partial: 'layouts/flash' %>
       <%= render partial: 'layouts/header' %>
+      <%= yield %>
     <% else %>
       <%= render partial: 'layouts/nav' %>
       <div class="nav-notification">
         <%= render partial: 'layouts/flash' %>
       </div>
+      <%= yield %>
+      <%= render partial: 'layouts/footer' %>
     <% end %>
 
-    <%= yield %>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
