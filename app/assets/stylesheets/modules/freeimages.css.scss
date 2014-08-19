@@ -1,0 +1,19 @@
+@import "globals/all";
+
+.freeimage-wrapper {
+	img {
+		border: 10px solid $white;
+		@include transition(.4s);
+		margin-bottom: 1em;
+		&:hover {
+			border: 10px solid $pink;
+		}
+	}
+	h3 a {
+		color: $text;
+		@include transition(.4s);
+		&:hover {
+			color: $pink;
+		}
+	}
+}
