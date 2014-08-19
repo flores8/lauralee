@@ -5,7 +5,7 @@
 			<div class="medium-spacer-top medium-spacer-bottom">
 				<div class="row">
 					<div class="small-12 medium-6 columns">
-						<%= image_tag 'code.jpg' %>
+						<%= image_tag 'code.jpg', class: "border" %>
 					</div>
 					<div class="small-12 medium-6 columns">
 						<h4>Bring your ideas to life. Learn to program.</h4>
@@ -16,19 +16,19 @@
 			<div class="big-spacer-top small-spacer-bottom">
 				<div class="row">
 					<div class="small-12 medium-6 medium-push-6 columns">
-						<%= image_tag 'code.jpg' %>
+						<%= image_tag 'psychology.png' %>
 					</div>
 					<div class="small-12 medium-6 medium-pull-6 columns">
 						<h4>Make Website People Love to Use</h4>
 						<p>Once you've learned to program <em><strong>you realize instantly how important the interface is</strong></em>. How to make an interface that the user loves.  One that is beautiful, minimal, easy to use, and speaks to the user.</p>
 						<p><em><strong>Making an impact online is so much more than creating a website.</strong></em></p>
-						<p><%= link_to "Sign up to now", "#", "data-reveal-id" => "sign-up-modal", class: "pink-link-center" %> and learn the technology and the psychology behind making amazing websites.</p>
+						<p><%= link_to "Sign up to now", "#", "data-reveal-id" => "sign-up-modal", class: "pink-link-center" %> and learn the technology <strong><em>and</em></strong> the psychology behind making amazing websites.</p>
 					</div>
 				</div>
 			</div>
 					
 					<div class="small-spacer row">
-						<div class="small-6 small-centered columns">
+						<div class="small-12 medium-6 medium-centered columns">
 							<% if user_signed_in? %>
 								<%= link_to	"What Do You Want To Learn?", new_feedback_path, class: "button expand button-pink" %>
 							<% else %>
@@ -65,7 +65,7 @@
 <div class="gray-strip">
 	<div class="small-spacer">
 		<div class="row">
-			<div class="small-6 small-centered columns">
+			<div class="small-12 medium-6 medium-centered columns">
 				<% if user_signed_in? %>
 					<%= link_to	"Thank You For Signing Up", comingsoon_path, class: "button expand button-pink" %>
 				<% else %>
@@ -121,7 +121,7 @@
 		<!-- Link to Sign Up Modal -->
 	  <div class="medium-spacer-top">
 	  	<div class="row">
-	  		<div class="small-3 small-centered columns">
+	  		<div class="small-10 medium-4 small-centered medium-centered columns">
 	  			<p><a href="#" data-reveal-id="sign-in-modal" class="secondary button expand">Sign In</a></p>
 	  		</div>
 	  	</div>
@@ -150,7 +150,7 @@
 	  	<div id="form">
 	  		<!-- Sign In Form -->
 	  		<div class="row">
-		  		<div class="small-7 small-centered columns">
+		  		<div class="small-12 medium-8 medium-centered columns">
 		  			<!-- Email -->
 					  <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "border-bottom" %>
 
@@ -170,7 +170,7 @@
 		  	<!-- Link to Sign Up Modal -->
 			  <div class="medium-spacer-top">
 			  	<div class="row">
-			  		<div class="small-3 small-centered columns">
+			  		<div class="small-10 medium-4 small-centered medium-centered columns">
 			  			<p><a href="#" data-reveal-id="sign-up-modal" class="secondary button expand">Sign Up</a></p>
 			  		</div>
 			  	</div>
