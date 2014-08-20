@@ -9,6 +9,23 @@
 	  background-position: center;
 	  padding: 15em 0;
 	}
+	.world {
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		h1 {
+			color: $text;
+			font-size: 3em;
+		}
+		h2 {
+			color: $text;
+			font-size: 2em;
+		}
+		h3 {
+			color: $pink;
+			font-size: 2.5em;
+		}
+	}
 	h4 {
 		color: $text;
 		font-size: 2em;
@@ -51,17 +68,3 @@ div.world {
 	height: 480px;
 }
 
-h1.world {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: $text;
-	font-size: 3em;
-}
-
-h2.world {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	color: $text;
-	font-size: 2em;
-	text-align: center;
-}

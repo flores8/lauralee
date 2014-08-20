@@ -18,26 +18,6 @@ a.white {
 	}
 }
 
-a.pink-link-center {
-	color: $pink;
-	@include transition(.4s);
-	@include link-center-out($pink);
-}
-
-a.pink-link-left {
-	color: $pink;
-	@include transition(.4s);
-	@include link-left-right($pink);
-}
-
-a.space-right {
-	margin-right: .75em;
-}
-
-a.space-left {
-	margin-left: .75em;
-}
-
 /* Feedback fonts */
 .panel p {
 	color: #585457;

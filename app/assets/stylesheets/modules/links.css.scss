@@ -1,0 +1,26 @@
+@import "globals/all";
+
+.button {
+	font-size: 1.5em;
+	padding: 1em;
+}
+
+a.pink-link-center {
+	color: $pink;
+	@include transition(.4s);
+	@include link-center-out($pink);
+}
+
+a.pink-link-left {
+	color: $pink;
+	@include transition(.4s);
+	@include link-left-right($pink);
+}
+
+a.space-right {
+	margin-right: .75em;
+}
+
+a.space-left {
+	margin-left: .75em;
+}
