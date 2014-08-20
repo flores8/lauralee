@@ -23,8 +23,6 @@
 	a.ghost-button {
 		@include ghost-button($pink, .5em 1.5em, 1.75em);
 		font-weight: 400;
-		position: relative;
-		top: .5em;
 	}
 	/* Top Bar Button to Log Out */
 	.button-small {

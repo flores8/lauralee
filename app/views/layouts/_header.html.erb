@@ -4,11 +4,13 @@
 			<%= link_to "Lauralee Flores", root_path, class: "logo" %>
 		</div>
 		<div class="show-for-medium-up medium-6 columns text-right">
-			<% if user_signed_in? %>
-				<%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button-small" %>
-			<% else %>
-				<%= link_to "Sign In", "#", "data-reveal-id" => "sign-in-modal", class: "ghost-button" %>
-			<% end %>
+			<div class="mini-spacer-top">
+				<% if user_signed_in? %>
+					<%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "button-small" %>
+				<% else %>
+					<%= link_to "Sign In", "#", "data-reveal-id" => "sign-in-modal", class: "ghost-button" %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 
