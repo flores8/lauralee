@@ -10,4 +10,7 @@ class WelcomeController < ApplicationController
 
   def freeimages
   end
+
+  def about
+  end
 end

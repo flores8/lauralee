@@ -1,0 +1,63 @@
+@import "globals/all";
+
+/* About Page
+================================================== */
+#about {
+	.about-header {
+		background-image: image-url("my-family-sm.jpg");
+		background-size: cover;
+	  background-position: center;
+	  padding: 15em 0;
+	}
+}
+
+#introduction {
+	@include font-smoothing(on);
+	h1 {
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  	font-size: 3.25em;
+  	color: $pink;
+  	padding-bottom: .25em;
+  }
+  h2 {
+  	letter-spacing: 1px;
+  	font-size: 2em;
+  	font-weight: 600;
+  	color: $text;
+  	padding-bottom: 1em;
+  }
+  p {
+  	font-size: 1.7em;
+  	line-height: 1.6em;
+  	padding-bottom: 1.7em;
+  }
+}
+
+/* Map and Intro div */
+div.contact-header {
+	background-color: #d0d0d0;
+
+}
+
+div.world {
+	background-image: image-url('world-contact.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	height: 480px;
+}
+
+h1.world {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: $text;
+	font-size: 3em;
+}
+
+h2.world {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: $text;
+	font-size: 2em;
+	text-align: center;
+}
