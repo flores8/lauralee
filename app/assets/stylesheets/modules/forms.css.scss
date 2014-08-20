@@ -73,6 +73,9 @@
 	input[type="submit"].notice {
 		@include button ($blue, white, 1em 1em);
 	}
+	.button {
+		font-size: .55em;
+	}
 }
 	
 p.error {
