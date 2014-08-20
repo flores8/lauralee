@@ -57,7 +57,7 @@
     @include font-smoothing(on);
 	} */
 
-@mixin link-center-out($color) {
+@mixin link-center-out($color, $hovercolor) {
 	position: relative;
 	color: $color;
 	text-decoration: none;
@@ -70,7 +70,8 @@
 		bottom: 0;
 		left: 0;
 		top: 1.4em;
-		background-color: $color;
+		color: $hovercolor;
+		background-color: $hovercolor;
 		visibility: hidden;
 		-webkit-transform: scaleX(0);
 		-moz-transform: scaleX(0);

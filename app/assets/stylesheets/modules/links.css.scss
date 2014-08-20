@@ -8,7 +8,7 @@
 a.pink-link-center {
 	color: $pink;
 	@include transition(.4s);
-	@include link-center-out($pink);
+	@include link-center-out($pink, $pink);
 }
 
 a.pink-link-left {
