@@ -30,10 +30,17 @@ posts = Post.all
 		)
 end
 
-User.first.update_attributes!(
+User.last.update_attributes!(
 	email: 'lauralee@majorfinder.com',
 	password: 'helloworld'
 )
+admin = User.new(
+	name: 'Admin User', 
+	email: 'admin@lauraleeflores.com',
+	password: 'helloworld')
+admin.skip_confirmation!
+admin.save
+admin.update_attribute(:role, 'admin')
 
 puts "Seed finished"
 puts "#{User.count} users created"

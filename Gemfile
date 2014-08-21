@@ -12,6 +12,7 @@ gem 'figaro'
 gem 'pry'
 gem 'jquery-turbolinks'
 gem 'faker'
+gem 'pundit'
 
 group :production do
 	gem 'rails_12factor'
