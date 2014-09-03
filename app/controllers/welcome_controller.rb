@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-	before_action :authenticate_user!, :only => [:comingsoon]
+	# before_action :authenticate_user!, :only => [:comingsoon]
 	
   def index
   end

@@ -7,10 +7,10 @@ Lauralee::Application.routes.draw do
   root to: "welcome#index"
   scope '/training' do
     get '/freeimages' => 'welcome#freeimages'
+    get "/a-little-about-me" => 'welcome#a-little-about-me'
   end
   get "/training" => 'welcome#comingsoon'
-  # get "/freeimages" => 'welcome#freeimages'
-  # get "training/a-little-about-me"
+  
   get "/about" => 'welcome#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
