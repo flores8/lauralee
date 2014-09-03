@@ -13,7 +13,7 @@
 					<!-- Right Nav Section -->
 					<ul class="right">
 						<li class="<%= 'active' if controller.controller_name == 'feedbacks' %>"><%= link_to "Feedback", new_feedback_path %></li>
-						<li class="<%= 'active' if current_page?(comingsoon_path) %><%= 'active' if current_page?(freeimages_path) %>"><%= link_to "Training", comingsoon_path %></li>
+						<li class="<%= 'active' if current_page?(training_path) %><%= 'active' if current_page?(freeimages_path) %>"><%= link_to "Training", training_path %></li>
 						<li class="has-dropdown <%= 'active' if current_page?(edit_user_registration_path) %>">
 							<% if current_user %>
 								<%= link_to "#{ current_user.name.present? ? current_user.name : current_user.email}", "#" %>

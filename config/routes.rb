@@ -5,8 +5,12 @@ Lauralee::Application.routes.draw do
   devise_for :users
   resources :users, only: [:update]
   root to: "welcome#index"
-  get "/comingsoon" => 'welcome#comingsoon'
-  get "/freeimages" => 'welcome#freeimages'
+  scope '/training' do
+    get '/freeimages' => 'welcome#freeimages'
+  end
+  get "/training" => 'welcome#comingsoon'
+  # get "/freeimages" => 'welcome#freeimages'
+  # get "training/a-little-about-me"
   get "/about" => 'welcome#about'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
