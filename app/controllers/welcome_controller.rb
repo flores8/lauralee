@@ -11,6 +11,9 @@ class WelcomeController < ApplicationController
   def freeimages
   end
 
+  def about_me
+  end
+
   def about
   end
 end

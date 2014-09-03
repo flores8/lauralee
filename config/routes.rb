@@ -7,7 +7,7 @@ Lauralee::Application.routes.draw do
   root to: "welcome#index"
   scope '/training' do
     get '/freeimages' => 'welcome#freeimages'
-    get "/a-little-about-me" => 'welcome#a-little-about-me'
+    get "/about_me" => 'welcome#about_me', path: "a-little-about-me"
   end
   get "/training" => 'welcome#comingsoon'
   

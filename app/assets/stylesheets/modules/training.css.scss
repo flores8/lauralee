@@ -55,3 +55,12 @@ h3 {
 		color: $blue;
 	}
 }
+
+p {
+	em {
+		color: darken($text, 25%);
+	}
+	strong {
+		color: darken($blue, 10%);
+	}
+}
