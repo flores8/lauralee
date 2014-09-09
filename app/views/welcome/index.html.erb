@@ -10,68 +10,60 @@
 </div>
 
 <div class="off-white" id="home-why-sign-up">
-	<div class="big-spacer">
+	<div class="big-spacer-top">
 		<div class="row">
-			<h1 class="text-center">Why Sign Up</h1>
-			<div class="medium-spacer-top medium-spacer-bottom">
-				<div class="row">
-					<div class="small-12 medium-6 columns">
-						<%= image_tag 'code.jpg', class: "border" %>
-					</div>
-					<div class="small-12 medium-6 columns">
-						<h4>Bring your ideas to life. Learn to program.</h4>
-						<p>You have a great idea. Do you know how to <strong>create that idea</strong> online? If not, I'll teach you how.</p>
-						<p><%= link_to "Sign Up Now", "#", "data-reveal-id" => "sign-up-modal", class: "pink-link-center" %></p>
+			<h1 class="text-center">Some of My Work</h1>
+			<div class="medium-spacer">
+				<div class="small-12 medium-6 columns">
+					<%= image_tag 'code.jpg', class: "border" %>
+					<h3>Major Finder</h3>
+					<p>A fun and easy way to find the perfect major and career.</p>
+					<%= link_to "Check Out This Project", "#", class: "button expand" %>
 				</div>
-			</div>
-			<div class="big-spacer-top small-spacer-bottom">
-				<div class="row">
-					<div class="small-12 medium-6 medium-push-6 columns">
-						<%= image_tag 'psychology.png' %>
-					</div>
-					<div class="small-12 medium-6 medium-pull-6 columns">
-						<h4>Make Website People Love to Use</h4>
-						<p>Once you've learned to program <em><strong>you realize instantly how important the interface is</strong></em>. How to make an interface that the user loves.  One that is beautiful, minimal, easy to use, and speaks to the user.</p>
-						<p><em><strong>Making an impact online is so much more than creating a website.</strong></em></p>
-						<p><%= link_to "Sign up to now", "#", "data-reveal-id" => "sign-up-modal", class: "pink-link-center" %> and learn the technology <strong><em>and</em></strong> the psychology behind making amazing websites.</p>
-					</div>
-				</div>
-			</div>
-					
-					<div class="small-spacer row">
-						<div class="small-12 medium-6 medium-centered columns">
-							<% if user_signed_in? %>
-								<%= link_to	"What Do You Want To Learn?", new_feedback_path, class: "button expand button-pink" %>
-							<% else %>
-								<%= link_to "Sign Up For Free", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
-							<% end %>
-						</div>
-					</div>
+				<div class="small-12 medium-6 columns">
+					<%= image_tag 'code.jpg', class: "border" %>
+					<h3>Discovery</h3>
+					<p>A fun and easy way to find the perfect major and career.</p>
+					<%= link_to "Check Out This Project", "#", class: "button expand" %>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-
-<div class="big-spacer">
-	<div class="row text-center">
-		<h1>What You Get By Signing Up</h1>
-		<div class="small-spacer">
+	<div class="row">
+		<div class="medium-spacer">
 			<div class="small-12 medium-6 columns">
-				<div class="what-you-get">
-					<%= image_tag("free-resources.png") %>
-				</div>
-				<p>Every web project will need access to certain resources, such as high-quality images, usability test templates, excellent designs, and so on.</p>
+				<%= image_tag 'code.jpg', class: "border" %>
+				<h3>Epitome</h3>
+				<p>One-on-one coaching to discovering your ideal self and ideal career.</p>
+				<%= link_to "Check Out This Project", "#", class: "button expand" %>
 			</div>
-			<div class="small-12 medium-6 offset-1 columns">
-				<div class="what-you-get">
-					<%= image_tag("step-by-step.png") %>
-				</div>
-				<p>Learn, through guided step-by-step training, how to create beautiful and persuasive web apps in ruby on rails, even if you're not a designer or developer.</p>
+			<div class="small-12 medium-6 columns">
+				<%= image_tag 'code.jpg', class: "border" %>
+				<h3>Blocipedia</h3>
+				<p>A fun and easy way to find the perfect major and career.</p>
+				<%= link_to "Check Out This Project", "#", class: "button expand" %>
 			</div>
 		</div>
 	</div>
+
+	<div class="row">
+		<div class="medium-spacer">
+			<div class="small-12 medium-6 columns">
+				<%= image_tag 'code.jpg', class: "border" %>
+				<h3>Bloccit</h3>
+				<p>A fun and easy way to find the perfect major and career.</p>
+				<%= link_to "Check Out This Project", "#", class: "button expand" %>
+			</div>
+			<div class="small-12 medium-6 columns">
+				<%= image_tag 'code.jpg', class: "border" %>
+				<h3>Web Analytics API</h3>
+				<p>A fun and easy way to find the perfect major and career.</p>
+				<%= link_to "Check Out This Project", "#", class: "button expand" %>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 
