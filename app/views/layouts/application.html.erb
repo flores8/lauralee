@@ -17,6 +17,10 @@
     <%= yield %>
     <%= render partial: 'layouts/footer' %>
 
+    <!-- Modals for signing up or signing in -->
+    <%= render partial: 'welcome/sign_up' %>
+    <%= render partial: 'welcome/sign_in' %>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
