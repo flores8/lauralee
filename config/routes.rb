@@ -1,17 +1,32 @@
 Lauralee::Application.routes.draw do
-  resources :posts
+  # Home Page
+  root to: "welcome#index"
+
+  # Main Nav / Works
+  get 'work/majorfinder' => 'work#majorfinder'
+  get 'work/discovery' => 'work#discovery'
+
+  # Main Nav / About
+  get "/about" => 'welcome#about'
+
+  # Main Nav / Feedback
   resources :feedbacks
 
+  # Blog
+  resources :posts
+
+  # Devise
   devise_for :users
   resources :users, only: [:update]
-  root to: "welcome#index"
+  
+  # Training -> remove soon
   scope '/training' do
     get '/freeimages' => 'welcome#freeimages'
     get "/about_me" => 'welcome#about_me', path: "a-little-about-me"
   end
   get "/training" => 'welcome#comingsoon'
   
-  get "/about" => 'welcome#about'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
