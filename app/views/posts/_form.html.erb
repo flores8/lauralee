@@ -2,10 +2,10 @@
 	<%= form_for @post do |f| %>
 		<div class="row">
 			<div class="small-12 columns">
-				<%= f.text_field :title, placeholder: "Post Title", class: "border-bottom" %>
+				<%= f.text_field :title, placeholder: "Post Title", class: "border background" %>
 			</div>
 			<div class="small-12 columns">
-				<%= f.text_area :body, placeholder: "Post Body", class: "border-bottom" %>
+				<%= f.text_area :body, placeholder: "Post Body", class: "border background" %>
 			</div>
 			<div class="small-12 medium-7 medium-centered columns">
 				<%= f.submit "Save Post", class: "button expand" %>

@@ -30,6 +30,8 @@
 		border: none;
 		border-radius: 0;
 		width: 100%;
+		size: 100%;
+		height: 100%;
 		padding: 1em;
 		margin: 1em 0;
 		@include transition (.4s);
@@ -48,6 +50,17 @@
 			box-shadow: none;
 			background: $offWhite;
 		}
+	}
+	input[type="text"].border, input[type="email"].border, input[type="password"].border, textarea.border {
+		border: 3px solid $gray;
+		&:focus {
+			border: 3px solid darken($blue, 15%);
+			box-shadow: none;
+			background: $offWhite;
+		}
+	}
+	input[type="text"].background, input[type="email"].background, input[type="password"].background, textarea.background {
+		background: $gray;
 	}
 	textarea {
 		height: 12em;
