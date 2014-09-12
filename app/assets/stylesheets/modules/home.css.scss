@@ -31,13 +31,28 @@ a.button-pink {
 	}
 }
 
-#home-why-sign-up {
-	h4 {
-		font-size: 1.8em;
-		color: darken($text, 10%);
-		margin-bottom: .8em;
-	}
-	img.border {
-		border: 10px solid $white;
+#home-work {
+	.portfolio {
+		/* Image */
+		a.border img {
+			border: 10px solid $white;
+			@include transition(.5s);
+		}
+		/* Work Title */
+		h3 {
+			padding: .5em 0 0 0;
+			a {
+				color: $text;
+				@include transition(.5s);
+			}
+		}
+		&:hover {
+			a.border img {
+				border: 10px solid $pink;
+			}
+			h3 a {
+				color: $pink;
+			}
+		}
 	}
 }
