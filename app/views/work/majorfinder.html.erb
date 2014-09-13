@@ -1,11 +1,40 @@
-<div class="row text-center medium-spacer-top">
-	<h1>Major Finder</h1>
+<div class="blue-background">
+	<div class="row text-center big-spacer-top">
+		<h1>Major Finder</h1>
+		<p class="tagline">Helping you make the most important decision of your life.</p>
+		<div class="small-12 columns centered">
+			<%= link_to image_tag('work/majorfinder-laptop.png'), "http://majorfinder.com/" %>
+		</div>
+	</div>
 </div>
 
-<div class="background-gray">
+<div class="row big-spacer-top">
+	<div class="small-12 medium-6 medium-centered columns" id="built-using">
+		<ul>
+			<li>Built Using</li>
+			<li>Ruby & Ruby on Rails</li>
+			<li>HTML / CSS / Javascript / Coffeescript</li>
+			<li>SASS</li>
+			<li>Heroku</li>
+			<li>Postgresql</li>
+			<li>Web Usability (lots and lots of usability work)</li>
+			<li>Minimal Design</li>
+			<li>Web Analytics</li>
+			<li>Web Optimization</li>
+		</ul>
+	</div>
+</div>
+
+<div class="background-gray small-spacer-top">
 	<div class="row">
-		<div class="span-12 columns big-spacer">
-			<%= image_tag 'work/majorfinder-major.png' %>
+		<div class="small-12 columns big-spacer">
+			<%= link_to image_tag('work/majorfinder-major.png'), "http://majorfinder.com/majors/music" %>
 		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="small-12 medium-6 medium-centered columns big-spacer-bottom">
+		<%= link_to "Visit MajorFinder", "http://majorfinder.com/", class: "button expand", id: "ghost-button" %>
 	</div>
 </div>

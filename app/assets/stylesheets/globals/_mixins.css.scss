@@ -16,7 +16,7 @@
 	padding: $padding;
 	font-size: $font-size;
 	color: $color;
-	@include transition(.4s);
+	@include transition(.5s);
 	&:hover {
 		color: white;
 		background-color: $color;

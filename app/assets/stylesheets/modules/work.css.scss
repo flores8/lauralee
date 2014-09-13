@@ -1,0 +1,57 @@
+@import "globals/all";
+
+.blue-background {
+	background-color: $blue;
+	h1 {
+		color: white;
+		text-transform: uppercase;
+		font-family: 'PT Sans', sans-serif;
+		letter-spacing: 4px;
+	}
+	p.tagline {
+		color: white;
+		letter-spacing: 2px;
+		font-family: 'Vollkorn', serif;
+		position: relative;
+		top: 1.8em;
+	}
+	img {
+		position: relative;
+		top: 6em;
+	}
+}
+
+#built-using {
+	background-color: $gray;
+	margin-top: 7em;
+	padding: 0;
+	ul {
+		list-style-type: none;
+		margin: 0;
+		li {
+			@include transition (.4s);
+			padding: .75em 2em;
+			font-size: 1.3em;
+			&:hover {
+				background-color: $blue;
+				color: $white;
+			}
+			&:first-child {
+				background-color: $blue;
+				color: $white;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.background-gray {
+	background-color: $lightGray;
+	margin: 7em 0;
+}
+
+#ghost-button {
+	background-color: transparent;
+	@include ghost-button ($pink, .75em, 1.8em);
+	margin-bottom: 0;
+}
