@@ -8,12 +8,17 @@
 		font-family: 'PT Sans', sans-serif;
 		letter-spacing: 4px;
 	}
-	p.tagline {
+	p {
 		color: white;
 		letter-spacing: 2px;
 		font-family: 'Vollkorn', serif;
+	}
+	p.tagline {
 		position: relative;
 		top: 1.8em;
+	}
+	p.no-tagline {
+		padding-bottom: 4em;
 	}
 	img {
 		position: relative;
