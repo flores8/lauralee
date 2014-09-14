@@ -11,6 +11,13 @@
 	border-radius: $px;
 }
 
+@mixin animation-delay ($time) {
+	-webkit-animation-delay: $time;
+	-moz-animation-delay: $time;
+	-o-animation-delay: $time;
+	animation-delay: $time;
+}
+
 @mixin ghost-button ($color, $padding, $font-size) {
 	border: 3px solid $color;
 	padding: $padding;
