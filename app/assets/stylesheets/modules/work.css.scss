@@ -16,11 +16,11 @@
 	p.tagline {
 		position: relative;
 		top: 1.8em;
-		@include animation-delay(1s);
+		@include animation-delay(.75s);
 	}
 	p.no-tagline {
 		padding-bottom: 4em;
-		@include animation-delay(1s);
+		@include animation-delay(.75s);
 	}
 	img {
 		position: relative;
