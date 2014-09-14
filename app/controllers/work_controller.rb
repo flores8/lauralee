@@ -4,4 +4,7 @@ class WorkController < ApplicationController
 
 	def discovery
 	end
+
+	def bloccit
+	end
 end

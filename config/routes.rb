@@ -5,6 +5,7 @@ Lauralee::Application.routes.draw do
   # Main Nav / Works
   get 'work/majorfinder' => 'work#majorfinder'
   get 'work/discovery' => 'work#discovery'
+  get 'work/bloccit' => 'work#bloccit', path: "work/training-community"
 
   # Main Nav / About
   get "/about" => 'welcome#about'
