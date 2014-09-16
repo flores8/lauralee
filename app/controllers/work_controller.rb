@@ -7,4 +7,7 @@ class WorkController < ApplicationController
 
 	def bloccit
 	end
+
+	def wikiland
+	end
 end
