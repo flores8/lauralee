@@ -1,7 +1,11 @@
 @import "globals/all";
-
 .blue-background {
 	background-color: $blue;
+}
+.purple-background {
+	background-color: $purple;
+}
+.blue-background, .purple-background {
 	h1 {
 		color: white;
 		text-transform: uppercase;
@@ -50,6 +54,14 @@
 			}
 		}
 	}
+	ul#purple li {
+		&:hover {
+			background-color: $purple;
+		}
+		&:first-child {
+			background-color: $purple;
+		}
+	}
 }
 
 .background-gray {
@@ -60,5 +72,10 @@
 #ghost-button {
 	background-color: transparent;
 	@include ghost-button ($pink, .75em, 1.8em);
+	margin-bottom: 0;
+}
+#ghost-button-purple {
+	background-color: transparent;
+	@include ghost-button ($purple, .75em, 1.8em);
 	margin-bottom: 0;
 }
