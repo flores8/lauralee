@@ -1,0 +1,10 @@
+#blog-landing {
+	background-image: image-url('blog-header.jpg');
+	background-size: cover;
+	background-position: top right;
+	background-repeat: no-repeat;
+	min-height: 50em;
+	@media only screen and (max-width : 1024px) {
+		background-size: 100%;
+	}
+}
