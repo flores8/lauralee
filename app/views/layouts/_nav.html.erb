@@ -14,6 +14,7 @@
 					<ul class="right">
 						<li class="<%= 'active' if current_page?(root_path) %><%= 'active' if controller.controller_name == 'work' %>"><%= link_to "Work", root_path %></li>
 						<li class="<%= 'active' if current_page?(about_path) %>"><%= link_to "About", about_path %></li>
+						<li class="<%= 'active' if controller.controller_name == 'posts' %>"><%= link_to "Blog", posts_path %></li>
 						<!-- <li class="<%= 'active' if controller.controller_name == 'feedbacks' %>"><%= link_to "Feedback", new_feedback_path %></li> -->
 						<!-- <li class="<%= 'active' if current_page?(training_path) %><%= 'active' if current_page?(freeimages_path) %><%= 'active' if current_page?(about_me_path) %>"><%= link_to "Training", training_path %></li> -->
 						<li class="has-dropdown <%= 'active' if current_page?(edit_user_registration_path) %>">
