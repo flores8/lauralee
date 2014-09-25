@@ -31,3 +31,24 @@
 		line-height: 1em;
 	}
 }
+
+/* Pagination from will_paginate */
+.pagination-centered {
+	margin-bottom: 4rem;
+	font-size: 1.3rem;
+	a {
+		color: $pink;
+		@include transition(.3s);
+		&:hover {
+			background-color: $pink;
+			color: $white;
+		}
+	}
+	em.current, a {
+		padding: .25em .45em;
+		margin: 0 .5rem;
+	}
+	em.current {
+		color: $darkGray;
+	}
+}

@@ -13,6 +13,7 @@ gem 'pry'
 gem 'jquery-turbolinks'
 gem 'faker'
 gem 'pundit'
+gem 'will_paginate', '~> 3.0.7'
 
 group :production do
 	gem 'rails_12factor'

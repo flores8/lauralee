@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
   def index
-  	@posts = Post.all
+  	@posts = Post.paginate(page: params[:page], per_page: 10)
     authorize @posts
   end
 
