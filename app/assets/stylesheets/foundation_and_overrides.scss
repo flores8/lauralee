@@ -1304,42 +1304,54 @@ $topbar-menu-icon-color-toggled: #f37171;
 @import 'foundation';
 
 // CUSTOM FOUNDATION STYLES
+/* Top and Bottom Spacers */
 .big-spacer {
 	padding: 7em 0;
-}
-.big-spacer-top {
-	padding-top: 7em;
-}
-.big-spacer-bottom {
-	padding-bottom: 7em;
 }
 .medium-spacer {
 	padding: 4em 0;
 }
-.medium-spacer-top {
-	padding-top: 4em;
-}
-.medium-spacer-bottom {
-	padding-bottom: 4em;
-}
 .small-spacer {
 	padding: 2em 0;
-}
-.small-spacer-top {
-	padding-top: 2em;
-}
-.small-spacer-bottom {
-	padding-bottom: 2em;
 }
 .mini-spacer {
 	padding: 1em 0;
 }
+
+
+/* Top Spacers */
+.big-spacer-top {
+	padding-top: 7em;
+}
+.medium-spacer-top {
+	padding-top: 4em;
+}
+.small-spacer-top {
+	padding-top: 2em;
+}
 .mini-spacer-top {
 	padding-top: 1em;
+}
+
+
+
+/* Bottom Spacers */
+.big-spacer-bottom {
+	padding-bottom: 7em;
+}
+.medium-spacer-bottom {
+	padding-bottom: 4em;
+}
+.small-spacer-bottom {
+	padding-bottom: 2em;
 }
 .mini-spacer-bottom {
 	padding-bottom: 1em;
 }
+
+
+
+
 
 h1 {
 	color: #585457;
