@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 	before_save :generate_slug
+	acts_as_taggable
+	acts_as_taggable_on :topics, :skills
 
 	# Validations
 	validates :slug, uniqueness: true, presence: true
