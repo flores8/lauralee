@@ -14,6 +14,7 @@ gem 'jquery-turbolinks'
 gem 'faker'
 gem 'pundit'
 gem 'will_paginate', '~> 3.0.7'
+gem 'redcarpet'
 
 group :production do
 	gem 'rails_12factor'

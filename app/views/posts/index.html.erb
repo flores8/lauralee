@@ -10,8 +10,9 @@
 	<div class="row">
 		<div class="small-12 medium-10 medium-centered columns small-spacer-top medium-spacer-bottom">
 			<div class="blog-landing-list">
-				<h2 class="centered"><%= link_to post.title, post, class: "post-title" %></h2>
-				<p class="centered"><%= truncate(post.body, length: 230, omission: " ... ") { link_to "continue", post, class: 'pink-link-center'} %></p>
+				<h2 class="centered"><%= link_to markdown(post.title), post, class: "post-title" %></h2>
+				<p class="centered"><%= truncate(markdown(post.body), length: 230, omission: " ... ") %></p>
+				<p class="centered"><%= truncate(markdown(post.body), length: 230, omission: " ... ") { link_to "continue", post, class: 'pink-link-center'} %></p>
 				<p class="centered"><small>posted <%= time_ago_in_words(post.created_at) %> ago by <%= post.user.name %></small></p>
 			</div>
 		</div>

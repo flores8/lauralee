@@ -1,6 +1,6 @@
 <div class="row">
-	<h2><%= @post.title %></h2>
-	<p><%= @post.body %></p>
+	<h2><%= markdown @post.title %></h2>
+	<p><%= markdown @post.body %></p>
 	<div class="small-12 columns">
 		<div class="small-spacer text-center">
 			<p><%= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center" %></p>
