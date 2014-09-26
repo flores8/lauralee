@@ -96,4 +96,11 @@
 			padding-bottom: 1rem;
 		}
 	}
+	footer {
+		background-color: transparent;
+		p {
+			text-transform: none;
+			color: $text;
+		}
+	}
 }

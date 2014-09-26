@@ -13,18 +13,20 @@
 				<%= markdown @post.body %>
 			</div>
 
-			<!-- Post Attributes -->
-			<footer>
-				<p>written on <%= @post.created_at %> by <%= @post.user.name %></p>
-			</footer>
-
 		</article>
 	</div>
+</div>
+
+<div class="similar-posts">
 	
-	
+</div>
+
+<div class="row">
 	<div class="small-12 columns">
 		<div class="small-spacer text-center">
-			<p><%= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center" %></p>
+			<% if policy(@post).edit? %>
+				<%= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center" %>
+			<% end %>
 		</div>
 	</div>
 </div>
