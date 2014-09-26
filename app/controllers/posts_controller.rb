@@ -1,12 +1,13 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit]
+  before_action :find_page, only: [:show, :edit, :update, :destroy]
+
   def index
   	@posts = Post.paginate(page: params[:page], per_page: 10)
     authorize @posts
   end
 
   def show
-  	@post = Post.find(params[:id])
   end
 
   def new
@@ -27,14 +28,12 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
     authorize @post
   end
 
   def update
-    @post = Post.find(params[:id])
     authorize @post
-    if @post.update_attributes(params.require(:post).permit(:title, :body))
+    if @post.update_attributes(params.require(:post).permit(:title, :body, :slug))
       flash[:notice] = "Post was updated."
       redirect_to @post
     else 
@@ -42,4 +41,18 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
+  def destroy
+    authorize @post
+    @post.destroy
+
+  end
+
+  private
+
+  def find_page
+    @post = Post.find_by_slug!(params[:id])
+  end
+  helper_method :page
+
 end

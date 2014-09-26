@@ -14,9 +14,6 @@ Lauralee::Application.routes.draw do
   # Main Nav / Feedback
   resources :feedbacks
 
-  # Blog
-  resources :posts
-
   # Devise
   devise_for :users
   resources :users, only: [:update]
@@ -27,6 +24,9 @@ Lauralee::Application.routes.draw do
     get "/about_me" => 'welcome#about_me', path: "a-little-about-me"
   end
   get "/training" => 'welcome#comingsoon'
+
+  # Blog
+  resources :posts, path: "blog"
   
   
   # The priority is based upon order of creation: first created -> highest priority.
