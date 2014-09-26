@@ -65,13 +65,13 @@
 #blog-post {
 	header {
 		h2, h2 p {
-			padding-bottom: 0;
+			padding-bottom: .5rem;
 		}
 		h2 p {
 			font-size: 2.5rem;
 		}
 		p.post-references {
-			margin-bottom: .5em;
+			margin-bottom: .8em;
 			color: lighten($text, 35%);
 		}
 		em.divider {
@@ -79,7 +79,21 @@
 		}
 		em.tags {
 			color: $pink;
+			font-style: normal;
 		}
 	}
-		
+	#blog-content {
+		strong {
+			color: $text;
+			border-bottom: 2px solid lighten($text, 15%);
+		}
+		a {
+			color: $pink;
+			@include transition(.4s);
+			@include link-center-out($pink, $pink);
+		}
+		p {
+			padding-bottom: 1rem;
+		}
+	}
 }
