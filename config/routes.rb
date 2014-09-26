@@ -26,7 +26,11 @@ Lauralee::Application.routes.draw do
   get "/training" => 'welcome#comingsoon'
 
   # Blog
-  resources :posts, path: "blog"
+  resources :posts, path: "blog" do
+    collection do
+      get :tag
+    end
+  end
   
   
   # The priority is based upon order of creation: first created -> highest priority.
