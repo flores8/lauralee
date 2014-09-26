@@ -1,6 +1,29 @@
 <div id="form" class="small-spacer-top medium-spacer-bottom">
 	<%= form_for @post do |f| %>
 
+	<!-- ERROR -->
+	<div class="row">
+    <div class="small-12 columns">
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <p class="error"><%= pluralize(@post.errors.count, "error") %> prohibited this@post from being saved:</p>
+          <ul>
+            <% @post.errors.full_messages.each do |msg| %>
+              <li><p><%= msg %></p></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- URL -->
+	<div class="row">
+		<div class="small-12 columns">
+			<%= f.text_field :slug, placeholder: "URL", class: "border background" %>
+		</div>
+	</div>
+
 	<!-- Post Title -->
 	<div class="row">
 		<div class="small-12 columns">
