@@ -1,6 +1,20 @@
-<div class="row">
-	<h2><%= markdown @post.title %></h2>
-	<p><%= markdown @post.body %></p>
+<div class="row" id="blog-post">
+	<div class="small-12 medium-10 medium-centered columns big-spacer-top">
+		<article>
+			<header>
+				<h2><%= markdown @post.title %></h2>
+				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em> <em class="tags">Thoughts</em></p>
+			</header>
+			
+			<p><%= markdown @post.body %></p>
+			<footer>
+				<p>written on <%= @post.created_at %> by <%= @post.user.name %></p>
+			</footer>
+		</article>
+			
+	</div>
+	
+	
 	<div class="small-12 columns">
 		<div class="small-spacer text-center">
 			<p><%= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center" %></p>

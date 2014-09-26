@@ -60,3 +60,26 @@
 		color: $darkGray;
 	}
 }
+
+/* Blog Post (Show Page) */
+#blog-post {
+	header {
+		h2, h2 p {
+			padding-bottom: 0;
+		}
+		h2 p {
+			font-size: 2.5rem;
+		}
+		p.post-references {
+			margin-bottom: .5em;
+			color: lighten($text, 35%);
+		}
+		em.divider {
+			padding: 0 .5em;
+		}
+		em.tags {
+			color: $pink;
+		}
+	}
+		
+}
