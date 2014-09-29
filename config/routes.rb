@@ -1,4 +1,5 @@
 Lauralee::Application.routes.draw do
+  
   # Home Page
   root to: "welcome#index"
 
@@ -26,11 +27,9 @@ Lauralee::Application.routes.draw do
   get "/training" => 'welcome#comingsoon'
 
   # Blog
-  resources :posts, path: "blog" do
-    collection do
-      get :tag
-    end
-  end
+  resources :posts, path: "blog"
+  get '/tags/:tag' => 'tags#show', as: :tag
+  get '/tags' => 'tags#index'
   
   
   # The priority is based upon order of creation: first created -> highest priority.

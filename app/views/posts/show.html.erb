@@ -4,6 +4,7 @@
 
 			<!-- Title, Date, and Tags -->
 			<header>
+
 				<h2><%= markdown @post.title %></h2>
 				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em> <em class="tags"><%= @post.tag_list %></em></p>
 			</header>

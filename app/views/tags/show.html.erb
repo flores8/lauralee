@@ -1,0 +1,10 @@
+<div class="row medium-spacer">
+	<%= @tags.count %>
+	<% @tags.each do |t| %>
+		<p><%= link_to t.name, tag_path(t) %></p>
+		<% Post.tagged_with(t).each do |p| %>
+			<p><%= p.title %></p>
+		<% end %>
+	<% end %>
+	<%= @tags.inspect %>
+</div>

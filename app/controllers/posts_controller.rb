@@ -8,6 +8,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    # @tags = @post.tagged_with(params[:id])
   end
 
   def new
