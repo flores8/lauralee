@@ -5,6 +5,7 @@ class TagsController < ApplicationController
   end
 
   def show
+  	@posts = Post.tagged_with(params[:tag])
   	@tags = ActsAsTaggableOn::Tag.most_used(10)
   end
 end

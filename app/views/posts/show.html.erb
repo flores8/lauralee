@@ -6,7 +6,11 @@
 			<header>
 
 				<h2><%= markdown @post.title %></h2>
-				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em> <em class="tags"><%= @post.tag_list %></em></p>
+				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em> 
+					<% @post.tags.each_with_index do |t, i| %>
+						<em class="tags"><%= link_to t.name, tag_path(t.name) %><%= @post.tags.length - 1 == i ? "" : "," %></em>
+					<% end %>
+				</p>
 			</header>
 			
 			<!-- Blog Post Content -->
