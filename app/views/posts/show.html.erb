@@ -19,6 +19,11 @@
 			</div>
 
 		</article>
+		<article class="similar-majors">
+			<% @post.find_related_tags.each do |p| %>
+				<p><%= p.title %></p>
+			<% end %>
+		</article>
 	</div>
 </div>
 

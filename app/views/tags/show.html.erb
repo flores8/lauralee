@@ -2,6 +2,9 @@
 	<h2><%= params[:tag] %></h2>
 	<% @posts.each do |p| %>
 		<h3><%= link_to p.title, post_path(p) %></h3>
+		<% p.tags.each do |t| %>
+			<p><%= t.name %></p>
+		<% end %>
 	<% end %>
 	<p>Add other tags here for easy navigation... maybe most popular???</p>
 </div>
