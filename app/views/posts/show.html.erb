@@ -27,15 +27,15 @@
 
 <!-- Find out if there are related posts -->
 <% if @post.find_related_tags.present? %>
-	<div id="similar-posts">
+	<div id="light-gray-background">
 		<div class="row">
 			<div class="small-12 medium-10 medium-centered columns big-spacer">
-				<h3 class="mini-spacer-bottom">Similar Posts</h3>
+				<h3 class="title mini-spacer-bottom">Similar Posts</h3>
 
 				<!-- Loop through each related post -->
 				<% @post.find_related_tags.each do |p| %>
-					<article class="similar-post small-spacer-bottom">
-						<h4><%= link_to markdown(p.title), p, class: "post-title" %></h4>
+					<article class="similar-item small-spacer-bottom">
+						<h4><%= link_to markdown(p.title), p, class: "item-title" %></h4>
 						<% if p.body.length > 230 %>
 							<p><%= truncate(markdown(p.body), length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'} %></p>
 						<% else %>

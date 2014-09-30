@@ -108,12 +108,12 @@
 	}
 }
 
-/* Similiar Posts on the bottom of the Blog Show Page*/
-#similar-posts {
+/* Similiar Posts on the bottom of the Blog Show Page and similar tags on the tags show page */
+#light-gray-background {
 	margin-top: 5rem;
 	background-color: $lightGray;
-	article.similar-post {
-		h4 a.post-title p {
+	article.similar-item {
+		h4 a.item-title p {
 			color: $text;
 			margin-bottom: 0;
 			font-size: 1.8rem;
@@ -121,6 +121,34 @@
 			&:hover {
 				color: $pink;
 			}
+		}
+	}
+}
+
+#tag-show {
+	h3, h3 a p {
+		margin-bottom: 0;
+	}
+	h3 a p {
+		color: $text;
+		font-size: 1.8rem;
+		@include transition(.4s);
+		&:hover {
+			color: $pink;
+		}
+	}
+	p.centered {
+		padding-bottom: 0;
+		margin-bottom: .5rem;
+	}
+	p {
+		a {
+			color: $pink;
+			@include transition(.4s);
+			@include link-center-out($pink, $pink);
+		}
+		em.tags {
+			font-size: 1.3rem;
 		}
 	}
 }
