@@ -78,7 +78,10 @@
 			padding: 0 .5em;
 		}
 		em.tags {
-			color: $pink;
+			a {
+				color: $pink;
+			}
+			color: $text;
 			font-style: normal;
 		}
 	}
