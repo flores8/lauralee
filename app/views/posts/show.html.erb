@@ -19,28 +19,43 @@
 			</div>
 
 		</article>
-
-		<!-- Find Other Articles with These Tags  -->
-		<article class="similar-majors">
-			<h3>Similar Posts</h3>
-			<% @post.find_related_tags.each do |p| %>
-				<p><%= link_to p.title, post_path(p) %></p>
-			<% end %>
-		</article>
-
 	</div>
 </div>
 
-<div class="similar-posts">
 
-</div>
+<!-- Find Other Articles with These Tags  -->
 
-<div class="row">
-	<div class="small-12 columns">
-		<div class="small-spacer text-center">
-			<% if policy(@post).edit? %>
-				<%= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center" %>
-			<% end %>
+<!-- Find out if there are related posts -->
+<% if @post.find_related_tags.present? %>
+	<div id="similar-posts">
+		<div class="row">
+			<div class="small-12 medium-10 medium-centered columns big-spacer">
+				<h3 class="mini-spacer-bottom">Similar Posts</h3>
+
+				<!-- Loop through each related post -->
+				<% @post.find_related_tags.each do |p| %>
+					<article class="similar-post small-spacer-bottom">
+						<h4><%= link_to markdown(p.title), p, class: "post-title" %></h4>
+						<%= truncate(markdown(p.body), length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'} %>
+					</article>
+				<% end %>
+
+			</div>
 		</div>
 	</div>
-</div>
+<% else %>
+<% end %>
+
+	
+	
+
+<!-- Edit this post if you have permission -->
+<% if policy(@post).edit? %>
+	<div class="row">
+		<div class="small-12 columns">
+			<div class="small-spacer text-center">
+				<%= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center" %>
+			</div>
+		</div>
+	</div>
+<% end %>

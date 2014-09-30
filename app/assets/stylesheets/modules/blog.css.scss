@@ -107,3 +107,20 @@
 		}
 	}
 }
+
+/* Similiar Posts on the bottom of the Blog Show Page*/
+#similar-posts {
+	margin-top: 5rem;
+	background-color: $lightGray;
+	article.similar-post {
+		h4 a.post-title p {
+			color: $text;
+			margin-bottom: 0;
+			font-size: 1.8rem;
+			@include transition(.3s);
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+}
