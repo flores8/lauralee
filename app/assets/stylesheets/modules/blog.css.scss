@@ -32,6 +32,11 @@
 	h2.centered {
 		padding-bottom: .2rem;
 	}
+	p a {
+		color: $pink;
+		@include transition(.4s);
+		@include link-center-out($pink, $pink);
+	}
 	a.post-title, a.post-title p {
 		color: $text;
 		line-height: 2.8rem;
