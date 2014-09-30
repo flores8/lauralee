@@ -19,11 +19,15 @@
 			</div>
 
 		</article>
+
+		<!-- Find Other Articles with These Tags  -->
 		<article class="similar-majors">
+			<h3>Similar Posts</h3>
 			<% @post.find_related_tags.each do |p| %>
-				<p><%= p.title %></p>
+				<p><%= link_to p.title, post_path(p) %></p>
 			<% end %>
 		</article>
+
 	</div>
 </div>
 

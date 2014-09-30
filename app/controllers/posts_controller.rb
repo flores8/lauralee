@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def show
     # @tags = @post.tagged_with(params[:id])
+    @posts = Post.all
   end
 
   def new
