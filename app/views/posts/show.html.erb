@@ -36,7 +36,11 @@
 				<% @post.find_related_tags.each do |p| %>
 					<article class="similar-post small-spacer-bottom">
 						<h4><%= link_to markdown(p.title), p, class: "post-title" %></h4>
-						<%= truncate(markdown(p.body), length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'} %>
+						<% if p.body.length > 230 %>
+							<p><%= truncate(markdown(p.body), length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'} %></p>
+						<% else %>
+							<%= markdown(p.body) %>
+						<% end %>
 					</article>
 				<% end %>
 
