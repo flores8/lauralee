@@ -37,7 +37,7 @@
 					<article class="similar-item small-spacer-bottom">
 						<h4><%= link_to markdown(p.title), p, class: "item-title" %></h4>
 						<% if p.body.length > 230 %>
-							<p><%= truncate(markdown(p.body), length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'} %></p>
+							<p><%= markdown(truncate(p.body, length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'}) %></p>
 						<% else %>
 							<%= markdown(p.body) %>
 						<% end %>

@@ -16,7 +16,7 @@
 
 				<!-- Post Body Truncated -->
 				<% if p.body.length > 230 %>
-					<p><%= truncate(markdown(p.body), length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'} %></p>
+					<p><%= markdown(truncate(p.body, length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'}) %></p>
 				<% else %>
 					<%= markdown(p.body) %>
 				<% end %>

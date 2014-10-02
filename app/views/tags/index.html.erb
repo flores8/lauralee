@@ -10,7 +10,7 @@
 
 				<!-- Posts with This Tag -->
 				<% Post.tagged_with(t).each do |p| %>
-					<p class="centered"><%= link_to p.title, post_path(p) %></p>
+					<%= link_to markdown(p.title), post_path(p), class: "centered" %>
 				<% end %>
 			<% end %>
 		</div>

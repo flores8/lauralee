@@ -127,6 +127,11 @@
 				color: $pink;
 			}
 		}
+		p a {
+			color: $pink;
+			@include transition(.4s);
+			@include link-center-out($pink, $pink);
+		}
 	}
 }
 
@@ -159,7 +164,7 @@
 }
 
 #tag-index {
-	p.centered a {
+	a.centered p {
 		color: $text;
 		@include transition(.3s);
 		&:hover {
