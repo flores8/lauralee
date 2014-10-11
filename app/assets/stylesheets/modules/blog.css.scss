@@ -92,8 +92,10 @@
 	}
 	#blog-content {
 		strong {
-			color: $text;
-			border-bottom: 2px solid lighten($text, 15%);
+			color: $white;
+			background-color: $text;
+			padding: 0 .5rem;
+			/*border-bottom: 2px solid lighten($text, 15%);*/
 		}
 		a {
 			color: $pink;
@@ -102,6 +104,10 @@
 		}
 		p {
 			padding-bottom: 1rem;
+		}
+		ol {
+			font-size: 1.5rem;
+			padding-left: 2rem;
 		}
 	}
 	footer {

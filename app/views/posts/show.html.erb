@@ -36,8 +36,12 @@
 				<% @post.find_related_tags.each do |p| %>
 					<article class="similar-item small-spacer-bottom">
 						<h4><%= link_to markdown(p.title), p, class: "item-title" %></h4>
-						<% if p.body.length > 230 %>
-							<p><%= markdown(truncate(p.body, length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'}) %></p>
+						<% p.tags.each_with_index do |t, i| %>
+							<em class="tags"><%= link_to t.name, tag_path(t.name), class: "pink-link-center" %><%= p.tags.length - 1 == i ? "" : "," %></em>
+						<% end %>
+						<% if p.body.length > 130 %>
+							<p><%= markdown(truncate(p.body, length: 110, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'}) %></p>
+
 						<% else %>
 							<%= markdown(p.body) %>
 						<% end %>
