@@ -52,3 +52,21 @@
     </div>
   </div>
 </div>
+
+
+<% if current_user.email == "lauralee@majorfinder.com" %>
+  <div class="row medium-spacer-top small-spacer-bottom">
+    <h2>Hey Lauralee!</h2>
+    <p><%= @users.count %> people signed up so far.</p>
+    <% @users.each do |u| %>
+      <!-- View all feedback - only for me -->
+        <div class="panel">
+
+          <p><%= u.name %></p>
+          <p><%= u.email %></p>
+          
+        </div>
+    <% end %>
+  </div>
+  <hr>
+<% end %>
