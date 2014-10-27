@@ -21,6 +21,7 @@
             <div class="small-spacer">
               <%= f.text_field :name, placeholder: "First Name", class: "border-bottom" %>
             </div>
+            <p><%= current_user.role if current_user.role == "admin"  %></p>
 
             <%= f.submit "Update My Personal Information", class: "button expand notice" %>
           </div>
