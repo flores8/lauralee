@@ -92,9 +92,10 @@
 	}
 	#blog-content {
 		strong {
-			color: $white;
+			color: $text;
+			/*color: $white;
 			background-color: $text;
-			padding: 0 .5rem;
+			padding: 0 .5rem;*/
 			/*border-bottom: 2px solid lighten($text, 15%);*/
 		}
 		a {
@@ -129,6 +130,13 @@
 			font-weight: 800;
 			margin-bottom: 1rem;
 			color: $blue;
+		}
+		code {
+			background-color: $gray;
+			padding: .5rem .75rem;
+			color: $text;
+			font-family: 'Source Sans Pro', Courier, monospace, sans-serif;
+			letter-spacing: 1px;
 		}
 	}
 	footer {
