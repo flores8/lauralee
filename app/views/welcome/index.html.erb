@@ -11,7 +11,7 @@
 
 <div class="off-white big-spacer-top" id="home-work">
 	<div class="row">
-		<h2 class="text-center">Some of My Work</h2>
+		<h2 class="text-center">What I'm Working On</h2>
 	</div>
 
 	<!-- Major Finder and Discovery -->
@@ -27,35 +27,22 @@
 			</div>
 		</div>
 	</div>
+</div>
 
-	<!-- Blocipedia and Bloccit -->
-	<div class="row big-spacer-bottom">
-		<div class="medium-spacer">
-			<div class="small-12 medium-6 columns portfolio">
-				<%= link_to image_tag('work/bloccit.jpg'), work_bloccit_path, class: "border" %>
-				<h3><%= link_to "Training Community", work_bloccit_path %></h3>
-			</div>
-			<div class="small-12 medium-6 columns portfolio">
-				<%= link_to image_tag('work/wikiland.jpg'), work_wikiland_path, class: "border" %>
-				<h3><%= link_to "WikiLand", "#" %></h3>
+<div class="off-white big-spacer-top" id="home-work">
+	<div class="row">
+		<h2 class="text-center">My Latest Posts</h2>
+	</div>
+	<!-- Latest Posts -->
+	<div class="row">
+		<div class="small-spacer-top">
+			<div class="small-12 columns">
+				<% @post.each do |p| %>
+					<h3><%= link_to p.title, p %></h3>
+				<% end %>
 			</div>
 		</div>
 	</div>
-
-	<!-- Web Analytics API and ???  -->
-<!-- 	<div class="row big-spacer-bottom">
-		<div class="medium-spacer-top">
-			<div class="small-12 medium-6 columns portfolio">
-				<%= link_to image_tag('code.jpg'), "#", class: "border" %>
-				<h3><%= link_to "Web Analytics API", "#" %></h3>
-			</div>
-			<div class="small-12 medium-6 columns portfolio">
-				<%= link_to image_tag('code.jpg'), "#", class: "border" %>
-				<h3><%= link_to "Web Analytics API", "#" %></h3>
-			</div>
-		</div>
-	</div>
-
 </div>
 
 
@@ -71,4 +58,34 @@
 			</div>
 		</div>
 	</div> -->
+</div>
+
+
+
+<!-- Blocipedia and Bloccit -->
+<!-- <div class="row big-spacer-bottom">
+	<div class="medium-spacer">
+		<div class="small-12 medium-6 columns portfolio">
+			<%= link_to image_tag('work/bloccit.jpg'), work_bloccit_path, class: "border" %>
+			<h3><%= link_to "Training Community", work_bloccit_path %></h3>
+		</div>
+		<div class="small-12 medium-6 columns portfolio">
+			<%= link_to image_tag('work/wikiland.jpg'), work_wikiland_path, class: "border" %>
+			<h3><%= link_to "WikiLand", "#" %></h3>
+		</div>
+	</div>
+</div> -->
+
+<!-- Web Analytics API and ???  -->
+<!-- 	<div class="row big-spacer-bottom">
+<div class="medium-spacer-top">
+	<div class="small-12 medium-6 columns portfolio">
+		<%= link_to image_tag('code.jpg'), "#", class: "border" %>
+		<h3><%= link_to "Web Analytics API", "#" %></h3>
+	</div>
+	<div class="small-12 medium-6 columns portfolio">
+		<%= link_to image_tag('code.jpg'), "#", class: "border" %>
+		<h3><%= link_to "Web Analytics API", "#" %></h3>
+	</div>
+</div>
 </div>
