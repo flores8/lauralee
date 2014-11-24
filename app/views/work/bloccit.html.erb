@@ -76,3 +76,23 @@
 		<%= link_to "Visit the Training Community", "http://lauralee-bloccit.herokuapp.com/", class: "button expand", id: "ghost-button" %>
 	</div>
 </div>
+
+<div class="background-gray big-spacer-top" id="work-show">
+	<div class="row">
+		<h4 class="text-center">See Some of My Other Projects</h4>
+	</div>
+
+	<!-- Major Finder and Discovery -->
+	<div class="row big-spacer-bottom">
+		<div class="small-spacer-top ">
+			<div class="small-12 medium-6 columns portfolio">
+				<%= link_to image_tag('work/majorfinder.jpg'), work_majorfinder_path, class: "border" %>
+				<h3><%= link_to "Major Finder", work_majorfinder_path %></h3>
+			</div>
+			<div class="small-12 medium-6 columns portfolio">
+				<%= link_to image_tag('work/wikiland.jpg'), work_wikiland_path, class: "border" %>
+				<h3><%= link_to "WikiLand", "#" %></h3>
+			</div>
+		</div>
+	</div>
+</div>
