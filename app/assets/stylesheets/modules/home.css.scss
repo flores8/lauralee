@@ -59,4 +59,17 @@ a.button-pink {
 			}
 		}
 	}
+	.home-latest-posts {
+		h3 {
+			margin-bottom: 1.5rem;
+			a {
+				color: $pink;
+				@include transition (.4s);
+				&:hover {
+					color: darken($pink, 10%);
+				}
+			}
+		}
+				
+	}
 }
