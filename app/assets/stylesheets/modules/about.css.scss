@@ -3,6 +3,9 @@
 /* About Page
 ================================================== */
 #about {
+	a.pink-link {
+		@include link-center-out($pink, $pink);
+	}
 	.about-header {
 		background-image: image-url("my-family-sm.jpg");
 		background-size: cover;

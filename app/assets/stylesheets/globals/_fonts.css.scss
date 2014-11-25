@@ -17,6 +17,9 @@
 		text-indent: -.5em;
 		li {
 			margin-bottom: .5em;
+			a.pink-link {
+				@include link-center-out($pink, $pink);
+			}
 			&::before {
 				content: "\02D \020";
 			}
