@@ -131,6 +131,19 @@
 			margin-bottom: 1rem;
 			color: $blue;
 		}
+		pre {
+			code {
+				white-space: pre-wrap;
+				word-wrap: break-word;
+				display: block;
+				padding: 1rem;
+				background: $gray;
+				color: $text;
+				line-height: 2rem;
+				font-size: 1.1rem;
+				font-weight: normal;
+			}
+		}
 		code {
 			background-color: $gray;
 			padding: .5rem .75rem;
