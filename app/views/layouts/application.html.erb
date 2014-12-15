@@ -21,6 +21,13 @@
     <%= render partial: 'welcome/sign_up' %>
     <%= render partial: 'welcome/sign_in' %>
 
+    <div class="container">
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+
     <%= javascript_include_tag "application" %>
+    <% if Rails.env.production? %>  
+      <%= render 'layouts/ga' %>
+    <% end %>
   </body>
 </html>
