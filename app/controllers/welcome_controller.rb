@@ -17,4 +17,7 @@ class WelcomeController < ApplicationController
 
   def about
   end
+
+  def test
+  end
 end

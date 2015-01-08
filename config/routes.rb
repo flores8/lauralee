@@ -11,6 +11,7 @@ Lauralee::Application.routes.draw do
 
   # Main Nav / About
   get "/about" => 'welcome#about'
+  get "/test" => 'welcome#test'
 
   # Main Nav / Feedback
   resources :feedbacks
