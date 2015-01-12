@@ -10,6 +10,15 @@ class Post < ActiveRecord::Base
 	validates :body, length: { minimum: 20 }, presence: true
 	validates :user, presence: true
 
+	# How Long A Post Will Take to Read
+	def word_count
+		self.body.split.size
+	end
+
+	def reading_time
+		(word_count / 200.0).ceil
+	end
+
 
 	# Relationships
 	has_many :comments
