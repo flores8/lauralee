@@ -54,13 +54,14 @@
 		<div class="row">
 			<div class="small-12 medium-6 medium-centered columns">
 				<% if user_signed_in? %>
-					<%= link_to	"Thank You For Signing Up", training_path, class: "button expand button-pink" %>
+					<h3>Thank You For Signing Up!</h3>
+					<%= link_to	"Access Resources", training_path, class: "button expand button-pink" %>
 				<% else %>
 					<%= link_to "Sign up, for free!", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
 				<% end %>
 			</div>
 		</div>
-	</div> -->
+	</div>
 </div>
 
 

@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
 	end
 
 	def reading_time
-		(word_count / 200.0).ceil
+		(word_count / 180.0).ceil
 	end
 
 
