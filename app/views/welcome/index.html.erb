@@ -39,6 +39,9 @@
 			<div class="small-12 columns home-latest-posts big-spacer-bottom">
 				<% @post.each do |p| %>
 					<h3><%= link_to p.title, p %></h3>
+					<p class="small centered"><%= time_ago_in_words(p.created_at) %> ago <span>|</span> <%= p.reading_time %> minute read</p>
+					<%= markdown(truncate(p.body, length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'}) %>
+					<hr>
 				<% end %>
 			</div>
 		</div>
