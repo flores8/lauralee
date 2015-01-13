@@ -54,8 +54,8 @@
 		<div class="row">
 			<div class="small-12 medium-6 medium-centered columns">
 				<% if user_signed_in? %>
-					<h3>Welcome, <%= current_user.first_name %>!</h3>
-					<%= link_to	"Access Your Resources", training_path, class: "button expand button-pink" %>
+					<h3>Welcome, <%= current_user.name %>!</h3>
+					<%= link_to	"Access Your Resources", resources_path, class: "button expand button-pink" %>
 				<% else %>
 					<%= link_to "Sign up, for free!", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
 				<% end %>

@@ -6,7 +6,7 @@
 		<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 			<p>We're waiting for you to confirm your account.  Please check your email and click on the link.</p>
 		<% else %>
-			<p>You've confirmed your account and are signed up. <%= link_to "Tell me what you want to learn", new_feedback_path, class: "pink-link-center" %> or let me <%= link_to "thank you for signing up", training_path, class: "pink-link-center" %>.</p>
+			<p>You've confirmed your account and are signed up. <%= link_to "Tell me what you want to learn", new_feedback_path, class: "pink-link-center" %> or let me <%= link_to "thank you for signing up", resources_path, class: "pink-link-center" %>.</p>
 		<% end %>
 		<!-- if they haven't confirmed their account.. link to resend confirmation instructions else go to coming soon page. -->
 	<% else %>
@@ -29,7 +29,7 @@
 					<% end %>
 				</div>
 			</div>
-<% end %>
+
 		<!-- Link to Sign Up Modal -->
 	  <div class="medium-spacer-top">
 	  	<div class="row">
@@ -38,6 +38,6 @@
 	  		</div>
 	  	</div>
 	  </div>
-	
+	<% end %>
   <a class="close-reveal-modal">&#215;</a>
 </div>

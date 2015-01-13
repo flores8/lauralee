@@ -20,12 +20,12 @@ Lauralee::Application.routes.draw do
   devise_for :users
   resources :users, only: [:update]
   
-  # Training -> remove soon
-  scope '/training' do
+  # Resources -> remove soon
+  scope '/resources' do
     get '/freeimages' => 'welcome#freeimages'
     get "/about_me" => 'welcome#about_me', path: "a-little-about-me"
   end
-  get "/training" => 'welcome#comingsoon'
+  get "/resources" => 'welcome#resources'
 
   # Blog
   get 'blog/tags' => 'tags#index', as: :tags

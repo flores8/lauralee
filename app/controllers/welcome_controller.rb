@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
     @post = Post.order("created_at DESC").limit(5)
   end
 
-  def comingsoon
+  def resources
   	@feedback = Feedback.new
   end
 
