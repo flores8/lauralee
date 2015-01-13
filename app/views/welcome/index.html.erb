@@ -9,7 +9,7 @@
 	</div>
 </div>
 
-<div class="off-white big-spacer-top" id="home-work">
+<div class="off-white big-spacer" id="home-work">
 	<div class="row">
 		<h2 class="text-center">What I'm Working On</h2>
 	</div>
@@ -54,7 +54,7 @@
 		<div class="row">
 			<div class="small-12 medium-6 medium-centered columns">
 				<% if user_signed_in? %>
-					<h3>Thank You For Signing Up!</h3>
+					<h3>Welcome, <%= current_user.first_name %>!</h3>
 					<%= link_to	"Access Your Resources", training_path, class: "button expand button-pink" %>
 				<% else %>
 					<%= link_to "Sign up, for free!", "#", "data-reveal-id" => "sign-up-modal", class: "button expand button-pink" %>
@@ -62,6 +62,16 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div class="footer">
+  <footer>
+    <div class="row text-center">
+      <div class="small-6 small-centered columns">
+        <p>Made with ♥ in Tucson, AZ</p>
+      </div>
+    </div>
+  </footer>
 </div>
 
 

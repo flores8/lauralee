@@ -8,7 +8,7 @@
 		<% else %>
 			<p>You've confirmed your account and are signed up. <%= link_to "Tell me what you want to learn", new_feedback_path, class: "pink-link-center" %> or let me <%= link_to "thank you for signing up", training_path, class: "pink-link-center" %>.</p>
 		<% end %>
-		<!-- if they haven't confirmed their account.. link to resendconfirmation instructions else go to coming soon page. -->
+		<!-- if they haven't confirmed their account.. link to resend confirmation instructions else go to coming soon page. -->
 	<% else %>
 		<div class="small-spacer">
 			<h2 class="text-center">Sign Up For Free</h2>
@@ -29,7 +29,7 @@
 					<% end %>
 				</div>
 			</div>
-
+<% end %>
 		<!-- Link to Sign Up Modal -->
 	  <div class="medium-spacer-top">
 	  	<div class="row">
@@ -38,8 +38,6 @@
 	  		</div>
 	  	</div>
 	  </div>
-	  <!-- <p>Reveal makes these very easy to summon and dismiss. The close button is simply an anchor with a unicode character icon and a class of <code>close-reveal-modal</code>. Clicking anywhere outside the modal will also dismiss it.</p>
-	  <p>Finally, if your modal summons another Reveal modal, the plugin will handle that for you gracefully.</p> -->
-	<% end %>
+	
   <a class="close-reveal-modal">&#215;</a>
 </div>
