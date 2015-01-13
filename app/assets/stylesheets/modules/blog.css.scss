@@ -33,9 +33,11 @@
 		padding-bottom: .2rem;
 	}
 	p a {
-		color: $pink;
-		@include transition(.4s);
-		@include link-center-out($pink, $pink);
+		color: $text;
+		&:hover {
+			color: $text;
+			text-decoration: none;
+		}
 	}
 	a.post-title, a.post-title p {
 		color: $text;
