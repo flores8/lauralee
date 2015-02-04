@@ -1,26 +1,4 @@
-<div id="tag-show" class="row medium-spacer">
-	<div class="small-12 medium-10 medium-centered columns">
-		<h2><%= params[:tag] %></h2>
 
-		<!-- Show posts with this tag -->
-		<% @posts.each do |p| %>
-			<div class="medium-spacer-bottom">
-				<h3><%= link_to markdown(p.title), post_path(p) %></h3>
 
-				<!-- Show tags for this post -->
-				<p class="centered">
-					<% p.tags.each_with_index do |t, i| %>
-						<em class="tags"><%= link_to t.name, tag_path(t.name), class: "pink-link-center" %><%= p.tags.length - 1 == i ? "" : "," %></em>
-					<% end %>
-				</p>
-
-				<!-- Post Body Truncated -->
-				<% if p.body.length > 230 %>
-					<p><%= markdown(truncate(p.body, length: 230, omission: " ... ") { link_to "continue", p, class: 'pink-link-center'}) %></p>
-				<% else %>
-					<%= markdown(p.body) %>
-				<% end %>
-			</div>
-		<% end %>
-	</div>
-</div>
+<%= render partial: 'posts/post' %>
+	

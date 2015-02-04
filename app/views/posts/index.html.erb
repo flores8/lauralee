@@ -1,18 +1,4 @@
-<div class="off-white big-spacer-top" id="blog-post-listing">
-	<!-- Latest Posts -->
-	<div class="row">
-		<div class="small-spacer-top">
-			<div class="small-12 columns post-listing big-spacer-bottom">
-				<% @posts.each do |p| %>
-					<h3><%= link_to p.title, p %></h3>
-					<p class="small centered"><%= time_ago_in_words(p.created_at) %> ago <span>|</span> <%= p.reading_time %> minute read</p>
-					<%= link_to markdown(truncate(p.body, length: 230, omission: " ... ")), p, class: "blog-link" %>
-					<hr>
-				<% end %>
-			</div>
-		</div>
-	</div>
-</div>
+<%= render partial: 'post' %>
 
 <div class="pagination-centered" id="infinite-scrolling">
 	<%= will_paginate %>
