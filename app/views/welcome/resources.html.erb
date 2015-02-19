@@ -1,38 +1,53 @@
-<div id="comingsoon-intro">
-	<div class="row">
-		<h1 class="text-center upper">Thank you</h1>
-		<h1 class="text-center">for taking this journey with me!</h1>
-	</div>
-</div>
+<div id="resources-landing">
 
-<!-- <div class="blog">
-	<div class="row">
-		<div class="big-spacer-top medium-spacer-bottom">
-			<h2><%= link_to "A Little About Me and Why I Decided to Start This Training Series", about_me_path %></h2>
-			<div class="small-12 columns small-spacer-bottom">
-				<p>I've been thinking about creating these resources for some time now.  In this post I explain a little bit my early failures and what they taught me.  Ultimately, this is what I am going to do my best to help you avoid.</p>
-			</div>
-			<div class="small-12 medium-8 medium-centered columns">
-				<%= link_to "View Article", about_me_path, class: 'button expand' %>
+	<!-- Header -->
+	<section class="intro">
+
+		<!-- Heading -->
+		<div class="row text-center">
+			<div class="small-12 columns big-spacer-top mini-spacer-bottom">
+				<h1>Resources &amp; Training</h1>
 			</div>
 		</div>
-	</div>
-</div> -->
 
-<div id="freebie">
-	<div class="row">
-		<div class="big-spacer">
-			<h2><%= link_to "Something That Every Web Project Needs", freeimages_path %></h2>
-			<h3>Here's one of many resources I'll be giving you: high-quality images and icons.</h3>
-			<%= link_to image_tag("images-thanks.png"), freeimages_path %>
-			<p>I've literally spent $1,000's of dollars on images because I didn't know where to find <em>beautiful, high-quality, FREE images</em>.  I'll share the ones I've collected and how to find them yourself.</p>
-			<p>This is my way of saying thank you for signing up on lauraleeflores.com.  I sincerely hope this is an extremely valuable resource for you on your journey to making remarkable websites.</p>
-			<div class="small-12 medium-8 medium-centered columns">
-				<%= link_to "Gimme Free Images!", freeimages_path, class: "button expand button-pink" %>
-				<!-- Later make this button read "Add This Resource to My Account" -->
+		<!-- Tagline -->
+		<div class="row text-center">
+			<div class="small-12 medium-8 small-centered columns medium-spacer-bottom">
+				<h2>I’m beginning to create resources that will allow you to create incredible websites.</h2>
 			</div>
 		</div>
-	</div>
+
+	</section>
+
+	<!-- Free Stuff -->
+	<section class="offers">
+		<div class="row" data-equalizer>
+
+			<!-- Free Images -->
+			<div class="small-12 large-6 columns card" data-equalizer-watch>
+				<div class="image-container">
+					<%= image_tag "web-page-illustration.png" %>
+				</div>
+				<div class="content-container">
+					<h4>Free Images</h4>
+					<p>I've literally spent $1,000's of dollars on images because I didn't know where to find beautiful, high-quality, FREE images. I'll share the ones I've collected and how to find them yourself.</p>
+					<p><%= link_to "Gimme Free Images", freeimages_path, class: "button expand" %></p>
+				</div>
+			</div>
+
+			<!-- Free Rails Course -->
+			<div class="small-12 large-6 columns card" data-equalizer-watch>
+				<div class="image-container">
+					<%= image_tag "web-app-illustration.png" %>
+				</div>
+				<div class="content-container">
+					<h4>Learn Rails</h4>
+					<p>Ruby on Rails is the fastest growing web development language and rails programers are the best paid with the highest demand. Why? Because you create and iterate on your application fast, really fast. </p>
+					<p><%= link_to "Notify Me When Course Is Ready", freeimages_path, class: "button expand" %></p>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
 
 <div id="user-input">
@@ -40,7 +55,7 @@
 		<div class="big-spacer">
 			<h2>I Have a Request...</h2>
 			<p>I'm working hard creating resources and training that <em>I think</em> you'll love. But, I'm honestly not sure if I'm focusing on what you <em>most want to learn</em>.</p>
-			<p>Let's say we were sitting together at the computer for the next 15 minutes.  And you could ask me anything about websites, what would you want to me to show you?  What is the first thing you would want to learn about?</p>
+			<p>If I were to create a course or a valuable resource <em>just for you</em>, what would it be? What do you want to learn from me?</p>
 			<%= render 'feedbacks/form' %>
 		</div>
 	</div>
