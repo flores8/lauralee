@@ -66,7 +66,7 @@
 				</div>
 				<div class="row">
 					<div class="small-12 medium-6 small-centered columns">
-						<%= link_to "Learn More", root_path, class: "button expand" %>
+						<%= link_to "Learn More", resources_path, class: "button expand" %>
 					</div>
 				</div>
 			</div>
@@ -87,7 +87,11 @@
 				
 				<div class="row">
 					<div class="small-12 medium-6 small-centered columns">
-						<%= link_to "Give Me Free Stuff", new_user_registration_path, class: "button expand" %>
+						<% if current_user %>
+							<%= link_to "Give Me Free Stuff", resources_path, class: "button expand" %>
+						<% else %>
+							<%= link_to "Give Me Free Stuff", new_user_registration_path, class: "button expand" %>
+						<% end %>
 					</div>
 				</div>
 				
