@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-	# before_action :authenticate_user!, :only => [:comingsoon]
+	before_action :authenticate_user!, :only => [:freeimages]
 	
   def index
     @post = Post.order("created_at DESC").limit(5)
@@ -10,6 +10,7 @@ class WelcomeController < ApplicationController
   end
 
   def freeimages
+
   end
 
   def about_me
