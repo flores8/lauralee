@@ -43,7 +43,11 @@
 				<div class="content-container">
 					<h4>Learn Rails</h4>
 					<p>Ruby on Rails is the fastest growing web development language and rails programers are the best paid with the highest demand. Why? Because you create and iterate on your application fast, really fast. </p>
-					<p><%= link_to "Notify Me When Course Is Ready", freeimages_path, class: "button expand" %></p>
+					<% if current_user %>
+						<p class="signed-up">Because your're signed up I will email you when the course is ready.</p>
+					<% else %>
+						<p><%= link_to "Notify Me When Course Is Ready", new_user_registration_path, class: "button expand" %></p>
+					<% end %>
 				</div>
 			</div>
 		</div>
