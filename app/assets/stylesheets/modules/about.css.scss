@@ -33,6 +33,12 @@
 		color: $text;
 		font-size: 2em;
 	}
+}
+
+#blog-first-call-to-action {
+	margin-top: 7rem;
+}
+#about, #blog-first-call-to-action, #blog-second-call-to-action {
 	.create-your-business-idea {
 		text-align: center;
 		background-image: image-url('create-your-dreams.jpg');
