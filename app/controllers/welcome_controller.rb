@@ -21,4 +21,7 @@ class WelcomeController < ApplicationController
 
   def test
   end
+
+  def varsitytutors
+  end
 end
