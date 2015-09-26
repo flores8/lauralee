@@ -5,10 +5,10 @@
 	
 		<p>
 			<% if @previous_lesson.first.present? %>
-				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.first.id), class: "pink-link-left" %>
+				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.first.slug), class: "pink-link-left" %>
 			<% end %>
 			<% if @next_lesson.first.present? %>
-				<%= link_to "Next Lesson >", lesson_path(@next_lesson.first.id), class: "right pink-link-left" %>
+				<%= link_to "Next Lesson >", lesson_path(@next_lesson.first.slug), class: "right pink-link-left" %>
 			<% end %>
 		</p>
 

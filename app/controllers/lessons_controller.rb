@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
 	before_action :set_lesson, only: [:show, :edit, :update, :destroy]
+  before_action :find_page, only: [:show, :edit, :update, :destroy]
 
   def index
   	@lessons = Lesson.all.order("lesson_number ASC")
@@ -7,6 +8,7 @@ class LessonsController < ApplicationController
 
   def show
   	@lessons = Lesson.all
+    # binding.pry
   	@next_lesson = @lessons.where(lesson_number: @lesson.next_lesson)
   	@previous_lesson = @lessons.where(lesson_number: @lesson.previous_lesson)
   end
@@ -44,10 +46,15 @@ class LessonsController < ApplicationController
   private
 
   def lesson_params
-  	params.require(:lesson).permit(:title, :body, :lesson_number)
+  	params.require(:lesson).permit(:title, :body, :lesson_number, :slug)
   end
 
   def set_lesson
-  	@lesson = Lesson.find(params[:id])
+  	@lesson = Lesson.find_by_slug!(params[:id])
   end
+
+  def find_page
+    @lesson = Lesson.find_by_slug!(params[:id])
+  end
+  helper_method :page
 end
