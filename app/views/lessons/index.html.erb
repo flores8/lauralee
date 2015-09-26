@@ -1,8 +1,10 @@
 <div class="row">
 	<div class="medium-spacer-top">
 		<h2>Your Lessons:</h2>
-		<% @lessons.each do |l| %>
-			<p><span><%= l.lesson_number %> - </span><%= link_to l.title, l %></p>
+		<% if @lessons.count > 0 %>
+			<% @lessons.each do |l| %>
+				<p><span><%= l.lesson_number %> - </span><%= link_to l.title, l %></p>
+			<% end %>
 		<% end %>
 		<p><%= link_to "Add New Lesson", new_lesson_path %></p>
 	</div>
