@@ -2,7 +2,7 @@
 	<div class="medium-spacer-top">
 		<p><%= link_to "all lessons", lessons_path %></p>
 		<h2><%= @lesson.title %></h2>
-		<p><%= @lesson.body %></p>
+		<p><%= markdown @lesson.body %></p>
 		<p><%= @lesson.next_lesson %></p>
 		<% if @next_lesson.first.present? %>
 			<p><%= link_to "Go to next lesson", lesson_path(@next_lesson.first.id) %></p>
