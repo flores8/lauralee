@@ -4,6 +4,8 @@
 		<h2><%= @lesson.title %></h2>
 		<p><%= @lesson.body %></p>
 		<p><%= @lesson.next_lesson %></p>
-		<p><%= link_to "Go to next lesson", lesson_path(@next_lesson.first.id) %></p>
+		<% if @next_lesson.first.present? %>
+			<p><%= link_to "Go to next lesson", lesson_path(@next_lesson.first.id) %></p>
+		<% end %>
 	</div>
 </div>
