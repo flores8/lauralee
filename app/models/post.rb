@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
 	# Pagination: Show 10 posts per page
 	self.per_page = 10
 
-	# Make the URL friend
+	# Make the URL friendly
 	def to_param
 		slug
 	end

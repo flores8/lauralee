@@ -17,6 +17,9 @@ Lauralee::Application.routes.draw do
   # Main Nav / Feedback
   resources :feedbacks
 
+  # Main Nav / Lessons
+  resources :lessons
+
   # Devise
   devise_for :users
   resources :users, only: [:update]
