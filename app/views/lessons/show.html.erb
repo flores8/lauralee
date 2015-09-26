@@ -4,8 +4,13 @@
 		<h2><%= @lesson.title %></h2>
 		<p><%= markdown @lesson.body %></p>
 		<p><%= @lesson.next_lesson %></p>
-		<% if @next_lesson.first.present? %>
-			<p><%= link_to "Go to next lesson", lesson_path(@next_lesson.first.id) %></p>
-		<% end %>
+	
+		<p>
+			<% if @previous_lesson.first.present? %>
+				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.first.id) %>
+			<% end %>
+			<% if @next_lesson.first.present? %>
+				<%= link_to "Next Lesson >", lesson_path(@next_lesson.first.id), class: "right" %></p>
+			<% end %>
 	</div>
 </div>

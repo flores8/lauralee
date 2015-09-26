@@ -8,6 +8,7 @@ class LessonsController < ApplicationController
   def show
   	@lessons = Lesson.all
   	@next_lesson = @lessons.where(lesson_number: @lesson.next_lesson)
+  	@previous_lesson = @lessons.where(lesson_number: @lesson.previous_lesson)
   end
 
   def new
