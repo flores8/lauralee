@@ -1,16 +1,17 @@
-<div class="row">
+<div class="row" id="course_show">
 	<div class="medium-spacer-top">
-		<p><%= link_to "all lessons", lessons_path %></p>
 		<h2><%= @lesson.title %></h2>
 		<p><%= markdown @lesson.body %></p>
-		<p><%= @lesson.next_lesson %></p>
 	
 		<p>
 			<% if @previous_lesson.first.present? %>
-				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.first.id) %>
+				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.first.id), class: "pink-link-left" %>
 			<% end %>
 			<% if @next_lesson.first.present? %>
-				<%= link_to "Next Lesson >", lesson_path(@next_lesson.first.id), class: "right" %></p>
+				<%= link_to "Next Lesson >", lesson_path(@next_lesson.first.id), class: "right pink-link-left" %>
 			<% end %>
+		</p>
+
+		<p class="centered small-spacer-top"><%= link_to "Go back to all lessons.", lessons_path, class: "pink-link-center" %></p>
 	</div>
 </div>

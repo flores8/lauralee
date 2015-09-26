@@ -18,7 +18,10 @@ Lauralee::Application.routes.draw do
   resources :feedbacks
 
   # Main Nav / Lessons
-  resources :lessons
+  scope '/git' do
+    resources :lessons
+  end
+  
 
   # Devise
   devise_for :users
