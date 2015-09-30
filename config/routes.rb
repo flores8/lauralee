@@ -21,6 +21,7 @@ Lauralee::Application.routes.draw do
   scope '/git' do
     resources :lessons
   end
+  get '/git' => 'courses#git'
   
 
   # Devise
