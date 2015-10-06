@@ -5,6 +5,10 @@
 		text-transform: uppercase;
 		color: $text;
 	}
+	a.button {
+		padding: 1rem 2rem;
+		@include border-radius (2px);
+	}
 }
 
 .git-lessons {
