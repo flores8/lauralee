@@ -13,7 +13,7 @@
 
 .git-lessons {
 	a {
-		@include link-center-out($blue, $blue)
+		@include link-center-out($pink, $pink)
 	}
 	a.link-left {
 		@include link-left-right($blue)
@@ -24,6 +24,7 @@
 	}
 	h2 {
 		padding-bottom: 0rem;
+		color: $blue;
 	}
 	pre {
 		background-color: $lightGray;
@@ -50,5 +51,11 @@
 	img {
 		margin-top: .75rem;
 		margin-bottom: 1.75rem;
+	}
+	ul {
+		margin-left: 4rem;
+		li {
+			font-size: 1.5rem;
+		}
 	}
 }
