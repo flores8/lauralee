@@ -6,3 +6,25 @@
 		color: $text;
 	}
 }
+
+.git-lessons {
+	a {
+		@include link-left-right($blue)
+	}
+	h1 {
+		margin-top: 1rem;
+		margin-bottom: .5rem;
+	}
+	pre {
+		background-color: $lightGray;
+		padding: 1rem;
+		margin-bottom: 1.5rem;
+		code {
+			color: $green;
+			font-weight: 400;
+		}
+	}
+	img {
+		margin-top: .75rem;
+	}
+}
