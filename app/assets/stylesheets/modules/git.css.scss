@@ -13,22 +13,42 @@
 
 .git-lessons {
 	a {
+		@include link-center-out($blue, $blue)
+	}
+	a.link-left {
 		@include link-left-right($blue)
 	}
 	h1 {
-		margin-top: 1rem;
+		margin-top: 3rem;
 		margin-bottom: .5rem;
+	}
+	h2 {
+		padding-bottom: 0rem;
 	}
 	pre {
 		background-color: $lightGray;
-		padding: 1rem;
+		padding: 1rem 1rem 1rem 2rem;
+		line-height: 1.35rem;
+		font-size: 1.25rem;
 		margin-bottom: 1.5rem;
 		code {
 			color: $green;
 			font-weight: 400;
 		}
 	}
+	p {
+		code {
+			background-color: $lightGray;
+			padding: .25rem .5rem;
+			color: $green;
+			font-weight: 400;
+		}
+	}
+	p.intro {
+		margin-bottom: 2rem;
+	}
 	img {
 		margin-top: .75rem;
+		margin-bottom: 1.75rem;
 	}
 }
