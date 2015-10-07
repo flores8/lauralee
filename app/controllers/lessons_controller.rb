@@ -4,6 +4,7 @@ class LessonsController < ApplicationController
 
   def index
   	@lessons = Lesson.all.order("lesson_number ASC")
+    authorize @lessons
   end
 
   def show
@@ -15,13 +16,16 @@ class LessonsController < ApplicationController
 
   def new
   	@lesson = Lesson.new
+    authorize @lesson
   end
 
   def edit
+    authorize @lesson
   end
 
   def create
   	@lesson = Lesson.new(lesson_params)
+    authorize @lesson
   	if @lesson.save
   		redirect_to @lesson, notice: "Your lesson was created!"
   	else
@@ -30,6 +34,7 @@ class LessonsController < ApplicationController
   end
 
   def update
+    authorize @lesson
   	if @lesson.update_attributes(lesson_params)
   		flash[:notice] = "Lesson was updated."
   		redirect_to @lesson
@@ -40,6 +45,7 @@ class LessonsController < ApplicationController
   end
 
   def destroy
+    authorize @lesson
   	@lesson.destroy
   end
 
