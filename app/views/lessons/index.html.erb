@@ -7,10 +7,14 @@
 			
 		<div class="small-12 medium-7 medium-centered columns">
 			<% if @lessons.count > 0 %>
-			<% @lessons.each do |l| %>
-				<p><span><%= l.lesson_number %> - </span><%= link_to l.title, l, class: "link-left" %></p>
+				<% @lessons.each do |l| %>
+					<div class="panel">
+						<p><span><%= l.lesson_number %> - </span><%= link_to l.title, l, class: "link-left" %></p>
+						<p class="description"><%= l.description %></p>
+					</div>
+					
+				<% end %>
 			<% end %>
-		<% end %>
 		</div>
 		
 	</div>
