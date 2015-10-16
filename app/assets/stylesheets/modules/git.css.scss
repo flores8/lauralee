@@ -46,6 +46,8 @@
 		}
 	}
 	.panel {
+		border-color: lighten($lightGray, 2%);
+		background-color: lighten($lightGray, 5%);
 		p {
 			margin-bottom: 0;
 		}
@@ -56,6 +58,7 @@
 	p.description {
 		line-height: 1.5rem;
 		font-size: 1.2rem;
+		margin-top: .5rem;
 	}
 	img {
 		margin-top: .75rem;

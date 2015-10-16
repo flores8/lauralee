@@ -16,6 +16,10 @@ class Lesson < ActiveRecord::Base
 		self.lesson_number - 1
 	end
 
+	def complete_lesson
+		self.complete = true
+	end
+
 	# Make the URL friendly
 	def to_param
 		slug
