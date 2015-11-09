@@ -1,11 +1,23 @@
-<div class="row">
+<div class="row git-lessons">
 	<div class="medium-spacer-top">
-		<h2>Your Lessons:</h2>
-		<% if @lessons.count > 0 %>
-			<% @lessons.each do |l| %>
-				<p><span><%= l.lesson_number %> - </span><%= link_to l.title, l %></p>
+		<h2>Create a Blog in Rails</h2>
+		<div class="small-12 medium-10 medium-centered columns centered">
+			<p class="intro">This course is an introduction to the world of rails. I think you're going to love it! It was made for <%= link_to "a Girls in Tech Bootcamp", git_path %>.</p>
+		</div>
+			
+		<div class="small-12 medium-7 medium-centered columns">
+			<% if @lessons.count > 0 %>
+				<% @lessons.each do |l| %>
+					<div class="panel">
+						<p><span><%= l.lesson_number %> - </span><%= link_to l.title, l, class: "link-left" %></p>
+						<% if l.description.present? %>
+							<p class="description"><%= l.description %></p>
+						<% end %>
+					</div>
+					
+				<% end %>
 			<% end %>
-		<% end %>
-		<p><%= link_to "Add New Lesson", new_lesson_path %></p>
+		</div>
+		
 	</div>
 </div>

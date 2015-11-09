@@ -821,7 +821,12 @@ $off-canvas-overlay-box-shadow: none;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color(#fff, $lightness: -5%);
+$panel-bg: #fafafa;
+div.panel {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 

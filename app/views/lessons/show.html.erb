@@ -1,16 +1,23 @@
-<div class="row" id="course_show">
+<div class="row git-lessons" id="course_show">
 	<div class="medium-spacer-top">
 		<h2><%= @lesson.title %></h2>
 		<p><%= markdown @lesson.body %></p>
 	
 		<p>
-			<% if @previous_lesson.first.present? %>
-				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.first.slug), class: "pink-link-left" %>
+			<% if @previous_lesson.present? %>
+				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.slug), class: "pink-link-left" %>
 			<% end %>
-			<% if @next_lesson.first.present? %>
-				<%= link_to "Next Lesson >", lesson_path(@next_lesson.first.slug), class: "right pink-link-left" %>
+			<% if @next_lesson.present? %>
+				<%= link_to "Next Lesson >", lesson_path(@next_lesson.slug), class: "right pink-link-right" %>
+				<!-- Form -->
+				<%# link_to(lesson_path(@next_lesson.slug), class: "right pink-link-left") do %>
+				  <!-- Complete and Next Lesson > -->
+				  <%# @lesson.complete_lesson %>
+				<%# end %>
+				
 			<% end %>
 		</p>
+				
 
 		<p class="centered small-spacer-top"><%= link_to "Go back to all lessons.", lessons_path, class: "pink-link-center" %></p>
 	</div>

@@ -4,24 +4,28 @@ class LessonsController < ApplicationController
 
   def index
   	@lessons = Lesson.all.order("lesson_number ASC")
+    authorize @lessons
   end
 
   def show
   	@lessons = Lesson.all
-    # binding.pry
-  	@next_lesson = @lessons.where(lesson_number: @lesson.next_lesson)
-  	@previous_lesson = @lessons.where(lesson_number: @lesson.previous_lesson)
+  	@next_lesson = @lessons.where(lesson_number: @lesson.next_lesson).first
+  	@previous_lesson = @lessons.where(lesson_number: @lesson.previous_lesson).first
   end
 
   def new
   	@lesson = Lesson.new
+    authorize @lesson
   end
 
   def edit
+    authorize @lesson
   end
 
   def create
   	@lesson = Lesson.new(lesson_params)
+    @lesson.complete = false
+    authorize @lesson
   	if @lesson.save
   		redirect_to @lesson, notice: "Your lesson was created!"
   	else
@@ -30,6 +34,7 @@ class LessonsController < ApplicationController
   end
 
   def update
+    authorize @lesson
   	if @lesson.update_attributes(lesson_params)
   		flash[:notice] = "Lesson was updated."
   		redirect_to @lesson
@@ -40,13 +45,15 @@ class LessonsController < ApplicationController
   end
 
   def destroy
+    authorize @lesson
   	@lesson.destroy
   end
 
   private
 
   def lesson_params
-  	params.require(:lesson).permit(:title, :body, :lesson_number, :slug)
+    # binding.pry
+  	params.require(:lesson).permit(:title, :body, :lesson_number, :slug, :description)
   end
 
   def set_lesson

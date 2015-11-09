@@ -17,6 +17,12 @@ a.pink-link-left {
 	@include link-left-right($pink);
 }
 
+a.pink-link-right {
+	color: $pink;
+	@include transition(.4s);
+	@include link-right-left($pink);
+}
+
 a.space-right {
 	margin-right: .75em;
 }
