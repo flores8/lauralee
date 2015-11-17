@@ -1,0 +1,34 @@
+<div id="form" class="small-spacer-top medium-spacer-bottom">
+	<%= form_for @course do |f| %>
+
+	<!-- ERROR -->
+	<div class="row">
+    <div class="small-12 columns">
+      <% if @course.errors.any? %>
+        <div id="error_explanation">
+          <p class="error"><%= pluralize(@course.errors.count, "error") %> prohibited this@post from being saved:</p>
+          <ul>
+            <% @course.errors.full_messages.each do |msg| %>
+              <li><p><%= msg %></p></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+	<!-- Course Name -->
+	<div class="row">
+		<div class="small-12 columns">
+			<%= f.text_field :name, placeholder: "Course Name", class: "border background" %>
+		</div>
+	</div>
+
+	<!-- Save Button -->
+	<div class="row">
+		<div class="small-12 medium-7 medium-centered columns">
+			<%= f.submit "Save Course", class: "button expand" %>
+		</div>
+	</div>
+	<% end %>
+</div>

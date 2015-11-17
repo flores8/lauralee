@@ -1,10 +1,13 @@
 class Lesson < ActiveRecord::Base
 	before_save :generate_slug
 
+	#Relationships
+	belongs_to :course
+
 	# Validations
 	validates :title, presence: true
 	validates :body, presence: true
-	validates :lesson_number, presence: true, uniqueness: true
+	validates :lesson_number, presence: true
 	validates :slug, uniqueness: true, presence: true
 	before_validation :generate_slug
 

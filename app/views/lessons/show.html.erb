@@ -5,10 +5,10 @@
 	
 		<p>
 			<% if @previous_lesson.present? %>
-				<%= link_to "< Previous Lesson", lesson_path(@previous_lesson.slug), class: "pink-link-left" %>
+				<%= link_to "< Previous Lesson", course_lesson_path(@course, @previous_lesson.slug), class: "pink-link-left" %>
 			<% end %>
 			<% if @next_lesson.present? %>
-				<%= link_to "Next Lesson >", lesson_path(@next_lesson.slug), class: "right pink-link-right" %>
+				<%= link_to "Next Lesson >", course_lesson_path(@course, @next_lesson.slug), class: "right pink-link-right" %>
 				<!-- Form -->
 				<%# link_to(lesson_path(@next_lesson.slug), class: "right pink-link-left") do %>
 				  <!-- Complete and Next Lesson > -->
@@ -19,6 +19,10 @@
 		</p>
 				
 
-		<p class="centered small-spacer-top"><%= link_to "Go back to all lessons.", lessons_path, class: "pink-link-center" %></p>
+		<p class="centered small-spacer-top"><%= link_to "Go back to this course", course_path(@course), class: "pink-link-center" %></p>
+
+		<% if policy(@lesson).edit? %>
+			<%= link_to "Edit", edit_course_lesson_path(@course, @lesson) %>
+		<% end %>
 	</div>
 </div>

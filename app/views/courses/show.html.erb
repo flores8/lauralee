@@ -1,0 +1,27 @@
+<div class="row" id="course_show">
+	<div class="medium-spacer-top">
+		<h2><%= @course.name %><% if policy(@course).update? %> <span class="text-small"><%= link_to "Edit", edit_course_path, class: "blue-link-center" %></span><% end %></h2>
+
+		<div class="small-12 medium-7 medium-centered columns">
+			<% if @lessons.count > 0 %>
+				<% @lessons.each do |l| %>
+					<div class="panel">
+						<p><span><%= l.lesson_number %> - </span><%= link_to l.title, [@course, l], class: "link-left" %></p>
+						<% if l.description.present? %>
+							<p class="description"><%= l.description %></p>
+						<% end %>
+					</div>
+					
+				<% end %>
+			<% else %>
+				<p class="centered">This course does not have any lessons yet.</p>
+			<% end %>
+		</div>
+
+		<% if policy(Course.new).create? %>
+			<p class="centered"><%= link_to "Add a New Lesson", new_course_lesson_path(@course), class: "pink-link-center" %></p>
+		<% end %>
+
+		<p class="centered small-spacer-top"><%= link_to "Go back to all courses.", courses_path, class: "pink-link-center" %></p>
+	</div>
+</div>

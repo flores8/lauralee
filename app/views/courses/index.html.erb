@@ -1,0 +1,28 @@
+<div class="row git-lessons">
+	<div class="medium-spacer-top">
+		<h2>Courses</h2>
+		<div class="small-12 medium-10 medium-centered columns centered">
+			<p class="intro">Become a ruby on rails developer.</p>
+		</div>
+			
+		<div class="small-12 medium-7 medium-centered columns">
+			<% if @courses.count > 0 %>
+				<% @courses.each do |c| %>
+					<div class="panel">
+						<p><%= link_to c.name, c, class: "link-left" %></p>
+					</div>
+					
+				<% end %>
+			<% end %>
+
+			<% if policy(Course.new).create? %>
+			<div class="centered medium-spacer-bottom">
+				<%= link_to "Create a New Course", new_course_path %>
+			</div>
+			<% end %>
+
+			
+		</div>
+		
+	</div>
+</div>

@@ -11,6 +11,12 @@ a.pink-link-center {
 	@include link-center-out($pink, $pink);
 }
 
+a.blue-link-center {
+	color: $blue;
+	@include transition(.4s);
+	@include link-center-out($blue, $blue);
+}
+
 a.pink-link-left {
 	color: $pink;
 	@include transition(.4s);
