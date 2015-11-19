@@ -1,3 +1,5 @@
+<%= render 'lessons/breadcrumb' %>
+
 <div class="row" id="course_show">
 	<div class="medium-spacer-top">
 		<h2><%= @course.name %><% if policy(@course).update? %> <span class="text-small"><%= link_to "Edit", edit_course_path, class: "blue-link-center" %></span><% end %></h2>

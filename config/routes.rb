@@ -18,11 +18,10 @@ Lauralee::Application.routes.draw do
   resources :feedbacks
 
   # Main Nav / Lessons
-  # scope '/git' do
-  #   resources :lessons
-  # end
+  get '/git', to: redirect('/courses')
+  get '/git/lessons', to: redirect('/courses')
   resources :courses do
-    resources :lessons
+    resources :lessons, path: "lesson"
   end
   get '/git' => 'courses#git'
   

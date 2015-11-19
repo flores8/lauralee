@@ -1361,6 +1361,9 @@ $topbar-menu-icon-color-toggled: #f37171;
 h1.text-small, h2.text-small, h3.text-small, h4.text-small, h5.text-small, p.text-small, span.text-small {
 	font-size: $small-font-size;
 }
+h1.text-medium, h2.text-medium, h3.text-medium, h4.text-medium, h5.text-medium, p.text-medium, span.text-medium {
+	font-size: 85%;
+}
 
 h1 {
 	color: #585457;

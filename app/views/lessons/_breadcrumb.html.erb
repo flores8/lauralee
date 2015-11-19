@@ -1,0 +1,12 @@
+<div class="row">
+	<% if controller.controller_name == "courses" %>
+		<% if controller.action_name == "show" %>
+			<p class="text-medium"><%= link_to "Home", root_path %> / <%= link_to "All Courses", courses_path  %> / <%= @course.name %></p>
+		<% elsif controller.action_name == "index" %>
+			<p class="text-medium"><%= link_to "Home", root_path %> / All Courses</p>
+		<% end %>
+	<% elsif controller.controller_name == "lessons" %>
+		<p class="text-medium"><%= link_to "Home", root_path %> / <%= link_to "All Courses", courses_path  %> / <%= link_to @course.name, course_path(@course) %> / <%= @lesson.title %></p>
+
+	<% end %>
+</div>
