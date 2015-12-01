@@ -5,7 +5,7 @@ class FeedbacksController < ApplicationController
   # GET /feedbacks
   # GET /feedbacks.json
   def index
-    @feedbacks = Feedback.all
+    @feedbacks = Feedback.all.order("created_at DESC")
     @users = User.all.order("created_at DESC")
   end
 

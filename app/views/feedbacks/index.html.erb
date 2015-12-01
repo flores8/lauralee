@@ -1,4 +1,4 @@
-<% if current_user.email == "lauralee@majorfinder.com" %>
+<% if current_user.role == "admin" %>
   <div class="row medium-spacer-top small-spacer-bottom">
     <h2>Hey Commander!</h2>
     <% @feedbacks.each do |f| %>
@@ -54,7 +54,7 @@
 </div>
 
 
-<% if current_user.email == "lauralee@majorfinder.com" %>
+<% if current_user.role == "admin" %>
   <div class="row medium-spacer-top small-spacer-bottom">
     <h2>Hey Lauralee!</h2>
     <p><%= @users.count %> people signed up so far.</p>
@@ -64,6 +64,7 @@
 
           <p><%= u.name %></p>
           <p><%= u.email %></p>
+          <p class="created-by">Signed up <%= time_ago_in_words(u.created_at) %> and has shared <%= u.feedbacks.count %> ideas. </p>
           
         </div>
     <% end %>
