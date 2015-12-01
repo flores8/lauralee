@@ -1,6 +1,5 @@
 class LessonsController < ApplicationController
 	before_action :set_lesson, :set_course, only: [:show, :edit, :update, :destroy]
-  before_action :find_page, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -10,8 +9,6 @@ class LessonsController < ApplicationController
 
   def show
   	@lessons = Lesson.all
-  	@next_lesson = @lessons.where(lesson_number: @lesson.next_lesson).first
-  	@previous_lesson = @lessons.where(lesson_number: @lesson.previous_lesson).first
   end
 
   def new
@@ -52,6 +49,7 @@ class LessonsController < ApplicationController
   def destroy
     authorize @lesson
   	@lesson.destroy
+    redirect_to course_url
   end
 
   private
@@ -68,9 +66,4 @@ class LessonsController < ApplicationController
   def set_course
     @course = Course.find_by_slug!(params[:course_id])
   end
-
-  def find_page
-    @lesson = Lesson.find_by_slug!(params[:id])
-  end
-  helper_method :page
 end

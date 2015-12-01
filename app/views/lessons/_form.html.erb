@@ -1,55 +1,56 @@
 <div id="form" class="small-spacer-top medium-spacer-bottom">
 	<%= form_for [@course, @lesson] do |f| %>
 
-	<!-- ERROR -->
-	<div class="row">
-    <div class="small-12 columns">
-      <% if @lesson.errors.any? %>
-        <div id="error_explanation">
-          <p class="error"><%= pluralize(@lesson.errors.count, "error") %> prohibited this@post from being saved:</p>
-          <ul>
-            <% @lesson.errors.full_messages.each do |msg| %>
-              <li><p><%= msg %></p></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-    </div>
-  </div>
+		<!-- ERROR -->
+		<div class="row">
+	    <div class="small-12 columns">
+	      <% if @lesson.errors.any? %>
+	        <div id="error_explanation">
+	          <p class="error"><%= pluralize(@lesson.errors.count, "error") %> prohibited this@post from being saved:</p>
+	          <ul>
+	            <% @lesson.errors.full_messages.each do |msg| %>
+	              <li><p><%= msg %></p></li>
+	            <% end %>
+	          </ul>
+	        </div>
+	      <% end %>
+	    </div>
+	  </div>
 
-	<!-- Lesson Title -->
-	<div class="row">
-		<div class="small-12 columns">
-			<%= f.text_field :title, placeholder: "Lesson Title", class: "border background" %>
+		<!-- Lesson Title -->
+		<div class="row">
+			<div class="small-12 columns">
+				<%= f.text_field :title, placeholder: "Lesson Title", class: "border background" %>
+			</div>
 		</div>
-	</div>
 
-	<!-- Post Body -->
-	<div class="row">
-		<div class="small-12 columns">
-			<%= f.text_area :body, placeholder: "Lesson Body", class: "border background" %>
+		<!-- Lesson Body -->
+		<div class="row">
+			<div class="small-12 columns">
+				<%= f.text_area :body, placeholder: "Lesson Body", class: "border background" %>
+			</div>
 		</div>
-	</div>
 
-	<!-- Post Description -->
-	<div class="row">
-		<div class="small-12 columns">
-			<%= f.text_field :description, placeholder: "Briefly Describe this lesson in just a line or two", class: "border background" %>
+		<!-- Lesson Description -->
+		<div class="row">
+			<div class="small-12 columns">
+				<%= f.text_field :description, placeholder: "Briefly Describe this lesson in just a line or two", class: "border background" %>
+			</div>
 		</div>
-	</div>
 
-	<!-- General Tags -->
-	<div class="row">
-		<div class="small-12 columns">
-			<%= f.number_field :lesson_number, min: 0 %>
+		<!-- Lesson Number -->
+		<div class="row">
+			<div class="small-12 columns">
+				<%= f.number_field :lesson_number, min: 0 %>
+			</div>
 		</div>
-	</div>
 
-	<!-- Save Button -->
-	<div class="row">
-		<div class="small-12 medium-7 medium-centered columns">
-			<%= f.submit "Save Post", class: "button expand" %>
+		<!-- Save Button -->
+		<div class="row">
+			<div class="small-12 medium-7 medium-centered columns">
+				<%= f.submit "Save Post", class: "button expand" %>
+			</div>
 		</div>
-	</div>
+
 	<% end %>
 </div>

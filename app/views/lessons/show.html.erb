@@ -2,15 +2,30 @@
 
 <div class="row git-lessons" id="course_show">
 	<div class="medium-spacer-top">
+		<p>Total Lessons: <%= @course.lessons.count %></p>
+		<p>Course ID: <%= @course.id %></p>
+		<% if @lesson.previous_lesson.present? %>
+			<p>Previous Lesson Number: <%= @lesson.previous_lesson.first.lesson_number %></p>
+		<% else %>
+			<p>No previous lesson.</p>
+		<% end %>
+		
+		<p>Lesson Number: <%= @lesson.lesson_number %></p>
+		<% if @lesson.next_lesson.present? %>
+			<p>Next Lesson Number: <%= @lesson.next_lesson.first.lesson_number %></p>
+		<% else %>
+			<p>No next lesson.</p>
+		<% end %>
+
 		<h2><%= @lesson.title %></h2>
 		<p><%= markdown @lesson.body %></p>
 	
 		<p>
-			<% if @previous_lesson.present? %>
-				<%= link_to "< Previous Lesson", course_lesson_path(@course, @previous_lesson.slug), class: "pink-link-left" %>
+			<% if @lesson.previous_lesson.present? %>
+				<%= link_to "< Previous Lesson", course_lesson_path(@course, @lesson.previous_lesson.first.slug), class: "pink-link-left" %>
 			<% end %>
-			<% if @next_lesson.present? %>
-				<%= link_to "Next Lesson >", course_lesson_path(@course, @next_lesson.slug), class: "right pink-link-right" %>
+			<% if @lesson.next_lesson.present? %>
+				<%= link_to "Next Lesson >", course_lesson_path(@course, @lesson.next_lesson.first.slug), class: "right pink-link-right" %>
 				<!-- Form -->
 				<%# link_to(lesson_path(@next_lesson.slug), class: "right pink-link-left") do %>
 				  <!-- Complete and Next Lesson > -->
@@ -25,6 +40,10 @@
 
 		<% if policy(@lesson).edit? %>
 			<p class="centered"><%= link_to "Edit Lesson", edit_course_lesson_path(@course, @lesson), class: "blue-link-center" %></p>
+		<% end %>
+
+		<% if policy(@lesson).destroy? %>
+			<p class="centered"><%= link_to "Delete Lesson", course_lesson_path(@course, @lesson), method: :delete %></p>
 		<% end %>
 	</div>
 </div>

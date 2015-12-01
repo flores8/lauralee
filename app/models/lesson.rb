@@ -12,11 +12,17 @@ class Lesson < ActiveRecord::Base
 	before_validation :generate_slug
 
 	def next_lesson
-		self.lesson_number + 1
+		if self.course.lessons.count > 1
+			lessons_in_course = Lesson.where(course_id: self.course_id)
+			lessons_in_course.where(lesson_number: self.lesson_number + 1)
+		end
 	end
 	
 	def previous_lesson
-		self.lesson_number - 1
+		if self.course.lessons.count > 1
+			lessons_in_course = Lesson.where(course_id: self.course_id)
+			lessons_in_course.where(lesson_number: self.lesson_number - 1)
+		end
 	end
 
 	def complete_lesson
