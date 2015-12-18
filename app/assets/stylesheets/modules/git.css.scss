@@ -16,7 +16,10 @@
 		@include link-center-out($pink, $pink)
 	}
 	a.link-left {
-		@include link-left-right($blue)
+		@include link-left-right($blue);
+		span.small {
+			font-size: .5rem;
+		}
 	}
 	h1 {
 		margin-top: 3rem;

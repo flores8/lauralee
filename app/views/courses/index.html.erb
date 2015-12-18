@@ -12,6 +12,9 @@
 				<% @courses.each do |c| %>
 					<div class="panel">
 						<p><%= link_to c.name, c, class: "link-left" %></p>
+						<% if policy(c).update? %>
+								<span class="small"><%= link_to "Edit", edit_course_path(c), class: "pink-link-left" %></span>
+							<% end %>
 					</div>
 					
 				<% end %>

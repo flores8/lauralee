@@ -3,6 +3,9 @@
 <div class="row git-lessons" id="course_show">
 	<div class="medium-spacer-top">
 		<h2><%= @course.name %><% if policy(@course).update? %> <span class="text-small"><%= link_to "Edit", edit_course_path, class: "blue-link-center" %></span><% end %></h2>
+		<div class="small-12 medium-10 medium-centered columns centered">
+			<p class="intro"><%= @course.description  %></p>
+		</div>
 
 		<div class="small-12 medium-7 medium-centered columns">
 			<% if @lessons.count > 0 %>

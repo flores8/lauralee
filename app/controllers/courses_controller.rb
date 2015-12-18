@@ -55,7 +55,7 @@ class CoursesController < ApplicationController
 
   def course_params
     # binding.pry
-  	params.require(:course).permit(:name)
+  	params.require(:course).permit(:name, :description)
   end
 
   def set_course
