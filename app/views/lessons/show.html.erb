@@ -1,22 +1,7 @@
 <%= render 'lessons/breadcrumb' %>
 
 <div class="row git-lessons" id="course_show">
-	<div class="medium-spacer-top">
-		<p>Total Lessons: <%= @course.lessons.count %></p>
-		<p>Course ID: <%= @course.id %></p>
-		<% if @lesson.previous_lesson.present? %>
-			<p>Previous Lesson Number: <%= @lesson.previous_lesson.first.lesson_number %></p>
-		<% else %>
-			<p>No previous lesson.</p>
-		<% end %>
-		
-		<p>Lesson Number: <%= @lesson.lesson_number %></p>
-		<% if @lesson.next_lesson.present? %>
-			<p>Next Lesson Number: <%= @lesson.next_lesson.first.lesson_number %></p>
-		<% else %>
-			<p>No next lesson.</p>
-		<% end %>
-
+	<div class="small-spacer-top">
 		<h2><%= @lesson.title %></h2>
 		<p><%= markdown @lesson.body %></p>
 	
