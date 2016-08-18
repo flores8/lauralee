@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     authorize @post
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   def create
@@ -38,7 +39,7 @@ class PostsController < ApplicationController
     if @post.update_attributes(user_params)
       flash[:notice] = "Post was updated."
       redirect_to @post
-    else 
+    else
       flash[:errror] = "There was a problem updating your post. Please try again."
       render :edit
     end
@@ -52,7 +53,7 @@ class PostsController < ApplicationController
 
   private
 
-  def user_params 
+  def user_params
     params.require(:post).permit(:title, :body, :slug, :tag_list, :skill_list, :interest_list)
   end
 
