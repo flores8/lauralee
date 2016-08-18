@@ -32,6 +32,7 @@ class PostsController < ApplicationController
 
   def edit
     authorize @post
+    @tags = ActsAsTaggableOn::Tag.all
   end
 
   def update
