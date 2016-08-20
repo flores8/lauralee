@@ -7,13 +7,13 @@
 			<header>
 
 				<h2><%= markdown @post.title %></h2>
-				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em> 
+				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em>
 					<% @post.tags.each_with_index do |t, i| %>
 						<em class="tags"><%= link_to t.name, tag_path(t.name), class: "pink-link-center" %><%= @post.tags.length - 1 == i ? "" : "," %></em>
 					<% end %>
 				</p>
 			</header>
-			
+
 			<!-- Blog Post Content -->
 			<div id="blog-content">
 				<%= markdown @post.body %>
@@ -43,7 +43,7 @@
 		</div>
 	</section>
 </div>
-	
+
 
 
 <!-- Find Other Articles with These Tags  -->
@@ -56,7 +56,7 @@
 				<h3 class="title mini-spacer-bottom">Similar Posts</h3>
 
 				<!-- Loop through each related post -->
-				<% @post.find_related_tags.each do |p| %>
+				<% @post.find_related_tags.limit(5).shuffle.each do |p| %>
 					<article class="similar-item small-spacer-bottom">
 						<h4><%= link_to markdown(p.title), p, class: "item-title" %></h4>
 					</article>
@@ -80,7 +80,7 @@
 						<p>My gift to you: I have put together resources and training material so that you can make incredible websites.</p>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="small-12 medium-6 small-centered columns">
 						<% if current_user %>
@@ -90,14 +90,14 @@
 						<% end %>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</section>
 </div>
 
-	
-	
+
+
 
 <!-- Edit this post if you have permission -->
 <% if policy(@post).edit? %>
