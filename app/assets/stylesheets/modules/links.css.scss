@@ -1,5 +1,14 @@
 @import "globals/all";
 
+.clean-link {
+	color: $text;
+	border-bottom: 4px solid $lightGray;
+	transition: .4s;
+	&:hover {
+		color: $text;
+		border-bottom: 4px solid $pink;
+	}
+}
 .button {
 	font-size: 1.5em;
 	padding: 1em;
