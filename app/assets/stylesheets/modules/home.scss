@@ -2,6 +2,7 @@
 #home-page {
 	display: flex;
 	height: 100vh;
+	min-height: 35rem;
 	width: 100%;
 	border: 10px solid $pink;
 	text-align: center;
@@ -9,9 +10,17 @@
 	align-items: center;
 	p {
 		width: 80%;
-		font-family: "et-book";
-		font-size: 2.5rem;
+		font-family: "et-book", Georgia, serif;
+		font-size: 2.75rem;
 		line-height: 1.5;
+	}
+}
+@media (max-width: 768px) {
+	#home-page {
+		p {
+			width: 90%;
+			font-size: 2.5rem;
+		}
 	}
 }
 .off-white {

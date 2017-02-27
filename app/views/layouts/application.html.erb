@@ -10,12 +10,14 @@
   </head>
 
   <body>
-    <%# render partial: 'layouts/nav' %>
+    <%= render partial: 'layouts/nav' %>
     <%= render partial: 'layouts/flash' %>
 
     <%= yield %>
 
-    <%# render partial: 'layouts/footer' %>
+    <% unless current_page?(root_path) %>
+      <%= render partial: 'layouts/footer' %>
+    <% end %>
 
     <!-- Modals for signing up or signing in -->
     <%= render partial: 'welcome/sign_up' %>

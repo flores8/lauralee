@@ -1,107 +1,49 @@
 <div id="about">
-	<!-- Picture of My Family -->
-	<div class="about-header">
-	</div>
 
 	<!-- Bio -->
-	<div class="row" id="introduction">
-		<div class="medium-spacer-top">
-			<h1 class="text-center">Hi, I'm Lauralee Flores</h1>
-		</div>
-		<!-- <h2>I'm a Wife, Mother, Online Entrepreneur, and Web Developer.</h2> -->
-	</div>
-
-	<!-- Bio -->
-	<div class="row">
+	<div class="row big-spacer-top">
 		<div class="small-12 columns">
 			<div class="small-spacer-bottom">
-				<p>I've been working on websites in a professional setting since 2006.  I have a masters degree in applied psychology with an emphasis in human-computer interaction which basically means I understand the psychology behind how to make a website users love. I have hired, trained, and managed a team of usability and web analytic professionals. I was the lead web analyst for the University of Idaho.</p>
-				<p>I have developed and taught university courses on topics such as human-computer interaction, principles of usability, introduction to psychology, cognitive development, and others. I began learning HTML and CSS in college and in 2012 I jumped into learning Ruby on Rails. I learned in order to create a business idea and I had no idea I would love it so much.</p>
-				<p>I am the web designer at <%= link_to "KickoffLabs", "http://www.kickofflabs.com" %>. When I'm not working at KickoffLabs, you might find me spending time with my family, reading (I am a voracious reader), or working on one of my side projects. Right now I'm creating <%= link_to "memorates", "http://www.memorates.com" %>.</p>
+				<%= image_tag "my-family-2.jpg" %>
 			</div>
-
-			<!-- <div class="small-10 medium-6 small-centered medium-centered columns">
-				<div class="medium-spacer-bottom">
-					<%= link_to "Sign Up For Free", new_user_registration_path, class: "button expand" %>
-				</div>
-			</div> -->
 		</div>
 	</div>
+	<div class="row small-spacer-top medium-spacer-bottom">
+		<div class="small-10 small-centered columns">
+			<p>
+				I began working on websites in 2006. However when I began I never would have imagined the path my professional life would take.
+			</p>
+			<p>
+				I started out in web usability (I have a masters degree in applied psychology with an emphasis in human-computer interaction). What this means is that I understand the psychology behind how to make a website users love. I did usability, I trained others how to do usability (one-on-one, seminars, and I developed and taught University courses on the topic), and I ran a usability team.
+			</p>
+			<p>
+				I never considered myself a creative person, whatever that means. If I could go back in time I'd tell young me that the reason I’m not creative is that I never really tried to be creative.
+			</p>
+			<p>
+				The first time I tried to express my creativity was with small web design projects. I had hired someone to do a website for me and the design wasn’t as good as I wanted it to be. So I would design little parts of the interface. This went on for some time, the company I hired would deliver web designs and I would see flaws in the design (my usability training definitely played a role in this) and so I would redesign it and send it to them to create.
+			</p>
+			<p>
+				Since I had self-identified as a non-creative person, it took me a long time to realize that my designs were not only better than this professional design company I had hired, but they were simply good without needing any comparison at all.
+			</p>
+			<p>
+				Equipped with a new self title of maybe a creative person. Maybe. I designed a website and then I learned HTML and CSS and built it. It was so simple and probably not very good but I loved every second of it. Creating it brought me alive.
+			</p>
+			<p>
+				I knew I had to do more websites. So, I did. I designed and built multiple websites. Some for myself and some for others. Before going very far down this path I realized I needed to learn more than just HTML and CSS. I started learning a couple different programming languages (PHP and Python for you nerds out there) but when I started learning Ruby on Rails I knew it had ruined me for all the other languages. I loved it. I found it beautiful and clean.
+			</p>
+			<p>
+				Looking back I realize that with each project I could see myself getting better. My goal is for that to never change. Ever.
+			</p>
+			<p>
+				I am the web designer at <%= link_to "KickoffLabs", "http://www.kickofflabs.com", class: "clean-link" %>. When I'm not working at KickoffLabs, you might find me spending time with my family, reading (I am a voracious reader), or working on one of my side projects. Right now I'm creating <%= link_to "memorates", "http://www.memorates.com", class: "clean-link" %>.
+			</p>
+			<p>
+				I absolutely love what I do.
+			</p>
 
-	<!-- Current Projects -->
-	<div id="home-work">
-		<div class="row">
-			<div class="medium-spacer-top">
-				<h4 class="text-center mini-spacer-bottom">
-					My Current Project
-				</h4>
-			</div>
 		</div>
 
-		<div class="row big-spacer-bottom">
-			<!-- Memorates -->
-			<div class="small-12 medium-6 medium-centered columns portfolio">
-				<%= link_to image_tag('work/memorates.jpg'), "http://www.memorates.com", class: "border" %>
-				<h3><%= link_to	"Memorates", "http://www.memorates.com" %></h3>
-			</div>
-
-			<!-- MajorFinder -->
-			<!-- <div class="small-12 medium-6 columns portfolio">
-				<%= link_to image_tag('work/majorfinder.jpg'), work_majorfinder_path, class: "border" %>
-				<h3><%= link_to	"Major Finder", work_majorfinder_path %></h3>
-			</div> -->
-
-			<!-- Discovery -->
-			<!-- <div class="small-12 medium-6 columns portfolio">
-				<%= link_to image_tag('work/discovery.jpg'), work_discovery_path, class: "border" %>
-				<h3><%= link_to "Discovery", work_discovery_path %></h3>
-			</div> -->
-		</div>
 	</div>
 
-	<!-- Create Your Business Idea -->
-	<section class="create-your-business-idea overlay">
-		<div class="row">
-			<div class="small-12 columns big-spacer">
-				<h3>Create Your Business Idea</h3>
-				<h4>Learn Ruby on Rails</h4>
-				<div class="row">
-					<div class="small-12 medium-8 small-centered columns">
-						<p>Learning to code was one of the most liberating experiences of my life. I will teach you the hottest web development language out there.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="small-12 medium-6 small-centered columns">
-						<%= link_to "Learn More", resources_path, class: "button expand" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<section class="resources-training">
-		<div class="row">
-			<div class="small-12 columns big-spacer">
-				<!-- gift box illustration -->
-				<div class="gift-box"></div>
-				<h3>Resources &amp; Tranining</h3>
-				<div class="row">
-					<div class="small-12 medium-7 small-centered columns">
-						<p>My gift to you: I have put together resources and training material so that you can make incredible websites.</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="small-12 medium-6 small-centered columns">
-						<% if current_user %>
-							<%= link_to "Give Me Free Stuff", resources_path, class: "button expand" %>
-						<% else %>
-							<%= link_to "Give Me Free Stuff", new_user_registration_path, class: "button expand" %>
-						<% end %>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
 </div>
