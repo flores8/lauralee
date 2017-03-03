@@ -23,27 +23,6 @@
 	</div>
 </div>
 
-<div id="blog-first-call-to-action">
-	<section class="create-your-business-idea overlay">
-		<div class="row">
-			<div class="small-12 columns big-spacer">
-				<h3>Create Your Business Idea</h3>
-				<h4>Learn Ruby on Rails</h4>
-				<div class="row">
-					<div class="small-12 medium-8 small-centered columns">
-						<p>Learning to code was one of the most liberating experiences of my life. I will teach you the hottest web development language out there.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="small-12 medium-6 small-centered columns">
-						<%= link_to "Learn More", resources_path, class: "button expand" %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
-
 
 
 <!-- Find Other Articles with These Tags  -->
@@ -67,37 +46,6 @@
 	</div>
 <% else %>
 <% end %>
-
-<div id="blog-second-call-to-action">
-	<section class="resources-training">
-		<div class="row">
-			<div class="small-12 columns big-spacer">
-				<!-- gift box illustration -->
-				<div class="gift-box"></div>
-				<h3>Resources &amp; Tranining</h3>
-				<div class="row">
-					<div class="small-12 medium-7 small-centered columns">
-						<p>My gift to you: I have put together resources and training material so that you can make incredible websites.</p>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="small-12 medium-6 small-centered columns">
-						<% if current_user %>
-							<%= link_to "Give Me Free Stuff", resources_path, class: "button expand" %>
-						<% else %>
-							<%= link_to "Give Me Free Stuff", resources_path, class: "button expand" %>
-						<% end %>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</section>
-</div>
-
-
-
 
 <!-- Edit this post if you have permission -->
 <% if policy(@post).edit? %>

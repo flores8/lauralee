@@ -30,9 +30,9 @@
 // $include-print-styles: true;
 // $include-html-global-classes: $include-html-classes;
 
-// Grid 
+// Grid
 
-// $include-html-block-grid-classes: $include-html-classes; 
+// $include-html-block-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
 // $row-width: rem-calc(1000);
@@ -60,7 +60,7 @@ $body-font-family: 'Source Sans Pro', "Helvetica Neue", "Helvetica", Helvetica, 
 // $default-float: left;
 
 // We use these as default colors throughout
-$primary-color: #66a3c6;
+$primary-color: #f37171;
 $secondary-color: #e7e7e7;
 $alert-color: #f37171;
 $success-color: #4fc099;
@@ -1133,7 +1133,7 @@ $tabs-navigation-active-bg-color: #f0f0f0;
 $tabs-navigation-bg-color: #efefef  ;
 $tabs-navigation-active-bg-color: #f37171;
 // $tabs-navigation-hover-bg-color: scale-color($tabs-navigation-bg-color, $lightness: -6%);
-$tabs-navigation-font-color: #585457; 
+$tabs-navigation-font-color: #585457;
 $tabs-navigation-active-font-color: #fff;
 $tabs-navigation-font-size: rem-calc(18);
 // $tabs-navigation-font-family: $body-font-family;

@@ -31,6 +31,13 @@
 
 #blog-post-listing {
 	background-color: #ffffff;
+	p {
+		font-family: "et-book", Georgia, serif;
+		font-size: 1.7rem;
+		line-height: 1.8;
+		text-align: justify;
+		letter-spacing: 0.1rem;
+	}
 	.post-listing {
 		a.blog-link {
 			color: $text;
@@ -93,9 +100,12 @@
 	header {
 		h2, h2 p {
 			padding-bottom: .5rem;
+			font-family: "et-book", Georgia, serif;
+			line-height: 1.1;
 		}
 		h2 p {
-			font-size: 2.5rem;
+			font-size: 4rem;
+			text-align: left;
 		}
 		p.post-references {
 			margin-bottom: .8em;
@@ -113,12 +123,9 @@
 		}
 	}
 	#blog-content {
+		padding-bottom: 4rem;
 		strong {
 			color: $text;
-			/*color: $white;
-			background-color: $text;
-			padding: 0 .5rem;*/
-			/*border-bottom: 2px solid lighten($text, 15%);*/
 		}
 		a {
 			color: $pink;
@@ -126,10 +133,27 @@
 			@include link-center-out($pink, $pink);
 		}
 		p {
+			font-family: "et-book", Georgia, serif;
+			font-size: 1.7rem;
+			line-height: 1.8;
+			text-align: justify;
+			letter-spacing: 0.1rem;
 			padding-bottom: 1rem;
+			&:nth-of-type(2) {
+				&:first-line {
+					font-variant: small-caps;
+					font-size: 4rem;
+					line-height: 1.2;
+				}
+			}
 			img {
 				margin-top: 1.5rem;
 			}
+		}
+		h1 {
+			font-family: "et-book", Georgia, serif;
+			font-size: 3rem;
+			padding: 4rem 0 1.5rem;
 		}
 		ol {
 			font-size: 1.5rem;
@@ -151,10 +175,10 @@
 		}
 		h3 {
 			text-align: left;
-			text-transform: uppercase;
-			font-weight: 800;
-			margin-bottom: 1rem;
-			color: $blue;
+			font-variant: small-caps;
+			font-family: "et-book", Georgia, serif;
+			font-size: 2.25rem;
+			padding: 3rem 0 1rem;
 		}
 		pre {
 			code {
