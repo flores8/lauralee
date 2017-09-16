@@ -16,6 +16,7 @@ gem 'pundit'
 gem 'will_paginate', '~> 3.0.7'
 gem 'redcarpet'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'slim', '~> 3.0', '>= 3.0.6'
 
 group :production do
 	gem 'rails_12factor'
