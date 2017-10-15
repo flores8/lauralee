@@ -6,16 +6,29 @@
 				<h2><%= params[:tag] %></h2>
 			</div>
 		</div>
-	<% else %>
 	<% end %>
 	<div class="row">
 		<div class="small-spacer-top">
 			<div class="small-12 columns post-listing big-spacer-bottom">
 				<% @posts.each do |p| %>
-					<h3><%= link_to p.title, p %></h3>
-					<p class="small centered"><%= time_ago_in_words(p.created_at) %> ago <span>|</span> <%= p.reading_time %> minute read</p>
-					<%= link_to markdown(truncate(p.body, length: 230, omission: " ... ")), p, class: "blog-link" %>
-					<hr>
+					<!-- If you're an admin and something's not published -->
+					<% if current_user && current_user.role?(:admin) %>
+						<% unless p.published? %>
+							<div class="unpublished">
+								<h3><%= link_to p.title, p %></h3>
+								<p class="small centered"><%= time_ago_in_words(p.created_at) %> ago <span>|</span> <%= p.reading_time %> minute read</p>
+								<%= link_to markdown(truncate(p.body, length: 230, omission: " ... ")), p, class: "blog-link" %>
+							</div>
+						<% end %>
+					<% end %>
+				<% end %>
+				<% @posts.each do |p| %>
+					<% if p.published? %>
+						<h3><%= link_to p.title, p %></h3>
+						<p class="small centered"><%= time_ago_in_words(p.created_at) %> ago <span>|</span> <%= p.reading_time %> minute read</p>
+						<%= link_to markdown(truncate(p.body, length: 230, omission: " ... ")), p, class: "blog-link" %>
+						<hr>
+					<% end %>
 				<% end %>
 			</div>
 		</div>

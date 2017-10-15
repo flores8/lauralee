@@ -9,6 +9,11 @@ class Post < ActiveRecord::Base
 	validates :title, length: { minimum: 5 }, presence: true
 	validates :body, length: { minimum: 20 }, presence: true
 	validates :user, :description, presence: true
+	scope :published, -> {where(published: true)}
+
+	def published?
+    self.published == true
+  end
 
 	# How Long A Post Will Take to Read
 	def word_count

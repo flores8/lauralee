@@ -1,5 +1,7 @@
 @import "globals/all";
-
+.unpublished {
+	border: 1px solid $blue;
+}
 /* Intro Image */
 #blog-landing-header {
 	background-image: image-url('blog-header.jpg');

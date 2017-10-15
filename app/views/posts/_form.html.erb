@@ -44,10 +44,17 @@
 			<%= f.text_area :body, placeholder: "Post Body", class: "border background" %>
 		</div>
 	</div>
-
-	<!-- General Tags -->
 	<div class="row">
-		<div class="small-12 columns">
+    <div class="small-6 columns small-spacer-top">
+			<!-- Published -->
+      <%= f.radio_button :published, false %>
+      <%= f.label :published, "Do Not Publish", value: false %>
+      <%= f.radio_button :published, true %>
+      <%= f.label :published, "Publish", value: true %>
+    </div>
+
+		<!-- General Tags -->
+		<div class="small-6 columns">
 			<%= f.text_field :tag_list, placeholder: "What other tags should be added to this post?", class: "border background" %>
 		</div>
 		<% if @tags %>
