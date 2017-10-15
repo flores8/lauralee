@@ -55,7 +55,7 @@ class PostsController < ApplicationController
   private
 
   def user_params
-    params.require(:post).permit(:title, :body, :slug, :tag_list, :skill_list, :interest_list)
+    params.require(:post).permit(:title, :body, :slug, :tag_list, :skill_list, :interest_list, :description)
   end
 
   def find_page

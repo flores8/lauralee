@@ -31,6 +31,13 @@
 		</div>
 	</div>
 
+	<!-- Post Description -->
+	<div class="row">
+		<div class="small-12 columns">
+			<%= f.text_field :description, placeholder: "Post Description", class: "border background" %>
+		</div>
+	</div>
+
 	<!-- Post Body -->
 	<div class="row">
 		<div class="small-12 columns">
@@ -43,10 +50,12 @@
 		<div class="small-12 columns">
 			<%= f.text_field :tag_list, placeholder: "What other tags should be added to this post?", class: "border background" %>
 		</div>
-		<% @tags.each do |t| %>
-			<p class="small">
-				<%= t %> (<%= t.taggings_count %>)
-			</p>
+		<% if @tags %>
+			<% @tags.each do |t| %>
+				<p class="small">
+					<%= t %> (<%= t.taggings_count %>)
+				</p>
+			<% end %>
 		<% end %>
 	</div>
 

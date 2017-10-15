@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
 	before_validation :generate_slug
 	validates :title, length: { minimum: 5 }, presence: true
 	validates :body, length: { minimum: 20 }, presence: true
-	validates :user, presence: true
+	validates :user, :description, presence: true
 
 	# How Long A Post Will Take to Read
 	def word_count
