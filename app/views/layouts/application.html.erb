@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "Lauralee Flores | Creating Websites People Love to Use" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Lauralee Flores | Design + Code" %></title>
+    <meta name="og:description" content="<%= content_for?(:description) ? yield(:description) : "Making beautiful websites users love." %>">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+    <!-- start Facebook share info -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= content_for?(:domain) ? yield(:domain) : "http://www.lauraleeflores.com#{url_for}" %>" />
+    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Lauralee Flores | Design + Code" %>" />
+    <!-- <meta property="og:image" content="<%= content_for?(:image) ? yield(:image) : "https://s3.amazonaws.com/memorates/memorates.jpg" %>" /> -->
+    <!-- <meta property="fb:app_id" content="318624068512773" /> -->
+    <!-- End Facebook share info -->
   </head>
 
   <body>
