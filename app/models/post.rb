@@ -30,7 +30,7 @@ class Post < ActiveRecord::Base
 	belongs_to :user
 
 	# Organize posts by the most recent first
-	default_scope { order('created_at DESC')}
+	default_scope { order('published_on DESC')}
 
 	# Pagination: Show 10 posts per page
 	self.per_page = 10

@@ -4,13 +4,12 @@
 <div class="row" id="blog-post">
 	<div class="small-12 medium-10 medium-centered columns big-spacer-top">
 		<article>
-			<%# binding.pry %>
 
 			<!-- Title, Date, and Tags -->
 			<header>
 
 				<h2><%= markdown @post.title %></h2>
-				<p class="post-references"><%= @post.created_at.strftime("%B %d, %Y") %> <em class="divider">|</em>
+				<p class="post-references"><%= @post.published_on ? @post.published_on.strftime("%B %d, %Y") : 'Not Published' %> <em class="divider">|</em>
 					<% @post.tags.each_with_index do |t, i| %>
 						<em class="tags"><%= link_to t.name, tag_path(t.name), class: "pink-link-center" %><%= @post.tags.length - 1 == i ? "" : "," %></em>
 					<% end %>

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :find_page, only: [:show, :edit, :update, :destroy]
 
   def index
-  	@posts = Post.paginate(page: params[:page], per_page: 10)
+  	@posts = Post.all.order('published_on DESC').paginate(page: params[:page], per_page: 10)
     authorize @posts
   end
 
@@ -54,7 +54,7 @@ class PostsController < ApplicationController
   private
 
   def user_params
-    params.require(:post).permit(:title, :body, :slug, :tag_list, :skill_list, :interest_list, :description, :published)
+    params.require(:post).permit(:title, :body, :slug, :tag_list, :skill_list, :interest_list, :description, :published, :published_on)
   end
 
   def find_page

@@ -45,12 +45,14 @@
 		</div>
 	</div>
 	<div class="row">
-    <div class="small-6 columns small-spacer-top">
+    <div class="small-6 columns">
 			<!-- Published -->
       <%= f.radio_button :published, false %>
       <%= f.label :published, "Do Not Publish", value: false %>
       <%= f.radio_button :published, true %>
       <%= f.label :published, "Publish", value: true %>
+			<%= f.label :published_on %>
+          <%= f.date_field :published_on, start_year: Time.now.year - 1 %>
     </div>
 
 		<!-- General Tags -->
