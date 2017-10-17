@@ -52,7 +52,10 @@
       <%= f.radio_button :published, true %>
       <%= f.label :published, "Publish", value: true %>
 			<%= f.label :published_on %>
-          <%= f.date_field :published_on, start_year: Time.now.year - 1 %>
+      <%= f.date_field :published_on, start_year: Time.now.year - 1 %>
+			<div class="created_at">
+				created at: <%= @post.created_at.strftime("%B %d, %Y") %>
+			</div>
     </div>
 
 		<!-- General Tags -->
