@@ -63,10 +63,12 @@
 			<%= f.text_field :tag_list, placeholder: "What other tags should be added to this post?", class: "border background" %>
 		</div>
 		<% if @tags %>
-			<% @tags.each do |t| %>
-				<p class="small">
-					<%= t %> (<%= t.taggings_count %>)
-				</p>
+			<% @tags.each_slice(1) do |t| %>
+				<div class="small-3 columns ">
+					<p class="small">
+						<%= t.first.name %> (<%= t.first.taggings_count %>)
+					</p>
+				</div>
 			<% end %>
 		<% end %>
 	</div>
