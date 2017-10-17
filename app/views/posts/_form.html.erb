@@ -62,6 +62,8 @@
 		<div class="small-6 columns">
 			<%= f.text_field :tag_list, placeholder: "What other tags should be added to this post?", class: "border background" %>
 		</div>
+	</div>
+	<div class="row">
 		<% if @tags %>
 			<% @tags.each_slice(1) do |t| %>
 				<div class="small-3 columns ">
