@@ -54,7 +54,9 @@
 			<%= f.label :published_on %>
       <%= f.date_field :published_on, start_year: Time.now.year - 1 %>
 			<div class="created_at">
-				created at: <%= @post.created_at.strftime("%B %d, %Y") %>
+				<% if @post.created_at %>
+					created at: <%= @post.created_at.strftime("%B %d, %Y") %>
+				<% end %>
 			</div>
     </div>
 
