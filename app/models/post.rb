@@ -9,7 +9,10 @@ class Post < ActiveRecord::Base
 	validates :title, length: { minimum: 5 }, presence: true
 	validates :body, length: { minimum: 20 }, presence: true
 	validates :user, :description, presence: true
+	validates_presence_of :image
 	scope :published, -> {where(published: true)}
+
+	mount_uploader :image, BlogUploader
 
 	def published?
     self.published == true

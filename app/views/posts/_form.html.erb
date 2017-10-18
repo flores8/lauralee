@@ -38,6 +38,19 @@
 		</div>
 	</div>
 
+	<!-- Post Image -->
+	<div class="row">
+		<%= f.label :image %>
+    <div class="row">
+      <div class="small-6 columns">
+        <%= image_tag @post.image if @post.image.present?  %>
+      </div>
+      <div class="small-6 columns">
+        <%= f.file_field :image %>
+      </div>
+    </div>
+	</div>
+
 	<!-- Post Body -->
 	<div class="row">
 		<div class="small-12 columns">
