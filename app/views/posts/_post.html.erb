@@ -26,6 +26,9 @@
 					<% if p.published? %>
 						<h3><%= link_to p.title, p %></h3>
 						<p class="small centered"><%= time_ago_in_words(p.published_on) %> ago <span>|</span> <%= p.reading_time %> minute read</p>
+						<% if p.image %>
+							<%= image_tag p.image, class: "post-image" %>
+						<% end %>
 						<%= link_to markdown(truncate(p.body, length: 230, omission: " ... ")), p, class: "blog-link" %>
 						<hr>
 					<% end %>
