@@ -134,6 +134,9 @@
 			@include transition(.4s);
 			@include link-center-out($pink, $pink);
 		}
+		img {
+			margin-bottom: 1.5rem;
+		}
 		p {
 			font-family: "et-book", Georgia, serif;
 			font-size: 1.7rem;
@@ -141,7 +144,7 @@
 			text-align: justify;
 			letter-spacing: 0.1rem;
 			padding-bottom: 1rem;
-			&:nth-of-type(2) {
+			&:nth-of-type(1) {
 				&:first-line {
 					font-variant: small-caps;
 					font-size: 4rem;
