@@ -1,5 +1,5 @@
 Lauralee::Application.routes.draw do
-  
+
   # Home Page
   root to: "welcome#index"
 
@@ -13,6 +13,7 @@ Lauralee::Application.routes.draw do
   get "/about" => 'welcome#about'
   get "/test" => 'welcome#test'
   get "/varsitytutors" => 'welcome#varsitytutors'
+  get "/confirmed" => 'welcome#confirm_subscription'
 
   # Main Nav / Feedback
   resources :feedbacks
@@ -24,12 +25,12 @@ Lauralee::Application.routes.draw do
     resources :lessons, path: "lesson"
   end
   get '/git' => 'courses#git'
-  
+
 
   # Devise
   devise_for :users
   resources :users, only: [:update]
-  
+
   # Resources -> remove soon
   scope '/resources' do
     get '/freeimages' => 'welcome#freeimages'
@@ -41,7 +42,7 @@ Lauralee::Application.routes.draw do
   get 'blog/tags' => 'tags#index', as: :tags
   get 'blog/tags/:tag' => 'tags#show', as: :tag
   resources :posts, path: "blog"
-  
-  
-  
+
+
+
 end

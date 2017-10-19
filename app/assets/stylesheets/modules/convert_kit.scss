@@ -39,32 +39,24 @@
   	-moz-border-radius: 2px;
   	-webkit-border-radius: 2px;
   	border-radius: 2px; /* border radius */
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
   	background-color: #fff; /* layer fill content */
-  	margin-bottom: 5px;
-  	height: auto;
-  	float: left;
-  	margin: 0px;
-  	height: 42px;
   }
   .ck_subscribe_button {
-    width: 100%;
     color: #fff;
-    margin: 0px;
     padding:  11px 0px;
     font-size: 18px;
     background: #f37171;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px; /* border radius */
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
     cursor: pointer;
     border: none;
     text-shadow: none;
-    width: 40%;
-    float: left;
+  }
+  input[type="text"], input[type="email"], .ck_subscribe_button {
+    width: 60%;
+    display: block;
+    margin: .5rem auto;
     height: 42px;
   }
   .ck_guarantee {
@@ -116,11 +108,7 @@
 	background: #fff;
 }
 
-.ck_form.ck_minimal.width400 .ck_subscribe_button, .ck_form.ck_minimal.width400 input[type="email"] {
-		width: 100%;
-		float: none;
-		margin-top: 5px;
-	}
+
 
 .ck_slide_up, .ck_modal, .ck_slide_up .ck_minimal, .ck_modal .ck_minimal  {
 	min-width: 400px;
@@ -143,16 +131,9 @@
     width: 600px;
   }
 }
-@media (max-width: 640px) {
-  .ck_form.ck_minimal input[type="text"], .ck_form.ck_minimal input[type="email"], .ck_form.ck_minimal .ck_subscribe_button {
+@media (max-width: 780px) {
+  #ck_subscribe_form {
     width: 100%;
-  }
-  .ck_form.ck_minimal input[type="text"], .ck_form.ck_minimal input[type="email"] {
-    border-radius: 2px;
-  }
-  .ck_form.ck_minimal .ck_subscribe_button {
-    margin-top: .5rem;
-    border-radius: 2px;
   }
   .ck_form.ck_minimal h3.ck_form_title {
     font-size: 1.7rem;
@@ -162,10 +143,11 @@
   }
 }
 @media (max-width: 560px) {
-  #ck_subscribe_form {
-    width: 80%;
+  .ck_form.ck_minimal input[type="text"], .ck_form.ck_minimal input[type="email"], .ck_form.ck_minimal .ck_subscribe_button {
+    width: 90%;
   }
 }
+
 
 .ck_modal.ck_form_v6 .ck_minimal .ck_subscribe_form {
   padding-top: 20px;
