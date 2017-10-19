@@ -1,0 +1,193 @@
+@import "globals/all";
+
+// Newsletter at end of blog
+.ck_form.ck_minimal {
+	background: $offWhite;
+  font-family: 'PT Sans', sans-serif;
+	overflow: hidden;
+	color: $text;
+	font-size: 16px;
+	// border: solid 3px $blue;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+  border-radius: 2px;
+	clear: both;
+	margin: 20px 0px 5rem;
+	text-align: center;
+  h3.ck_form_title {
+  	text-align: center;
+  	margin: 0px 0px 10px;
+  	font-size: 2rem;
+    line-height: 1.1;
+  }
+  p {
+  	padding: 0px;
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  .ck_form_fields {
+  	width: 100%;
+  	float: left;
+  	padding: 5%;
+  }
+  input[type="text"], input[type="email"] {
+  	font-size: 18px;
+  	padding: 10px 8px;
+  	width: 60%;
+  	border: 1px solid #d6d6d6; /* stroke */
+  	-moz-border-radius: 2px;
+  	-webkit-border-radius: 2px;
+  	border-radius: 2px; /* border radius */
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  	background-color: #fff; /* layer fill content */
+  	margin-bottom: 5px;
+  	height: auto;
+  	float: left;
+  	margin: 0px;
+  	height: 42px;
+  }
+  .ck_subscribe_button {
+    width: 100%;
+    color: #fff;
+    margin: 0px;
+    padding:  11px 0px;
+    font-size: 18px;
+    background: #f37171;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px; /* border radius */
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+    border: none;
+    text-shadow: none;
+    width: 40%;
+    float: left;
+    height: 42px;
+  }
+  .ck_guarantee {
+  	color: #626262;
+  	font-size: 12px;
+  	text-align: center;
+  	padding: 15px 0px 0px;
+  	display: block;
+  	clear: both;
+  }
+}
+
+.ck_form, .ck_form * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.ck_errorArea {
+	display: none; /* temporary */
+}
+
+#ck_success_msg {
+	padding: 10px 10px 0px;
+  p {
+    color: $blue;
+  }
+}
+
+.ck_form input[type="text"]:focus, .ck_form input[type="email"]:focus {
+	outline: none;
+	border-color: #aaa;
+}
+
+.ck_form .ck_powered_by {
+	display: block;
+	color: #aaa;
+	font-size: 12px;
+}
+
+.ck_form .ck_powered_by:hover {
+	display: block;
+	color: #444;
+}
+
+.ck_converted_content {
+  display: none;
+	padding: 5%;
+	background: #fff;
+}
+
+.ck_form.ck_minimal.width400 .ck_subscribe_button, .ck_form.ck_minimal.width400 input[type="email"] {
+		width: 100%;
+		float: none;
+		margin-top: 5px;
+	}
+
+.ck_slide_up, .ck_modal, .ck_slide_up .ck_minimal, .ck_modal .ck_minimal  {
+	min-width: 400px;
+}
+
+.page .ck_form.ck_minimal {
+	margin: 50px auto;
+	max-width: 600px;
+}
+
+
+/* v6 */
+.ck_slide_up.ck_form_v6, .ck_modal.ck_form_v6, .ck_slide_up.ck_form_v6 .ck_minimal, .ck_modal.ck_form_v6 .ck_minimal {
+  min-width: 0 !important;
+}
+
+@media all and (min-width: 801px) {
+  .ck_modal.ck_form_v6 .ck_form.ck_minimal {
+    margin-left: -300px;
+    width: 600px;
+  }
+}
+@media (max-width: 640px) {
+  .ck_form.ck_minimal input[type="text"], .ck_form.ck_minimal input[type="email"], .ck_form.ck_minimal .ck_subscribe_button {
+    width: 100%;
+  }
+  .ck_form.ck_minimal input[type="text"], .ck_form.ck_minimal input[type="email"] {
+    border-radius: 2px;
+  }
+  .ck_form.ck_minimal .ck_subscribe_button {
+    margin-top: .5rem;
+    border-radius: 2px;
+  }
+  .ck_form.ck_minimal h3.ck_form_title {
+    font-size: 1.7rem;
+  }
+  .ck_form.ck_minimal p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 560px) {
+  #ck_subscribe_form {
+    width: 80%;
+  }
+}
+
+.ck_modal.ck_form_v6 .ck_minimal .ck_subscribe_form {
+  padding-top: 20px;
+
+}
+
+.ck_slide_up.ck_form_v6 .ck_minimal .ck_subscribe_form {
+  padding-top: 10px;
+}
+.ck_subscribe_form {
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
+}
+.ck_form_v6 #ck_success_msg {
+  margin-top: 15px;
+  padding: 0px 10px;
+}
+
+.ck_slide_up.ck_form_v6 .ck_minimal + .ck_close_link {
+  top: 5px;
+}
+.ck_slide_up.ck_form_v6 .ck_minimal h3.ck_form_title {
+  margin-top: 5px;
+}
