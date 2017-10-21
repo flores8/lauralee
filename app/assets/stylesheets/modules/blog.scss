@@ -33,24 +33,13 @@
 
 #blog-post-listing {
 	background-color: #ffffff;
-	p {
-		font-family: "et-book", Georgia, serif;
-		font-size: 1.7rem;
-		line-height: 1.8;
-		text-align: justify;
-		letter-spacing: 0.1rem;
-	}
 	.post-listing {
-		a.blog-link {
-			color: $text;
-			&:hover {
-				color: $text;
-				text-decoration: none;
-			}
-		}
 		h3 {
-			font-size: 2.5rem;
-			margin-bottom: 0rem;
+			font-size: 1.7rem;
+			margin-bottom: .5rem;
+			margin-top: 1rem;
+			line-height: 1.1;
+			text-align: left;
 			a {
 				color: $text;
 				@include transition (.4s);
@@ -59,14 +48,27 @@
 				}
 			}
 		}
+		a.blog-link {
+			color: $text;
+			&:hover {
+				color: $text;
+				text-decoration: none;
+			}
+		}
 		p.small {
-			margin-bottom: 1.5rem;
+			margin-bottom: .2rem;
 			font-size: 1rem;
 			span {
 				padding: 0 .75rem;
 			}
 		}
-
+		p {
+			font-family: "et-book", Georgia, serif;
+			font-size: 1.4rem;
+			line-height: 1.6;
+			text-align: justify;
+			letter-spacing: 0.1rem;
+		}
 		hr {
 			margin: 8rem 0;
 			&:last-child {
