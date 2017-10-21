@@ -12,14 +12,10 @@
 							h3 = link_to p.title, p
 
 							= link_to markdown(truncate(p.body, length: 230, omission: " ... ")), p, class: "blog-link"
-
-	- @posts.each do |p|
-		- if p.published?
-			.row
-				.medium-4.columns.post-listing.small-spacer-top
+	.blog-index-grid
+		- @posts.each do |p|
+			- if p.published?
+				.post-listing
 					- if p.image
 						= link_to image_tag(p.image), p, class: "post-image"
-				.medium-8.columns.post-listing.small-spacer-top
 					h3 = link_to truncate(p.title, length: 55, omission: " ... "), p
-					p.small #{p.published_on.strftime("%B %Y")} <span>|</span> #{p.reading_time} minute read
-					= link_to markdown(truncate(p.description, length: 100, omission: " ... ")), p, class: "blog-link"
