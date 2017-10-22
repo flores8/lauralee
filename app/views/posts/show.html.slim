@@ -1,0 +1,49 @@
+- content_for :title, "#{@post.title} - www.lauraleeflores.com"
+- content_for :description, "#{@post.description}"
+- content_for :domain, "http://www.lauraleeflores.com#{url_for}"
+- content_for :image, "#{@post.image.url}"
+
+#blog-post.row
+	.small-12.medium-10.medium-centered.columns.big-spacer-top
+		article
+			/ Title, Date, and Tags
+			header
+				h2 = markdown @post.title
+				p.post-references
+					= @post.published_on ? @post.published_on.strftime("%B %d, %Y") : 'Not Published'
+					em.divider |
+					- @post.tags.each_with_index do |t, i|
+						em.tags #{link_to t.name, tag_path(t.name), class: "pink-link-center"}#{@post.tags.length - 1 == i ? "" : ", "}
+
+			/ Blog Post Content
+			#blog-content
+				- if @post.image
+					= image_tag @post.image, class: "post-image"
+				= markdown @post.body
+
+/ ConvertKit Newsletter Opt In
+.row
+	.small-12.medium-spacer-bottom
+		= render "ck_newsletter"
+
+
+/ Find Other Articles with These Tags
+
+/ Find out if there are related posts
+- if @post.find_related_tags.present?
+	#light-gray-background
+		.row
+			.small-12.medium-10.medium-centered.columns.big-spacer
+				h3.title.mini-spacer-bottom Similar Posts
+
+				/ Loop through each related post
+				- @post.find_related_tags.limit(5).shuffle.each do |p|
+					article.similar-item.small-spacer-bottom
+						h4 = link_to markdown(p.title), p, class: "item-title"
+
+/ Edit this post if you have permission
+- if policy(@post).edit?
+	.row
+		.small-12.columns
+			.small-spacer.text-center
+				= link_to "Edit Post", edit_post_path(@post), class: "pink-link-center"

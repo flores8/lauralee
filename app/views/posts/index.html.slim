@@ -1,0 +1,9 @@
+/ ConvertKit Newsletter Opt In
+.medium-spacer-top
+	= render "ck_newsletter"
+
+= render partial: 'post'
+
+
+#infinite-scrolling.pagination-centered
+	= will_paginate
