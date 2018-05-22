@@ -15,6 +15,10 @@ Lauralee::Application.routes.draw do
   get "/varsitytutors" => 'welcome#varsitytutors'
   get "/confirmed" => 'welcome#confirm_subscription'
 
+  # Playground
+  get "/playground/*page" => "playground#show"
+  get "/playground" => "playground#show", page: "index"
+
   # Main Nav / Feedback
   resources :feedbacks
 
