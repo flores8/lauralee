@@ -1,0 +1,19 @@
+@import "globals/all";
+
+style[class="editme" i] {
+	display: block;
+	width: 80%;
+	margin: 6rem auto 0;
+	padding: 10px;
+	border: 1px solid $gray;
+	font-family: "Courier New", Courier, monospace;
+	background: $offWhite;
+	line-height: 1.5;
+  &:focus {
+    outline: none;
+    border: 1px solid $pink;
+  }
+}
+p.cascade {
+  font-size: 60px;
+}
