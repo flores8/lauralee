@@ -153,18 +153,11 @@
 		}
 		p {
 			font-family: "et-book", Georgia, serif;
-			font-size: 1.7rem;
-			line-height: 1.8;
+			font-size: 1.3rem;
+			line-height: 1.6;
 			text-align: justify;
 			letter-spacing: 0.1rem;
 			padding-bottom: 1rem;
-			&:nth-of-type(1) {
-				&:first-line {
-					font-variant: small-caps;
-					font-size: 4rem;
-					line-height: 1.2;
-				}
-			}
 			img {
 				margin-top: 1.5rem;
 			}
@@ -173,13 +166,27 @@
 			font-family: "et-book", Georgia, serif;
 			font-size: 3rem;
 			padding: 4rem 0 1.5rem;
+			margin-bottom: 0;
 		}
-		ol {
-			font-size: 1.5rem;
+		h2 {
+			font-size: 30px;
+			color: $text;
+			text-align: left;
+			padding-bottom: .25em;
+			font-weight: 800;
+		}
+		h3 {
+			text-align: left;
+			font-family: "et-book", Georgia, serif;
+			font-size: 22px;
+			font-weight: 800;
+			padding: 3rem 0 1rem;
+		}
+		ul, ol {
+			font-size: 1.3rem;
+			line-height: 1.6;
 			padding-left: 2rem;
-		}
-		ul {
-			font-size: 1.5rem;
+			font-family: "et-book", Georgia, serif;
 			li {
 				list-style-type: none;
 				padding-left: 1.5rem;
@@ -191,13 +198,6 @@
 					left: -10px;
 				}
 			}
-		}
-		h3 {
-			text-align: left;
-			font-variant: small-caps;
-			font-family: "et-book", Georgia, serif;
-			font-size: 2.25rem;
-			padding: 3rem 0 1rem;
 		}
 		pre {
 			code {

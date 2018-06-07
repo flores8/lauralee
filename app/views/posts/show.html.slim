@@ -3,23 +3,24 @@
 - content_for :domain, "http://www.lauraleeflores.com#{url_for}"
 - content_for :image, "#{@post.image.url}"
 
-#blog-post.row
-	.small-12.medium-10.medium-centered.columns.big-spacer-top
-		article
-			/ Title, Date, and Tags
-			header
-				h2 = markdown @post.title
-				p.post-references
-					= @post.published_on ? @post.published_on.strftime("%B %d, %Y") : 'Not Published'
-					em.divider |
-					- @post.tags.each_with_index do |t, i|
-						em.tags #{link_to t.name, tag_path(t.name), class: "pink-link-center"}#{@post.tags.length - 1 == i ? "" : ", "}
+#blog-post
+		article.big-spacer-top
+			header.row
+				.small-12.medium-6.medium-push-6.columns
+					- if @post.image
+						= image_tag @post.image, class: "post-image"
+				.small-12.medium-6.medium-pull-6.columns.medium-spacer
+					h1 #{@post.title}
+					p.post-references
+						= @post.published_on ? @post.published_on.strftime("%B %d, %Y") : 'Not Published'
+						em.divider |
+						- @post.tags.each_with_index do |t, i|
+							em.tags #{link_to t.name, tag_path(t.name), class: "pink-link-center"}#{@post.tags.length - 1 == i ? "" : ", "}
 
 			/ Blog Post Content
-			#blog-content
-				- if @post.image
-					= image_tag @post.image, class: "post-image"
-				= markdown @post.body
+			#blog-content.row
+				.small-12.medium-10.medium-centered.columns.small-spacer-top
+					= markdown @post.body
 
 / ConvertKit Newsletter Opt In
 .row
