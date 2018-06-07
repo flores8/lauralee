@@ -114,6 +114,10 @@
 /* Blog Post (Show Page) */
 #blog-post {
 	header {
+		h1 {
+			font-family: "et-book", Georgia, serif;
+			margin-bottom: 0;
+		}
 		h2, h2 p {
 			padding-bottom: .5rem;
 			font-family: "et-book", Georgia, serif;
@@ -126,6 +130,7 @@
 		p.post-references {
 			margin-bottom: .8em;
 			color: lighten($text, 35%);
+			font-size: 1.2rem;
 		}
 		em.divider {
 			padding: 0 .5em;
@@ -152,24 +157,17 @@
 			margin-bottom: 1.5rem;
 		}
 		p {
-			font-family: "et-book", Georgia, serif;
 			font-size: 1.3rem;
-			line-height: 1.6;
-			text-align: justify;
-			letter-spacing: 0.1rem;
+			line-height: 1.8;
+			letter-spacing: 1px;
 			padding-bottom: 1rem;
 			img {
 				margin-top: 1.5rem;
 			}
 		}
-		h1 {
-			font-family: "et-book", Georgia, serif;
-			font-size: 3rem;
-			padding: 4rem 0 1.5rem;
-			margin-bottom: 0;
-		}
 		h2 {
 			font-size: 30px;
+			font-family: "et-book", Georgia, serif;
 			color: $text;
 			text-align: left;
 			padding-bottom: .25em;
@@ -184,9 +182,9 @@
 		}
 		ul, ol {
 			font-size: 1.3rem;
-			line-height: 1.6;
+			line-height: 1.8;
 			padding-left: 2rem;
-			font-family: "et-book", Georgia, serif;
+			letter-spacing: 1px;
 			li {
 				list-style-type: none;
 				padding-left: 1.5rem;
@@ -205,7 +203,7 @@
 				word-wrap: break-word;
 				display: block;
 				padding: 1rem;
-				background: $gray;
+				background: lighten($gray, 7%);
 				color: $text;
 				line-height: 2rem;
 				font-size: 1.1rem;
@@ -214,7 +212,7 @@
 			}
 		}
 		code {
-			background-color: $gray;
+			background-color: lighten($gray, 7%);
 			padding: .5rem .75rem;
 			color: $text;
 			font-family: 'Source Sans Pro', Courier, monospace, sans-serif;
