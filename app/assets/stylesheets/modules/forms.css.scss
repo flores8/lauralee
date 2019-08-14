@@ -64,6 +64,7 @@
 		background: $lightGray;
 	}
 	input[type="text"].border-bottom, input[type="email"].border-bottom, input[type="password"].border-bottom, textarea.border-bottom {
+		border: 3px solid transparent;
 		border-bottom: 3px solid $gray;
 		&:focus {
 			border: 3px solid darken($blue, 15%);
@@ -110,7 +111,7 @@
 		font-size: .55em;
 	}
 }
-	
+
 p.error {
 	color: $pink;
 }
