@@ -20,7 +20,7 @@ gem 'slim', '~> 3.0', '>= 3.0.6'
 
 # Image Uploading
 gem 'aws-sdk', '~> 3'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.9'
 gem 'fog'
 
